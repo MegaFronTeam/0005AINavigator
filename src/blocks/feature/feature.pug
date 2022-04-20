@@ -1,0 +1,35 @@
+mixin feature(data)
+  .feature&attributes(attributes)
+    .feature__icon
+      .feature__icon-content
+        if data && data.type == 'tech'
+          .feature__tech.feature__animation
+            - for (var i = 0; i < 5; ++i) {
+              img.feature__tech-item.feature__animation-item(src="./img/feature-tech-item.svg", alt)
+            - }
+        else if data && data.type == 'eco'
+          .feature__eco.feature__animation
+            - for (var i = 0; i < 7; ++i) {
+              img.feature__eco-item.feature__animation-item(src="./img/feature-eco-item.svg", alt)
+            - }
+        else if data && data.type == 'monitor'
+          .feature__monitor.feature__animation
+            - for (var i = 1; i < 5; ++i) {
+              img.feature__monitor-item.feature__animation-item(src="./img/feature-monitor-item-" + i + ".svg", alt)
+            - }
+        else if data && data.type == 'support'
+          .feature__support.feature__animation
+            - for (var i = 0; i < 4; ++i) {
+              img.feature__support-item.feature__animation-item(src="./img/feature-support-item.svg", alt)
+            - }
+        else if data && data.type == 'regulations'
+          .feature__regulations.feature__animation
+            - for (var i = 0; i < 3; ++i) {
+              img.feature__regulations-item.feature__animation-item(src="./img/feature-regulations-item.svg", alt)
+            - }
+        else if data && data.type == 'project'
+          .feature__project.feature__animation
+            - for (var i = 0; i < 3; ++i) {
+              img.feature__project-item.feature__animation-item(src="./img/feature-project-item.svg", alt)
+            - }
+    p.text-white.text-center.mb-0= data.title

@@ -1,0 +1,14 @@
+mixin project-new(data)
+  a.project-new(href="#uni" data-fancybox)&attributes(attributes)
+    .project-new__logo
+      img.project-new__logo-img(src="./img/" + data.logo, alt)
+    .project-new__tags.table-grid__item--lg
+      each tag in data.tags
+        .tag.tag--new.tag--light-new.tag--static= tag
+    .p.project-new__title.table-grid__item--md ИТМО / Программирование и искуссивенный интелект
+    p.sm.project-new__address.table-grid__item--sm Г. 
+      span.project-new__address-city Москва
+      |, ул. Строителей, д65
+    p.sm.project-new__type.table-grid__item--sm Магистратура
+    .project-new__bottom
+      .link-arrow.link-arrow--dark Подробно

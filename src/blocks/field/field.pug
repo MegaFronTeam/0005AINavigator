@@ -1,0 +1,6 @@
+mixin field(data)
+  a.field(href="#")&attributes(attributes)
+    .field__content
+      p.lg.field__number= data.number
+      .field__content-footer
+        .p.lg.field__title(data-content=data.title)= data.title

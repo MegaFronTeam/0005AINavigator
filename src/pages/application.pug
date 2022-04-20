@@ -1,0 +1,46 @@
+extends ../templates/template.pug
+block content
+  +header.header--static
+  .container
+    +back
+    .row
+      .col-xl-5
+        h2.mb-10 Заявка
+        h4.text-gray.mb-30 на включение в карту Искусственного интеллекта в России
+    form.form.form--validation.mb-40.mb-xl-70(action="#", method="POST", name="registration")
+      .row
+        .col-xxl-3.col-xxl-4.col-md-6
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Имя
+            input.input.form-control(type="text", required, placeholder="Введите")
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Фамилия
+            input.input.form-control(type="text", required, placeholder="Введите")
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 E-mail
+            input.input.form-control(type="text", required, placeholder="Введите")
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Телефон
+            input.input.input--phone.form-control(type="text", placeholder="+_ (___) ___ - __ - __")
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Компания
+            input.input.form-control(type="text", placeholder="Введите")
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Проект
+            input.input.form-control(type="text", placeholder="Введите")
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Регион
+            input.input.form-control(type="text", placeholder="Введите")
+          .form__item.form-group
+            +file({
+              title: 'Загрузить файл'
+            }).file--dark
+      .row
+        .col-xl-6
+          button.btn.btn-primary.btn-md(type="submit") Отправить
+          .form-check.mt-30
+            input#check2.form-check-input(type='checkbox' checked value='')
+            label.form-check-label(for='check2') Нажимая кнопку «Зарегистрироваться», я принимаю условия 
+              a(href="https://www.scienceid.net/agreement", target="_blank") пользовательского соглашения 
+              | и даю своё согласие  на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных»
+  +footer

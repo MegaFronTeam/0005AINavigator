@@ -1,0 +1,263 @@
+@import 'bootstrap';
+
+@import 'mixins';
+
+/* Plugins */
+@import 'plugins/jquery-ui.structure';
+
+@import 'plugins/jquery-ui.theme';
+
+@import 'plugins/perfect-scrollbar';
+
+@import 'plugins/select2.min';
+
+@import 'plugins/slick';
+
+@import 'plugins/fancybox';
+
+@import 'plugins/plugins-rewrite';
+
+/* Global styles */
+@import 'global/global-fonts';
+
+@import 'global/global-typo';
+
+@import 'global/global-scaffolding';
+
+/* Blocks */
+
+@import './src/blocks/header/header';
+
+@import './src/blocks/logo/logo';
+
+@import './src/blocks/front/front';
+
+@import './src/blocks/search/search';
+
+@import './src/blocks/section/section';
+
+@import './src/blocks/feature/feature';
+
+@import './src/blocks/monitor/monitor';
+
+@import './src/blocks/info/info';
+
+@import './src/blocks/expert/expert';
+
+@import './src/blocks/experts/experts';
+
+@import './src/blocks/support/support';
+
+@import './src/blocks/calendar/calendar';
+
+@import './src/blocks/main/main';
+
+@import './src/blocks/select/select';
+
+@import './src/blocks/news/news';
+
+@import './src/blocks/field/field';
+
+@import './src/blocks/schedule/schedule';
+
+@import './src/blocks/partners/partners';
+
+@import './src/blocks/event/event';
+
+@import './src/blocks/date/date';
+
+@import './src/blocks/footer/footer';
+
+@import './src/blocks/updates/updates';
+
+@import './src/blocks/menu/menu';
+
+@import './src/blocks/navigator/navigator';
+
+@import './src/blocks/link/link';
+
+@import './src/blocks/divider/divider';
+
+@import './src/blocks/direction/direction';
+
+@import './src/blocks/institute/institute';
+
+@import './src/blocks/tag/tag';
+
+@import './src/blocks/slider/slider';
+
+@import './src/blocks/card/card';
+
+@import './src/blocks/article/article';
+
+@import './src/blocks/back/back';
+
+@import './src/blocks/quote/quote';
+
+@import './src/blocks/document/document';
+
+@import './src/blocks/form/form';
+
+@import './src/blocks/input/input';
+
+@import './src/blocks/auth/auth';
+
+@import './src/blocks/cabinet/cabinet';
+
+@import './src/blocks/item/item';
+
+@import './src/blocks/person/person';
+
+@import './src/blocks/winner/winner';
+
+@import './src/blocks/report/report';
+
+@import './src/blocks/file/file';
+
+@import './src/blocks/filters/filters';
+
+@import './src/blocks/center/center';
+
+@import './src/blocks/hero/hero';
+
+@import './src/blocks/achievement/achievement';
+
+@import './src/blocks/content/content';
+
+@import './src/blocks/stat/stat';
+
+@import './src/blocks/details/details';
+
+@import './src/blocks/advantage/advantage';
+
+@import './src/blocks/parameters/parameters';
+
+@import './src/blocks/parameter/parameter';
+
+@import './src/blocks/accomplishment/accomplishment';
+
+@import './src/blocks/note/note';
+
+@import './src/blocks/even/even';
+
+@import './src/blocks/doc/doc';
+
+@import './src/blocks/modal/modal';
+
+@import './src/blocks/organizer/organizer';
+
+@import './src/blocks/comments/comments';
+
+@import './src/blocks/comment/comment';
+
+@import './src/blocks/video/video';
+
+@import './src/blocks/photo/photo';
+
+@import './src/blocks/stub/stub';
+
+@import './src/blocks/table/table';
+
+@import './src/blocks/indicators/indicators';
+
+@import './src/blocks/circle/circle';
+
+@import './src/blocks/part/part';
+
+@import './src/blocks/map/map';
+
+@import './src/blocks/university/university';
+
+@import './src/blocks/scroller/scroller';
+
+@import './src/blocks/loader/loader';
+
+@import './src/blocks/sorting/sorting';
+
+@import './src/blocks/results/results';
+
+@import './src/blocks/finding/finding';
+
+@import './src/blocks/country/country';
+
+@import './src/blocks/project/project';
+
+@import './src/blocks/view/view';
+
+@import './src/blocks/fact/fact';
+
+@import './src/blocks/socials/socials';
+
+@import './src/blocks/table-grid/table-grid';
+
+@import './src/blocks/pulse/pulse';
+
+@import './src/blocks/indicator/indicator';
+
+@import './src/blocks/category/category';
+
+@import './src/blocks/category-item/category-item';
+
+@import './src/blocks/course/course';
+
+@import './src/blocks/news-card/news-card';
+
+@import './src/blocks/research/research';
+
+@import './src/blocks/uni/uni';
+
+@import './src/blocks/ethics/ethics';
+
+@import './src/blocks/event-item/event-item';
+
+@import './src/blocks/partners-list/partners-list';
+
+@import './src/blocks/categories/categories';
+
+@import './src/blocks/courses/courses';
+
+@import './src/blocks/news-list/news-list';
+
+@import './src/blocks/centers/centers';
+
+@import './src/blocks/events-list/events-list';
+
+@import './src/blocks/link-arrow/link-arrow';
+
+@import './src/blocks/cover/cover';
+
+@import './src/blocks/activity/activity';
+
+@import './src/blocks/point/point';
+
+@import './src/blocks/dynamics/dynamics';
+
+@import './src/blocks/page/page';
+
+@import './src/blocks/theme/theme';
+
+@import './src/blocks/graph/graph';
+
+@import './src/blocks/crumbs/crumbs';
+
+@import './src/blocks/number/number';
+
+@import './src/blocks/wrapper/wrapper';
+
+@import './src/blocks/leader/leader';
+
+@import './src/blocks/about/about';
+
+@import './src/blocks/new-quote/new-quote';
+
+@import './src/blocks/doc-new/doc-new';
+
+@import './src/blocks/sorting-new/sorting-new';
+
+@import './src/blocks/card-new/card-new';
+
+@import './src/blocks/line-header/line-header';
+
+@import './src/blocks/project-new/project-new';
+
+@import './src/blocks/error/error';

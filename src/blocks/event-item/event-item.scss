@@ -1,0 +1,106 @@
+.event-item {
+  padding-right: 24px;
+
+  @include media-breakpoint-down(md) {
+    padding-right: 0;
+  }
+
+  &:hover {
+
+    .event-item__date {
+      color: $dark-new;
+      border-bottom-color: $dark-new;
+    }
+  }
+
+  &__top {
+    text-decoration: none;
+  }
+
+  &__date {
+    padding-top: 10px;
+    min-height: 65px;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: #d9d9de;
+    border-bottom: 1px solid #a7a7ab;
+
+    @include transition;
+
+    @include media-breakpoint-down(xl) {
+      min-height: 0;
+      font-size: 12px;
+      line-height: 1.32;
+      color: $dark-new;
+      border-bottom: 0;
+    }
+  }
+
+  &__picture {
+    margin: 35px 0;
+    display: flex;
+    height: 207px;
+    align-items: center;
+
+    @include media-breakpoint-down(xl) {
+      margin: 16px 0;
+      height: 127px;
+    }
+
+    @include media-breakpoint-down(md) {
+      height: auto;
+    }
+  }
+
+  &__picture-img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__tags-wrapper {
+    margin-bottom: 8px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__tag {
+    margin-right: 16px;
+    margin-bottom: 8px;
+    padding: 6.5px 12px 4.5px;
+    font-size: 10px;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: #fff;
+    background: $dark-new;
+    border-radius: 4px;
+  }
+
+  &__dscr {
+    padding-right: 24px;
+    display: -webkit-box;
+    overflow: hidden;
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+    text-overflow: ellipsis;
+    color: #55556a;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    @include media-breakpoint-down(xl) {
+      font-size: 12px;
+      line-height: 1.32;
+    }
+  }
+
+  &--cabinet {
+    padding-right: 0;
+
+    .event-item__date {
+      color: #333;
+    }
+  }
+}

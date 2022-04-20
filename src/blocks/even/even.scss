@@ -1,0 +1,18 @@
+.even {
+
+  &__content {
+  }
+
+  &__scroll {
+    position: relative;
+    min-height: 300px;
+
+    @include media-breakpoint-down(xl) {
+      height: 300px !important;
+    }
+
+    .ps__rail-y {
+      opacity: 1;
+    }
+  }
+}

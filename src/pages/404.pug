@@ -1,0 +1,13 @@
+extends ../templates/template.pug
+block content
+  +header
+  .wrapper
+    .container.container--new
+      .error
+        .error__number(data-number="404") 404
+          img.error__bg(src="./img/error-bg.svg", alt)
+        .error__content
+          p.lg-new.error__header Данной страницы не существует
+          p.sm.error__subheader Попытайте счастья в другом месте
+          a.btn.btn-primary.btn-violet.btn-lg(href="#") На главную
+  +footer

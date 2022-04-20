@@ -1,0 +1,65 @@
+extends ../templates/template.pug
+block content
+  +header
+  .wrapper
+    .container.container--new
+      +crumbs({
+        links: ['Личный кабинет', 'Редактирование профиля']
+      }).mb-15.mb-xl-35
+      form.form.mb-30.mb-xl-100.pb-xl-60(action="#", method="POST")
+        h2.sm-new.fw-medium.mb-40 Редактирование профиля
+        .row
+          .col-lg-4.col-md-6.order-2.order-lg-1
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Фамилия
+              input.input.form-control(type="text", placeholder="Введите")
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Имя
+              input.input.form-control(type="text", placeholder="Введите")
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Дата рождения
+              input.input.form-control(type="text", placeholder="Введите")
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 E-mail
+              input.input.form-control(type="text", placeholder="Введите")
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Телефон
+              input.input.form-control(type="text", placeholder="+7 ____  ____ ___ ___")
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Город
+              input.input.form-control(type="text", placeholder="Введите")
+          .col-lg-4.col-md-6.order-3.order-lg-2
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Ссылка на профиль во вконтакте
+              input.input.form-control(type="text", placeholder="Введите")
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Ссылка на профиль в Facebook
+              input.input.form-control(type="text", placeholder="Введите")
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Leader ID
+              input.input.form-control(type="text", placeholder="Введите")
+          .col-xxl-2.col-xl-3.offset-xxl-2.offset-xl-1.col-lg-4.order-1.order-lg-3
+            .form__photo
+              .form__photo-content
+                img.form__photo-img(src="./img/cabinet-user.png", alt)
+                a.form__photo-remove(href="#")
+              input#formFile.form-control.form__photo-input(type='file')
+              label.p.form__photo-link(for="formFile") Сменить фото
+        button.btn.btn-primary.btn-violet.btn-lg(type="submit") Сохранить информацию
+      form.form.mb-50.mb-xl-100(action="#", method="POST")
+        h3.md.mb-25.mb-xl-40 Смена пароля
+        .row
+          .col-xxl-3.col-lg-4.col-md-6
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Старый пароль
+              input.input.form-control(type="password", placeholder="Введите")
+          .col-xxl-3.col-lg-4.col-md-6
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Новый пароль
+              input.input.form-control(type="password", placeholder="Введите")
+          .col-xxl-3.col-lg-4.col-md-6.ms-auto.ms-lg-0
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Повторите пароль
+              input.input.form-control(type="password", placeholder="Введите")
+        button.btn.btn-primary.btn-violet.btn-lg(type="submit") Сменить пароль
+  +footer

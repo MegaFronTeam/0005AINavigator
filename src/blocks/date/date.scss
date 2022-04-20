@@ -1,0 +1,50 @@
+.date {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 50%;
+  padding: 30px 0 36px;
+  display: none;
+  overflow: hidden;
+  max-width: 653px;
+  background: $primary;
+  transform: translateX(-50%);
+
+  @include media-breakpoint-down(xl) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__header {
+    padding: 0 40px 40px;
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__number {
+    margin-right: 40px;
+    margin-bottom: 0;
+    font-family: $font-family-secondary;
+    color: #fff;
+  }
+
+  &__amount {
+    margin-bottom: 0;
+    font-family: $font-family-secondary;
+    color: #fff;
+  }
+
+  &__content {
+    position: relative;
+    margin-left: -12px;
+    padding-right: 24px;
+    padding-left: 42px;
+    display: flex;
+    width: calc(100% + 12px);
+  }
+
+  &--active {
+    display: block;
+  }
+}

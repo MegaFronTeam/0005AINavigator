@@ -1,0 +1,62 @@
+.support {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  background: url(../img/support-bg.jpg) no-repeat center right;
+  background-size: cover;
+
+  @include media-breakpoint-down(xl) {
+    padding: 50px 0;
+    min-height: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    background: #1d034a;
+  }
+
+  &__item {
+    margin-bottom: 54px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 30px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: rgba(#fff, .8);
+
+    @include media-breakpoint-down(xxxl) {
+      font-size: 24px;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 30px;
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 18px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      margin-top: 13px;
+      margin-right: 64px;
+      display: block;
+      width: 96px;
+      height: 12px;
+      flex-shrink: 0;
+      content: '';
+      background: url(../img/support-arrow.svg) no-repeat center;
+      background-size: contain;
+
+      @include media-breakpoint-down(xxxl) {
+        margin-right: 40px;
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

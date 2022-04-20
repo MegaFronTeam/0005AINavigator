@@ -1,0 +1,5 @@
+mixin socials(data)
+  .socials&attributes(attributes)
+    each social in data.items
+      a.socials__item(href="#")
+        img(src="./img/" + social + '.svg', alt)

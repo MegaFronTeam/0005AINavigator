@@ -1,0 +1,10 @@
+mixin event(data)
+  a.event(href="#")&attributes(attributes)
+    .event__media
+      img.event__media-img(src="./img/" + data.picture, alt)
+      .event__section(class="event__section--" + data.color)= data.section
+    .event__content
+      p.md.font-secondary.text-dark.mb-20= data.title
+      .event__footer
+        p.xs.font-secondary.text-dark.fw-normal.mb-0.me-20= data.date
+        p.xs.font-secondary.fw-normal.mb-0.event__city Москва

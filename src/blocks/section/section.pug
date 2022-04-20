@@ -1,0 +1,75 @@
+mixin section(data)
+  .section&attributes(attributes)
+    if data && data.bg
+      //.section__bg
+        video.section__bg-content(autoplay="autoplay", muted)
+          source(src='./img/' + data.bg, type='video/mp4')
+    .section__content
+      if data && data.type == 'staff'
+        .row
+          .col-xl-4.d-flex
+            .section__left
+              .section__left-top.reveal-new
+                h3.section__title= data.title
+                h5.section__dscr= data.dscr
+              .section__left-bottom.reveal-new
+                a.btn.btn-secondary.btn-new.section__btn(href="#") Подробнее
+          .col-xl-8.d-flex
+            .section__stats
+              .row
+                each item in data.stats
+                  .col-lg-6
+                    +stat({
+                      icon: item[0],
+                      header: item[1],
+                      dscr: item[2],
+                    }).reveal-new
+
+      else if data && data.type == 'short'
+        .row
+          .col-lg-6.d-flex
+            .section__left
+              .section__left-top.reveal-new
+                h3.section__title= data.title
+                p.section__dscr!= data.dscr
+                if data && data.operator
+                  .section__operator
+                    .section__operator-header оператор:
+                    .section__operator-title= data.operator
+              .section__left-bottom.reveal-new
+                a.btn.btn-secondary.btn-new.section__btn(href="#") Подробнее
+          .col-lg-6.d-flex
+            .section__stats
+              each item in data.stats
+                +stat({
+                  icon: item[0],
+                  header: item[1],
+                  dscr: item[2],
+                }).section__stat.reveal-new
+              .section__mobile-btn
+                a.btn.btn-secondary.btn-new.section__btn(href="#") Подробнее
+
+      else if data && data.type == 'regulations'
+        .row.align-items-center
+          .col-xl-4.col-lg-6
+            .section__left
+              .section__left-top.reveal-new
+                h3.section__title= data.title
+                h5.section__dscr= data.dscr
+                if data && data.operator
+                  .section__operator
+                    .section__operator-header оператор:
+                    .section__operator-title= data.operator
+              .section__left-bottom.reveal-new
+                a.btn.btn-secondary.btn-new.section__btn(href="#") Подробнее
+          .col-xl-3.col-lg-6
+            .section__item.reveal-new
+              h3.text-primary.mb-15 Утверждена
+              .section__item-dscr Программ бакалавриата по направлениям ии появится в высших учебных заведениях
+          .col-xl-5
+            .section__item.section__item--row.reveal-new
+              h3.text-primary.mb-0.me-15 21
+              .section__item-dscr Стандарт разработан в сфере ИИ 46 млн. рублей
+            .section__item.section__item--row.reveal-new
+              h3.text-primary.mb-0.me-15 >200
+              .section__item-dscr Стандартов 241,7 млн. рублей

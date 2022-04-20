@@ -1,0 +1,28 @@
+.finding {
+  margin-bottom: 15px;
+  padding: 10px 0 6px;
+  border-bottom: 1px solid #e9e9e9;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    display: block;
+    font-size: 22px;
+    text-decoration: none;
+    color: $violet;
+
+    @include media-breakpoint-down(md) {
+      font-size: 18px;
+    }
+  }
+
+  &__dscr {
+  }
+
+  &__date {
+    color: #a7a7ab;
+  }
+}

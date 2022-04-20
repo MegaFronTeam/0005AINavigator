@@ -1,0 +1,5 @@
+mixin parameter(data)
+  .parameter&attributes(attributes)
+    .parameter__icon
+      img.parameter__icon-img(src="./img/" + data.icon, alt)
+    p.sm.mb-0= data.title

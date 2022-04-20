@@ -1,0 +1,70 @@
+extends ../templates/template.pug
+block content
+  +header
+  .wrapper
+    .container.container--new
+      +crumbs({
+        links: ['Медиацентр']
+      }).mb-30.mb-xl-50
+      h2.sm-new.fw-medium.mb-30 Медиацентр
+      .row.mb-40
+        .col-xl-8
+          p.sm В разделе «Медиацентр» представлены актуальные новости и события в сфере ИИ. <br>С помощью фильтров ниже можно отсортировать информацию по технологиям ИИ, уровню сложности и сфере деятельности. Также можно отобрать новости и события для СМИ, партнерские материалы и информацию по федеральному проекту «Искусственный интеллект». 
+          p.sm.mb-0 Пример: технологии ИИ — компьютерное зрение, уровень сложности — эксперт, сфера — предприниматель. В этом случае будут представлены материалы о компьютерном зрении для предпринимателя экспертного уровня. 
+      .row
+        .col-xl-9
+          +filters({
+            type: 'media'
+          }).mb-20
+      +news-list({
+        title: 'Направления',
+        tags: ['Для СМИ', 'Партнерские материалы', 'Мировые рейтинги индексы в ИИ', 'Федеральный проект'],
+        link: 'no'
+      }).news-list--database.news-list--alone.mt-0
+      .mb-40.mb-xl-100
+        h3.md.mb-10.mb-xl-55 События
+        .slider.mt-0
+          .slider__content.slider__content--new.slider__content--two
+            +video({
+              picture: 'article-4.jpg',
+              source: 'ai',
+              id: 'video-1'
+            }).slider__item.js-video-link
+            +video({
+              picture: 'card-1.jpg',
+              source: 'ai',
+              id: 'video-2'
+            }).slider__item.js-video-link
+            +video({
+              picture: 'article-4.jpg',
+              source: 'ai',
+              id: 'video-2'
+            }).slider__item.js-video-link
+            +video({
+              picture: 'card-1.jpg',
+              source: 'ai',
+              id: 'video-4'
+            }).slider__item.js-video-link
+      .mb-40.mb-xl-100
+        h3.md.mb-10.mb-xl-55 Фотографии
+        .slider.mt-0
+          .slider__content.slider__content--new.slider__content--photo
+            +photo({
+              picture: 'photo-1.jpg',
+            }).slider__item
+            +photo({
+              picture: 'photo-2.jpg',
+            }).slider__item
+            +photo({
+              picture: 'photo-3.jpg',
+            }).slider__item
+            +photo({
+              picture: 'photo-1.jpg',
+            }).slider__item
+            +photo({
+              picture: 'photo-2.jpg',
+            }).slider__item
+            +photo({
+              picture: 'photo-3.jpg',
+            }).slider__item
+  +footer

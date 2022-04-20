@@ -1,0 +1,45 @@
+mixin category(data)
+  .category(style="background-image: url(./img/" + data.picture + ');')&attributes(attributes)
+    .category__wrapper
+      .container.container--new
+        .row
+          .col-xl-4
+            h2.sm.category__title Поддержка бизнеса
+            p.category__text!= data.text
+            .category__operator
+              .category__operator-top
+                .category__operator-header Оператор:
+                .category__operator-content
+                  a.category__logo(href="#")
+                    img.category__logo-img(src="./img/category-logo-1.svg", alt)
+                  a.category__logo(href="#")
+                    img.category__logo-img(src="./img/category-logo-2.svg", alt)
+              a.btn.btn-secondary.btn-rounded.btn-lg-new.category__btn(href="#") Подробнее
+          .col-xl-8
+            .category__content
+              .row
+                .col-md-6
+                  +category-item({
+                    subtitle: 'Результат 2021',
+                    icon: 'category-item-1.svg',
+                    title: 'Конкурсы на предоставление грантов',
+                    dscr: 'В 2021 году фондом «Сколково» запущены конкурсы на предоставление грантов от 20 до 100 миллионов рублей'
+                  }).category-item--red
+                .col-md-6
+                  +category-item({
+                    subtitle: 'Результат 2021',
+                    icon: 'category-item-2.svg',
+                    title: '7 компаний разработчиков',
+                    dscr: 'Министерством промышленности и торговли Российской Федерации оказана поддержка 7 организациям, разрабатывающим аппаратно-программные комплексы для искусственного интеллекта'
+                  })
+                .col-md-6
+                  +category-item({
+                    subtitle: 'План до 2024',
+                    icon: 'category-item-2.svg',
+                    title: '50+ разработчиков',
+                    dscr: 'Фондом  «Сколково» будут поддержаны не менее 50 организаций, внедряющих технологии искусственного интеллекта'
+                  }).category-item--red
+                .col-md-6
+                  +category-item({
+                    type: 'empty'
+                  }).category-item--empty

@@ -1,0 +1,13 @@
+mixin quote(data)
+  .quote&attributes(attributes)
+    .quote__photo
+      img.quote__photo-img(src="./img/quote-1.jpg", alt)
+    .quote__content
+      if data && data.content
+        p.lg.quote__text.fw-semibold.mb-30= data.content
+      else
+        p.lg.quote__text.fw-semibold.mb-30 Циата в тексте для наглядности отображенмия Наука и практика анализа больших объемов данных с помощью всевозможных математических методов, в том числе машинного Рассмотрим работу ML на примере задачи банковского скоринга. Банк располагает данными о существующих клиентах. Ему известно, есть ли у кого-то просроченные платежи по кредитам. Задача — определить, будет ли новый потенциаль
+      if data && data.author
+        p.semi-transparent.fw-semibold.mb-0= data.author
+      else
+        p.semi-transparent.fw-semibold.mb-0 Виктор Головобородов, Rambler

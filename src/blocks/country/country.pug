@@ -1,0 +1,59 @@
+mixin country(data)
+  .country&attributes(attributes)
+    
+    if data && data.type == 'research'
+      .country__item-content
+        .country__item-map
+          include img/country-red.svg
+      .country__legend
+        +country__legend-item({
+          text: '1-100'
+        }).country__legend-item--light
+        +country__legend-item({
+          text: '100-1 000'
+        }).country__legend-item--medium
+        +country__legend-item({
+          text: '1 000-10 000'
+        }).country__legend-item--dark
+    
+    else if data && data.type == 'education'
+      .country__item-content
+        .country__item-map
+          include img/country-blue.svg
+      .country__legend
+        +country__legend-item({
+          text: '1-10'
+        }).country__legend-item--light
+        +country__legend-item({
+          text: '10-20'
+        }).country__legend-item--medium
+        +country__legend-item({
+          text: '20-50'
+        }).country__legend-item--dark
+    
+    else if data && data.type == 'events'
+      .country__item-content
+        .country__item-map
+          include img/country-green.svg
+      .country__legend
+        +country__legend-item({
+          text: '1-100'
+        }).country__legend-item--light
+        +country__legend-item({
+          text: '100-1 000'
+        }).country__legend-item--medium
+        +country__legend-item({
+          text: '1 000-10 000'
+        }).country__legend-item--dark
+  
+  
+  
+  
+mixin country__item(data)
+  .country__item&attributes(attributes)
+          
+          
+mixin country__legend-item(data)
+  .country__legend-item&attributes(attributes)
+    .country__legend-item-color
+    .country__legend-item-text= data.text

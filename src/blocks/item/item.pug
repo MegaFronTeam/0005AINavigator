@@ -1,0 +1,19 @@
+mixin item(data)
+  .item&attributes(attributes)
+    a.item__picture(href="#")
+      img.item__picture-img(src="./img/" + data.picture, alt)
+    .item__content
+      .item__types-wrapper
+        a.item__type.item__type--conference(href="#") Конференция
+        if data && data.type == 'cabinet'
+          a.item__type(href="#") Вы участвуете
+      a.h5.item__title(href="#") Цифровизация транспорта 2021. Процесс трансформации: оценка и перспективы
+      .item__info
+        .p.sm.fw-semibold.mb-0.me-20 10.01.2022 в 14:00
+        .p.sm.text-gray-light.mb-0 Организатор
+      p.sm.fw-semibold.mb-15 г. Москва, ул. Поднебесников пр. 3, офис 13
+      if data && data.type == 'cabinet'
+        a.btn.btn-primary.btn-md.w-100.mb-15(href="#") Удалить событие
+        a.btn.btn-outline-primary.btn-md.w-100.mb-15(href="#") Добавить в Google календарь
+        a.btn.btn-link.btn-md.w-100(href="#") Скачать файл календаря
+        

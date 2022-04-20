@@ -1,0 +1,54 @@
+.sorting-new {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+
+  &__title {
+    margin-right: 10px;
+    font-size: 12px;
+    line-height: 1.32;
+    letter-spacing: .04em;
+    color: #000;
+  }
+
+  &__content {
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 1.32;
+    text-decoration: none;
+    letter-spacing: .04em;
+
+    &:before {
+      margin-right: 8px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      content: '';
+      background: url(../img/sorting-new-up.svg) no-repeat center;
+      background-size: contain;
+    }
+
+    &:after {
+      margin-left: 8px;
+      display: block;
+      width: 14px;
+      height: 14px;
+      content: '';
+      background: url(../img/sorting-new-arrow.svg) no-repeat center;
+      background-size: contain;
+
+      @include transition;
+    }
+
+    &--active {
+
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.winner {
+  padding-right: 40px;
+  text-decoration: none;
+  color: $dark-new;
+
+  &__top {
+    margin-bottom: 27px;
+    display: flex;
+  }
+
+  &__top-content {
+  }
+
+  &__picture {
+    position: relative;
+    margin-right: 30px;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+  }
+
+  &__picture-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  &__content {
+  }
+
+  &__occupation {
+    font-size: 12px;
+    line-height: 1.25;
+    text-transform: uppercase;
+    color: rgba(#333, .8);
+  }
+
+  &__place {
+    margin-bottom: 12px;
+    padding: 6.5px 12px 4.5px;
+    display: inline-flex;
+    font-size: 10px;
+    line-height: 1.25;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: $dark-new;
+    background: #d9d9de;
+    border-radius: 4px;
+  }
+}

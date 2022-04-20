@@ -1,0 +1,5 @@
+mixin finding(data)
+  .finding&attributes(attributes)
+    a.finding__title(href="#")!= data.title
+    p.sm.finding__dscr!= data.dscr
+    p.sm.finding__date Изменено #{data.date}

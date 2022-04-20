@@ -1,0 +1,34 @@
+mixin date(data)
+  .date&attributes(attributes)
+    .date__header
+      .p.md.date__number 10
+      .p.md.date__amount 3 мероприятия на эту дату
+    .date__content
+      +event({
+        picture: 'event-1.jpg',
+        section: 'Конференция',
+        color: 'orange',
+        title: 'Цифровизация транспорта 2021. Процесс трансформации: оценка и перспективы',
+        date: '10.01.2022'
+      })
+      +event({
+        picture: 'event-2.jpg',
+        section: 'Форум',
+        color: 'blue',
+        title: 'ИКТ в госсекторе 2021: жизнь в новой реальности',
+        date: '21.09.2021'
+      })
+      +event({
+        picture: 'event-1.jpg',
+        section: 'Конференция',
+        color: 'orange',
+        title: 'Цифровизация транспорта 2021. Процесс трансформации: оценка и перспективы',
+        date: '10.01.2022'
+      })
+      +event({
+        picture: 'event-2.jpg',
+        section: 'Форум',
+        color: 'blue',
+        title: 'ИКТ в госсекторе 2021: жизнь в новой реальности',
+        date: '21.09.2021'
+      })

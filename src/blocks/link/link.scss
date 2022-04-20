@@ -1,0 +1,35 @@
+.link {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 600;
+  text-decoration: none;
+  color: $primary;
+
+  @include transition;
+
+  @include media-breakpoint-down(xxl) {
+    font-size: 16px;
+  }
+
+  &:before {
+    margin-top: 10px;
+    margin-right: 15px;
+    display: block;
+    width: 14px;
+    height: 9px;
+    flex-shrink: 0;
+    content: '';
+    background: url(../img/link-arrow.svg) no-repeat center;
+    background-size: contain;
+  }
+
+  &--default {
+
+    &:before {
+      display: none;
+    }
+  }
+}

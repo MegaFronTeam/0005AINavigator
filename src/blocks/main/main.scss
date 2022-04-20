@@ -1,0 +1,282 @@
+.main {
+  padding-top: 137px;
+
+  @include media-breakpoint-down(xl) {
+    padding-top: 64px;
+  }
+
+  &__logo {
+    display: none;
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 82px;
+      display: block;
+    }
+  }
+
+  &__magic {
+    padding-top: 100vh;
+    overflow: hidden;
+
+    @include media-breakpoint-down(xl) {
+      padding-top: 0;
+    }
+
+    @media (max-height: 749px) {
+      padding-top: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 22px;
+    }
+  }
+
+  &__sections {
+    overflow: hidden;
+  }
+
+  &__section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 1s ease-in-out, transform .7s ease-in-out;
+    transform: translateY(-100%);
+
+    @media (max-height: 749px) {
+      position: relative;
+      padding: 30px 0;
+      min-height: 0;
+      pointer-events: all;
+    }
+
+    @include media-breakpoint-down(xl) {
+      position: relative;
+      padding: 0;
+      min-height: 0;
+      pointer-events: all;
+    }
+
+    &--active {
+      position: absolute;
+      opacity: 1;
+      pointer-events: all;
+      transform: translateY(0);
+
+      @include media-breakpoint-down(xl) {
+        position: relative;
+        transform: none;
+      }
+
+      @media (max-height: 749px) {
+        position: relative;
+        transform: none;
+      }
+
+      & ~ .main__section {
+        transform: translateY(100%);
+
+        @include media-breakpoint-down(xl) {
+          transform: translateY(0);
+        }
+
+        @media (max-height: 749px) {
+          transform: translateY(0);
+        }
+      }
+    }
+
+    &--scroller {
+
+      @media (max-height: 749px) {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__section-content {
+    width: 100%;
+  }
+
+  &__front {
+    flex-direction: column;
+
+    @media (max-height: 749px) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    @include media-breakpoint-down(xl) {
+      padding-top: 0;
+    }
+  }
+
+  &__front-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  &__front-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__front-content {
+    margin-bottom: 140px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    @include media-breakpoint-down(xxl) {
+      margin-bottom: 80px;
+    }
+
+    @include media-breakpoint-down(xl) {
+      padding-top: 0;
+    }
+
+    @media (max-height: 749px) {
+      padding-top: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 0;
+    }
+  }
+
+  &__front-inner {
+    flex-grow: 1;
+  }
+
+  &__front-achievements {
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-down(xl) {
+      margin-top: 80px;
+      width: 100%;
+    }
+
+    @media (max-height: 749px) {
+      margin-top: 80px;
+      width: 100%;
+    }
+  }
+
+  &__magic-dots {
+    position: fixed;
+    top: 50%;
+    left: calc(100vw - 88px);
+    transform: translateY(-50%);
+
+    @include media-breakpoint-down(xxl) {
+      left: calc(100vw - 44px);
+    }
+  }
+
+  &__magic-dots-item {
+    position: relative;
+    margin-bottom: 31px;
+    display: flex;
+    width: 32px;
+    height: 32px;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #afd9ff;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @include transition;
+
+    @include media-breakpoint-down(xxl) {
+      width: 24px;
+      height: 24px;
+    }
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 11px;
+      height: 11px;
+      opacity: 0;
+      content: '';
+      background: $primary;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+
+      @include transition;
+
+      @include media-breakpoint-down(xxl) {
+        width: 8px;
+        height: 8px;
+      }
+    }
+
+    &:after {
+      position: absolute;
+      bottom: -32px;
+      left: 50%;
+      margin: 9px 0;
+      display: block;
+      width: 1px;
+      height: 13px;
+      content: '';
+      background: #afd9ff;
+      transform: translateX(-50%);
+
+      @include transition;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &--active {
+      border-color: $primary;
+
+      &:before {
+        opacity: 1;
+      }
+
+      &:after {
+        background: $primary;
+      }
+    }
+  }
+
+  &__content {
+    margin-bottom: -28px;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}
+
+@keyframes reveal {
+
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

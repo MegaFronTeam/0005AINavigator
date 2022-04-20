@@ -1,0 +1,86 @@
+.uni {
+  margin-bottom: 24px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+
+  @include media-breakpoint-down(md) {
+    border-bottom: .5px solid #e4e4fa;
+  }
+
+  &:hover {
+
+    .uni__link {
+      opacity: 1;
+      color: #5d60f4;
+
+      &:after {
+        background: url(../img/uni-arrow-color.svg) no-repeat center;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__wrapper {
+  }
+
+  &__logo {
+    margin-bottom: 17px;
+    display: flex;
+    height: 127px;
+    align-items: center;
+
+    @include media-breakpoint-down(xl) {
+      height: 66px;
+    }
+  }
+
+  &__logo-img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__title {
+    margin-bottom: 17px;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: .04em;
+    color: #55556a;
+
+    @include media-breakpoint-down(xl) {
+      font-size: 9px;
+      line-height: 1.25;
+      letter-spacing: .01em;
+    }
+  }
+
+  &__link {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    opacity: .3;
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $dark-new;
+
+    @include media-breakpoint-down(xl) {
+      display: none;
+    }
+
+    &:after {
+      margin-left: 16px;
+      display: block;
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+      content: '';
+      background: url(../img/uni-arrow.svg) no-repeat center;
+      background-size: contain;
+      border-radius: 50%;
+    }
+  }
+}

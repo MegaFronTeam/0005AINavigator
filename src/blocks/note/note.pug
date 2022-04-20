@@ -1,0 +1,12 @@
+mixin note(data)
+  .note&attributes(attributes)
+    a.h5.note__title.mb-15(href="#") Разработка и развитие программного обеспечения
+    p.lh-lg.mb-25= data.dscr
+    if data && data.author
+      .note__author
+        .note__author-photo
+          img.note__author-photo-img(src="./img/note-author.jpg", alt)
+        .note__author-content
+          p.sm.mb-0 Александр Мануваловский
+          .note__author-role Специалист в сфере Ai
+    a.btn.btn-danger.btn-new.mt-auto(href="#") Подробнее

@@ -1,0 +1,16 @@
+mixin number(data)
+  .number&attributes(attributes)
+    if data && data.number == 'complex'
+      .number__complex
+        span.p от
+        .number__title-wrapper
+          span.number__title.number__title--complex 20
+          .p.number__title-subheader млн ₽
+        span.p до
+        .number__title-wrapper
+          span.number__title.number__title--complex 100
+          .p.number__title-subheader млн ₽
+    else if data && data.number
+      .number__title= data.number
+    else
+    p.sm.mob-xs!= data.dscr

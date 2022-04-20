@@ -1,0 +1,29 @@
+extends ../templates/template.pug
+block content
+  .stub
+    .container
+      .stub__wrapper
+        .stub__content
+          +logo.logo--mob-lg.stub__logo
+          .stub__inner
+            h2.text-center.mb-30.mb-xl-50 Сайт находится в разработке
+            .row.w-100
+              .col-xxl-3.col-lg-4.col-sm-6.mx-auto
+                form.form.stub__form(action="#", method="post")
+                  .form__item.form-group
+                    p.xs.form-label.font-secondary.mb-5 Логин
+                    input.input.form-control(type="text", placeholder="Введите")
+                  .form__item.form-group
+                    p.xs.form-label.font-secondary.mb-5 Пароль
+                    input.input.form-control(type="password", placeholder="Введите")
+                  .text-center
+                    button.btn.btn-primary.btn-sm(type="submit") Войти
+            .row.mt-30.mt-xl-50
+              .col-lg-6.col-md-8.mx-auto
+                p.xs.text-center Опытная эксплуатации проводится в закрытом режиме, для получения логина/пароля доступа просим отправить запрос на электронную почту 
+                  a(href="mailto:request@ai.gov.ru") request@ai.gov.ru 
+                p.xs.text-center В рамках проведения опытной эксплуатации аудит, поддержка и развитие портала производится ООО «Рувентс» по заказу АНО «Аналитический центр при Правительстве Российской Федерации». По техническим вопросам просьба обращаться по телефону: 
+                  a(href="tel:+74951090200") +7 (495) 109-02-00
+        .stub__footer
+          .stub__footer-text © 2021. Национальный портал в сфере искусственного интеллекта
+          a.btn.btn-outline-dark.stub__btn(href="#") Напишите нам

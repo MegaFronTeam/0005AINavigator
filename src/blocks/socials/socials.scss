@@ -1,0 +1,20 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    width: 24px;
+    height: 24px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__item-img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

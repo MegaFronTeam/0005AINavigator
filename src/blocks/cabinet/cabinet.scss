@@ -1,0 +1,251 @@
+.cabinet {
+  overflow: hidden;
+
+  &__top {
+    margin-bottom: 21px;
+    padding: 24px;
+    background: #eaeaef;
+    border-radius: 16px;
+
+    @include media-breakpoint-down(xl) {
+      padding: 30px 0;
+    }
+  }
+
+  &__top-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(xl) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+  }
+
+  &__top-left {
+    display: flex;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__picture {
+    position: relative;
+    margin-right: 24px;
+    display: flex;
+    width: 160px;
+    height: 160px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+    background: #fff url(../img/photo-bg.svg) no-repeat center;
+    border-radius: 8px;
+
+    @include media-breakpoint-down(xxl) {
+      margin-right: 30px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 20px;
+    }
+
+    &:before {
+      margin-bottom: 12px;
+      display: flex;
+      width: 22px;
+      height: 22px;
+      content: '';
+      background: url(../img/photo-plus.svg) no-repeat center;
+      background-size: contain;
+    }
+
+    &:after {
+      margin: 0 auto;
+      display: block;
+      max-width: 60px;
+      font-size: 10px;
+      line-height: 1.25;
+      text-align: center;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      content: 'Добавить фото';
+      color: #55556a;
+    }
+  }
+
+  &__picture-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 8px;
+  }
+
+  &__photo-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+
+  &__info-wrapper {
+    padding-right: 20px;
+    display: flex;
+    max-width: 500px;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &--wide {
+      max-width: 690px;
+
+      @include media-breakpoint-down(xxl) {
+        max-width: 500px;
+      }
+    }
+  }
+
+  &__info {
+    margin-bottom: -10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__info-item {
+    margin-right: 48px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__social {
+    margin-right: 24px;
+
+    @include transition;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__social-icon {
+  }
+
+  &__top-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 30px;
+      width: 100%;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__top-right-links {
+    display: flex;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    margin-right: 40px;
+    font-size: 14px !important;
+    text-decoration: none;
+    color: rgba($violet, .8);
+
+    @include transition;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      opacity: $dark-new;
+    }
+  }
+
+  &__id {
+    font-size: 16px;
+    line-height: 1.375;
+    color: rgba($dark-new, .8);
+  }
+
+  &__content {
+    padding-bottom: 34px;
+  }
+
+  &__profile {
+    margin-bottom: 34px;
+    padding-top: 50px;
+  }
+
+  &__profile-item {
+    padding: 16.5px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #d9d9de;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &__profile-item-header {
+    padding-right: 20px;
+    width: 360px;
+    flex-shrink: 0;
+    font-size: 16px;
+    line-height: 1.375;
+    letter-spacing: .04em;
+    color: rgba(#55556a, .8);
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 10px;
+      padding-right: 0;
+    }
+  }
+
+  &__profile-item-content {
+    font-size: 16px;
+    line-height: 1.375;
+    letter-spacing: .04em;
+    color: rgba($dark-new, .8);
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

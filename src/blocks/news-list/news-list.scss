@@ -1,0 +1,222 @@
+.news-list {
+  margin-bottom: 80px;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 48px;
+  }
+
+  &__header {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 16px;
+    }
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 1.15;
+    font-weight: 600;
+    letter-spacing: .04em;
+    color: $dark-new;
+
+    @include media-breakpoint-down(xl) {
+      font-size: 20px;
+      line-height: 1.22;
+      letter-spacing: .04em;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__docs {
+    padding-right: 132px;
+    display: flex;
+    align-items: baseline;
+    opacity: .8;
+    font-size: 16px;
+    line-height: 1.375;
+    font-weight: 500;
+    letter-spacing: .04em;
+
+    @include media-breakpoint-down(xl) {
+      padding-right: 110px;
+      font-size: 14px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding-right: 0;
+    }
+  }
+
+  &__docs-header {
+    margin-right: 5px;
+    color: #55556a;
+  }
+
+  &__docs-number {
+    color: $violet;
+  }
+
+  &__slider {
+
+    .slick-track {
+      display: flex;
+
+      .slick-slide {
+        height: auto;
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+
+    @include media-breakpoint-down(md) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    line-height: 1.5;
+    text-decoration: none;
+    color: #a7a7ab;
+
+    @include media-breakpoint-down(xl) {
+      font-size: 8px;
+      line-height: 1.25;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $violet;
+    }
+
+    &:after {
+      margin-left: 16px;
+      display: block;
+      width: 60px;
+      height: 24px;
+      content: '';
+      background: url(../img/news-list-arrow.svg) no-repeat center;
+      background-size: contain;
+
+      @include media-breakpoint-down(xl) {
+        margin-left: 16px;
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        background: url(../img/events-link-arrow.svg) no-repeat center;
+        background-size: contain;
+      }
+    }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    top: -60px;
+    width: 32px;
+    height: 32px;
+    font-size: 0;
+    background: url(../img/slider-arrow-black.svg) no-repeat center;
+    border: 1px solid $dark-new;
+    border-radius: 50%;
+
+    @include media-breakpoint-down(xl) {
+      top: -40px;
+      width: 24px;
+      height: 24px;
+      background-position: 7px center;
+      background-size: 30%;
+    }
+
+    &.slick-prev {
+      right: 60px;
+    }
+
+    &.slick-next {
+      right: 0;
+      transform: rotate(180deg);
+    }
+  }
+
+  &--page {
+
+    .container {
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+      max-width: none !important;
+    }
+  }
+
+  &--database {
+    margin: 72px 0;
+    padding-top: 72px;
+    border-top: 1px solid #acadcc;
+
+    @include media-breakpoint-down(xl) {
+      margin: 32px 0;
+      padding-top: 32px;
+    }
+
+    &:last-child {
+      padding-bottom: 72px;
+      border-bottom: 1px solid #acadcc;
+
+      @include media-breakpoint-down(md) {
+        padding-bottom: 32px;
+      }
+    }
+
+    .slick-arrow {
+      top: 4px;
+
+      @include media-breakpoint-down(xl) {
+        top: 0;
+      }
+
+      &.slick-prev {
+        right: 60px;
+      }
+    }
+
+    .news-list__slider {
+      position: static;
+    }
+
+    .container {
+      position: relative;
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+      max-width: none !important;
+    }
+
+    .news-card {
+      padding: 34px 0 0;
+      border-top: 0;
+      border-bottom: 0;
+    }
+  }
+
+  &--alone {
+    padding-bottom: 72px;
+    border-bottom: 1px solid #acadcc;
+
+    @include media-breakpoint-down(xl) {
+      padding-bottom: 32px;
+    }
+  }
+}

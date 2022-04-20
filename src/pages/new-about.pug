@@ -1,0 +1,63 @@
+extends ../templates/template.pug
+block content
+  +header
+  .wrapper
+    .about
+      .about__top
+        .container.container--new
+          +crumbs({
+            links: ['О проекте']
+          }).crumbs--light.mb-35
+          .row
+            .col-xl-7
+              h2.sm-new.fw-medium.text-white.mb-0 Национальный портал по искусственному интеллекту
+      .about__content
+        .container.container--new
+          .row
+            .col-xl-5
+              .article.mt-0
+                .pe-xl-50.mb-30.mb-xl-70
+                  p.md.mb-0 Миссия портала — объединить опыт и знания в области искусственного интеллекта. Ресурс является основной площадкой для диалога между разработчиками ИИ, потребителями «больших данных» и государством. На сайте собрана самая актуальная информация о технологиях и механизмах развития сферы ИИ, ее правовом регулировании, а также экспертном сообществе
+                h3.md.mb-30 Редакция Национального портала по искусственному интеллекту
+                a.article__contact.article__contact--dark.article__contact--phone(href="tel:+74956658899") +7 495 665 88 99
+                a.article__contact.article__contact--dark.article__contact--email(href="mailto:mail@ainavigator.com") mail@ainavigator.com
+            .col-xl-6.offset-xl-1
+              h3.md.page__subheader Задачи портала:
+              .row
+                .col-sm-4
+                  +activity({
+                    dot: 1,
+                    title: 'Является проводником в экосистему ИИ для граждан'
+                  })
+                .col-sm-4
+                  +activity({
+                    dot: 2,
+                    title: 'Показывает всю картину развития ИИ в России'
+                  })
+                .col-sm-4
+                  +activity({
+                    dot: 3,
+                    title: 'Открывает для каждого участника его собственный путь в сферу ИИ'
+                  })
+                .col-sm-4
+                  +activity({
+                    dot: 4,
+                    title: 'Обеспечивает коммуникацию для сообщества специалистов'
+                  })
+                .col-sm-4
+                  +activity({
+                    dot: 5,
+                    title: 'Помогает получить поддержку бизнесу, разработчикам ИИ, ученым, студентам'
+                  })
+                .col-sm-4
+                  +activity({
+                    dot: 5,
+                    title: 'Отслеживает все изменения законодательной базы в области ИИ'
+                  })
+                .col-sm-4
+                  +activity({
+                    dot: 5,
+                    title: 'Анализирует стремительно меняющуюся сферу ИИ в режиме реального времени'
+                  })
+          +new-quote
+  +footer

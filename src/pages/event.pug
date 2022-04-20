@@ -1,0 +1,41 @@
+extends ../templates/template.pug
+block content
+  +header.header--static
+  .container
+    +back
+    .article
+      .row
+        .col-lg-7
+          .article__header
+            h3.mb-25 Прикладные кейсы использования технологий машинного обучения в реальных бизнес кейсах внешних Заказчиков
+            p.lg.fw-semibold Чебоксары, Ледовый Дворец «Чебоксары-Арена», ул. Чапаева, 19
+            .article__header-info.mb-35
+              .p.article__header-info-text 30 октября, 13:00 
+            .article__tags-wrapper.article__header-tags
+              a.tag.article__tag(href="#") #Студентам
+              a.tag.article__tag(href="#") #Сбер
+              a.tag.article__tag(href="#") #Smart City
+            .row
+              .col-lg-5
+                a.btn.btn-primary.btn-md.py-15.w-100(href="#") Зарегистрироваться
+          .article__content
+            img.d-block.d-lg-none.mb-30(src="./img/article-5.jpg", alt)
+            p Основные направления кейсов: банковские кейсы, кейсы для ритейл-индустрии, производство, анализ медицинских данных, работа с текстами, диалоговые системы, голосовые боты. Основные направления прикладных разработок в области ИИ: разработка прогностических моделей, рекомендательных моделей; разработка моделей по работе с изображениями, разработка моделей по работе с текстами, НИРы и НИОКРы на стыке разных технологий.
+          +auth({
+            type: 'custom',
+            header: 'Поделиться',
+            socials: ['vk', 'fb', 'go', 'vk', 'fb', 'go']
+          }).mt-40.mt-xl-60
+        .col-lg-5
+          .article__aside
+            img.article__aside-picture.mb-30.mb-xl-45(src="./img/article-5.jpg", alt)
+            h5.mb-30 Спикеры:
+            +person({
+              picture: 'person-1.jpg',
+              name: 'Роберт Васильев'
+            })    
+            +person({
+              picture: 'person-2.jpg',
+              name: 'Игорь Ольгов'
+            })         
+  +footer

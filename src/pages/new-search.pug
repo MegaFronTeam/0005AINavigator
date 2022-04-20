@@ -1,0 +1,29 @@
+extends ../templates/template.pug
+block content
+  +header
+  .wrapper
+    .container.container--new
+      .results
+        h3.md.fw-medium.mb-35 Результаты поиска
+        .results__controls
+          +sorting({
+            btns: ['По релевантности', 'По дате']
+          }).sorting--new.results__sorting
+          +search.search--inner.results__search
+        p.fw-semibold.mb-30.mb-xl-50 Найдено: 10
+        .results__findings
+          +finding({
+            title: 'Мониторинг СМИ 15.01-21.01',
+            dscr: 'Анализ СМИ в сфере <b>искусственного</b> интеллекта за неделю.',
+            date: '24.01.2022'
+          })
+          +finding({
+            title: 'Совет федерации поручил Министерствам разработать меры по защите прав граждан при применении <b>искусственного</b> интеллекта',
+            date: '21.01.2022'
+          })
+          +finding({
+            title: 'Мониторинг информационных источников по <b>искусственному</b> интеллекту за декабрь',
+            dscr: 'Анализ СМИ в сфере <b>искусственного</b> интеллекта за декабрь. Топ-10 новостей мессяца Тренд месяца Главная новость месяца Положительное/отрицательное событие месяца ...',
+            date: '19.01.2022'
+          })
+  +footer

@@ -1,0 +1,63 @@
+extends ../templates/template.pug
+block content
+  +header.header--static.mb-40.mb-xl-65
+  .overflow-hidden
+    .container
+      h2.mb-35 Мероприятия
+      +filters
+      .mb-40.mb-xl-55.mt-100
+        .slider
+          .slider__content
+            +item({
+              picture: 'item-1.jpg'
+            }).slider__item
+            +item({
+              picture: 'item-2.jpg'
+            }).slider__item
+            +item({
+              picture: 'item-3.jpg'
+            }).slider__item
+            +item({
+              picture: 'item-1.jpg'
+            }).slider__item
+      .mb-40.mb-xl-100
+        h3.fw-light.mb-60.mb-xl-100 Отчеты о прошедших мероприятиях
+        .slider
+          .slider__content
+            +card({
+              picture: 'card-5.jpg',
+              type: 'short'
+            })
+            +card({
+              picture: 'card-6.jpg',
+              type: 'short'
+            })
+            +card({
+              picture: 'card-7.jpg',
+              type: 'short'
+            })
+            +card({
+              picture: 'card-8.jpg',
+              type: 'short'
+            })
+      .mb-40.mb-xl-100
+        h3.fw-light.mb-30 Победители конкурсов
+        .slider
+          .slider__content
+            +winner({
+              picture: 'person-1.jpg',
+              name: 'Викторов Игорь Валентинович'
+            }).slider__item
+            +winner({
+              picture: 'person-2.jpg',
+              name: 'Колобородьков Антон Станиславович'
+            }).slider__item
+            +winner({
+              picture: 'person-1.jpg',
+              name: 'Викторов Игорь Валентинович'
+            }).slider__item
+            +winner({
+              picture: 'person-2.jpg',
+              name: 'Викторов Игорь Валентинович'
+            }).slider__item
+  +footer

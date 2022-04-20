@@ -1,0 +1,13 @@
+mixin video(data)
+  .video&attributes(attributes)
+    a.video__link(href="#" + data.id data-fancybox)
+      .video__picture
+        img.video__picture-img(src="./img/" + data.picture, alt)
+      .video__content
+        p.video__title Российские поезда оснастят искусственным интеллектом в 2022 году
+        p.video__time 16:00
+      if data && data.source
+        +modal({
+          type: 'source',
+          source: data.source
+        }).modal--video.js-video(id=data.id, data-source=data.source)

@@ -1,0 +1,345 @@
+mixin modal(data)
+  .modal&attributes(attributes)
+
+  
+    if data && data.type == 'uni'
+      .modal__university.modal__university--new
+        .modal__university-content
+          .modal__university-top
+            h3.modal__university-title Исследовательский центр в сфере искусственного интеллекта
+            .modal__university-logo
+              img.modal__university-logo-img(src="./img/uni-1.svg", alt)
+          .modal__university-article
+            p Исследовательский центр реализует проект «Искусственный интеллект для оптимизации  управленческих решений в целях снижения углеродного следа». 
+            p Проект ставит своей целью создание программного обеспечения на базе технологий сильного ИИ для воспроизведения творческих профессиональных функций отраслевого специалиста для разработки решений, обеспечивающих процессы цифровой трансформации и интеллектуализации промышленных производств.
+            p Потенциальными потребителями решений являются промышленные организации реального сектора экономики.
+            p Ключевым партнером по внедрению является ПАО «Газпром нефть», поэтому одной из ключевых задач Центра является интегрированное планирование разработки и обустройства нефтегазовых месторождений.
+            h5 Мониторинг и моделирование углеродного следа и загрязнений окружающей среды предполагают:
+            ul
+              li Консолидацию мультимодальных данных для построения предиктивных моделей;
+              li Моделирование сложных физических и социально-экономических явлений;
+              li Разработку нового класса энергоэффективных и высокопроизводительных моделей.
+            p Стратегическими партнерами Центра являются «Сбер», «Яндекс», ПАО «Газпром нефть» и CityAir. 
+            p Программы сотрудничества Центра с компаниями-партнерами подразумевают создание программного обеспечения  для оценки качества атмосферного воздуха, оптимизации управленческих решений в сфере нефтедобычи, анализа рисков, создаваемых климатическими изменениями и уточнение прогнозов погоды.
+          .modal__results
+            h4.modal__results-header Плановые результаты 2021 года
+            .modal__result-wrapper
+              .modal__result
+                .modal__result-number 7
+                .modal__result-content сформированных и проведенных курса лекций и семинаров по тематике центра;
+              .modal__result
+                .modal__result-number 8
+                .modal__result-content аспирантов, являющихся сотрудниками центра;
+              .modal__result
+                .modal__result-number 3
+                .modal__result-content привлеченных индустриальных партнера
+        .modal__university-info
+          .modal__university-photo
+            img.modal__university-photo-img(src="./img/rector-new.jpg", alt)
+          .modal__university-info-content
+            p.modal__university-position Ректор:
+            p.modal__university-name Кулешов Александр Петрович
+            .modal__university-role Академик РАН, доктор технических наук, профессор
+            a.modal__university-link(href="#") https://www.skoltech.ru
+            
+    else if data && data.type == 'uni-center'
+      .modal__university.modal__university--new
+        .modal__university-content
+          .modal__university-top
+            h3.modal__university-title Исследовательский центр в сфере искусственного интеллекта
+            .modal__university-logo
+              img.modal__university-logo-img(src="./img/uni-1.svg", alt)
+          p.xs.text-gray-lightest.mb-15 Даты проведения: 
+            span.text-dark 10.08.2022 — 12.08.2022 
+          p.xs.text-gray-lightest.mb-15 Прием заявок до: 
+            span.text-dark 10.08.2022
+          .modal__tags-wrapper
+            .tag.tag--color.tag--color-static Онлайн
+            .tag.tag--color.tag--color-static Хакатон
+          .modal__tags-wrapper
+            .tag.tag--new.tag--light-new Прикладной ИИ
+            .tag.tag--new.tag--light-new Алгоритмы и струкутура данных
+            .tag.tag--new.tag--light-new Обработка и анализ данных
+          .modal__facts
+            .row
+              .col-xl-4.d-flex
+                +fact({
+                  number: '40',
+                  title: 'Бюджетных мест'
+                }).fact--new
+              .col-xl-4.d-flex
+                +fact({
+                  number: '10',
+                  title: 'контрактный мест'
+                }).fact--new
+              .col-xl-4.d-flex
+                +fact({
+                  number: '2',
+                  title: 'года обучения'
+                }).fact--new
+          .modal__facts
+            +fact({
+              number: '40 000 0000 Р',
+              title: 'Призовой фонд'
+            }).fact--new
+          .modal__university-article
+            p Исследовательский центр реализует проект «Искусственный интеллект для оптимизации  управленческих решений в целях снижения углеродного следа». 
+            p Проект ставит своей целью создание программного обеспечения на базе технологий сильного ИИ для воспроизведения творческих профессиональных функций отраслевого специалиста для разработки решений, обеспечивающих процессы цифровой трансформации и интеллектуализации промышленных производств.
+            p Потенциальными потребителями решений являются промышленные организации реального сектора экономики.
+            p Ключевым партнером по внедрению является ПАО «Газпром нефть», поэтому одной из ключевых задач Центра является интегрированное планирование разработки и обустройства нефтегазовых месторождений.
+            h5 Мониторинг и моделирование углеродного следа и загрязнений окружающей среды предполагают:
+            ul
+              li Консолидацию мультимодальных данных для построения предиктивных моделей;
+              li Моделирование сложных физических и социально-экономических явлений;
+              li Разработку нового класса энергоэффективных и высокопроизводительных моделей.
+            p Стратегическими партнерами Центра являются «Сбер», «Яндекс», ПАО «Газпром нефть» и CityAir. 
+            p Программы сотрудничества Центра с компаниями-партнерами подразумевают создание программного обеспечения  для оценки качества атмосферного воздуха, оптимизации управленческих решений в сфере нефтедобычи, анализа рисков, создаваемых климатическими изменениями и уточнение прогнозов погоды.
+          .modal__results
+            h4.modal__results-header Плановые результаты 2021 года
+            .modal__result-wrapper
+              .modal__result
+                .modal__result-number 7
+                .modal__result-content сформированных и проведенных курса лекций и семинаров по тематике центра;
+              .modal__result
+                .modal__result-number 8
+                .modal__result-content аспирантов, являющихся сотрудниками центра;
+              .modal__result
+                .modal__result-number 3
+                .modal__result-content привлеченных индустриальных партнера
+        .modal__university-info
+          .modal__university-photo
+            img.modal__university-photo-img(src="./img/rector-new.jpg", alt)
+          .modal__university-info-content
+            p.modal__university-position Ректор:
+            p.modal__university-name Кулешов Александр Петрович
+            .modal__university-role Академик РАН, доктор технических наук, профессор
+            p.xs.fw-semibold.mb-10 Контакты:
+            p.xs.mb-25 Г. Москва, ул. Строителей, д65 <br>+7 495 899-88-88 <br>fcccs@frcsd.ru
+            a.modal__university-link(href="#") https://www.skoltech.ru
+            +socials({
+              items: ['vk', 'tw', 'tg', 'wa', 'dc', 'yt']
+            }).mt-25
+
+  
+    else if data && data.type == 'video'
+      .modal__video
+        video.modal__video-content(loop='' controls)
+          source(src='./img/ai.webm' type='video/webm')
+          source(src='./img/ai.mp4' type='video/mp4')
+        //iframe.modal__video-frame(src='https://rutube.ru/play/embed/aecf76343d0ef4d44d9dbf96cdbb8e2c' frameborder='0' allow='clipboard-write' webkitallowfullscreen='' mozallowfullscreen='' allowfullscreen='')
+
+  
+    else if data && data.type == 'source'
+      .modal__video
+        //iframe.modal__video-frame(src='https://rutube.ru/play/embed/aecf76343d0ef4d44d9dbf96cdbb8e2c' frameborder='0' allow='clipboard-write' webkitallowfullscreen='' mozallowfullscreen='' allowfullscreen='')
+
+  
+    else if data && data.type == 'iframe'
+      .modal__video.modal__video--iframe
+        iframe.modal__video-frame(src='https://rutube.ru/play/embed/aecf76343d0ef4d44d9dbf96cdbb8e2c' frameborder='0' allow='clipboard-write' webkitallowfullscreen='' mozallowfullscreen='' allowfullscreen='')
+  
+    else if data && data.type == 'university'
+      .modal__university.modal__university--new
+        .modal__university-content
+          .modal__university-logo
+            img.modal__university-logo-img(src="./img/uni-2.png", alt)
+          p.lh-lg.text-gray Открытая лаборатория искусственного интеллекта основана в декабре 2015 года и является подразделением Центра компетенций НТИ на базе МФТИ по направлению «Искусственный интеллект».
+          p.lh-lg.text-gray Основными направлениями развития Лаборатории являются разработка образовательных программ в области искусственного интеллекта, машинного обучения и нейротехнологий, а также исследования в области человеко-машинных интерфейсов на основе биосигналов человека.
+          p.lh-lg.text-gray Целью конференции является анализ российского и международного опыта и выработка рекомендаций по внедрению самых передовых образовательных технологий в процесс подготовки высококвалифицированных специалистов, отвечающих актуальным отраслевым требованиям.
+        .modal__university-info
+          .modal__university-photo
+            img.modal__university-photo-img(src="./img/rector.jpg", alt)
+          .modal__university-info-content
+            p.xs.text-black.fw-semibold Ректор:
+            p.lh-lg.fw-semibold.text-black.mb-10 Дмитрий Викторович Ливанов
+            .modal__university-role Доктор физико-математических наук
+            a.modal__university-link.modal__aside-link(href="#") aimipt.com
+  
+    else if data && data.type == 'education'
+      .modal__wrapper
+        .modal__content
+          h3.mb-15 ИТМО / Программирование и искуссивенный интелект
+          p.xs.text-gray-lightest.mb-15 Формат обучения: 
+            span.text-dark Магистратура
+          .modal__tags
+            a.tag.tag--light(href="#") Прикладной ИИ
+            a.tag.tag--light(href="#") Алгоритмы и струкутура данных
+            a.tag.tag--light(href="#") Обработка и анализ данных
+            a.tag.tag--light(href="#") Криптография
+          .modal__facts
+            .row
+              .col-xl-4
+                +fact({
+                  number: '40',
+                  title: 'Бюджетных мест'
+                })
+              .col-xl-4
+                +fact({
+                  number: '10',
+                  title: 'контрактный мест'
+                })
+              .col-xl-4
+                +fact({
+                  number: '2',
+                  title: 'года обучения'
+                })
+          .modal__article
+            p Открытая лаборатория искусственного интеллекта основана в декабре 2015 года и является подразделением Центра компетенций НТИ на базе МФТИ по направлению «Искусственный интеллект».
+            p Основными направлениями развития Лаборатории являются разработка образовательных программ в области искусственного интеллекта, машинного обучения и нейротехнологий, а также исследования в области человеко-машинных интерфейсов на основе биосигналов человека.
+            h4 Дисциплины
+            ul
+              li Искусственный интеллект – это свойство интеллектуальной системы
+              li Выполнять те функции и задачи, которые обычно характерны существ
+              li Это может быть проявление каких-то творческих способностей
+              li Склонность к рассуждению, обобщение, обучение на основании полученного 
+        .modal__aside
+          .modal__logo
+            img.modal__logo-img(src="./img/modal-logo-1.png", alt)
+          p.xs.fw-semibold.mb-10 Адрес ВУЗа:
+          p.sm.mb-25 Г. Москва, ул. Строителей, д65
+          .modal__photo
+            img.modal__photo-picture(src="./img/rector.jpg", alt)
+          p.xs.text-gray-lightest.mb-10 Ректор ИТМО
+          p.xs.mb-10 
+            span.fw-semibold Сайт: 
+            a.text-decoration-none.modal__aside-link(href="aimipt.com") aimipt.com
+          p.fw-semibold Владимир Николаевич Васильев
+          .modal__socials
+            p.xs.fw-semibold.me-10.mb-0.modal__socials-header Соц. сети:
+            +socials({
+              items: ['vk', 'ig', 'tw', 'tg', 'wa', 'dc', 'fb', 'yt']
+            })
+  
+    else if data && data.type == 'event'
+      .modal__wrapper
+        .modal__content
+          h3.mb-15 Название мероприятия
+          p.xs.text-gray-lightest.mb-15 Даты проведения: 
+            span.text-dark 10.08.2022 — 12.08.2022 
+          p.xs.text-gray-lightest.mb-15 Прием заявок до: 
+            span.text-dark 10.08.2022
+          .modal__tags
+            a.tag.tag--gradient(href="#") Онлайн
+            a.tag.tag--gradient(href="#") Хакатон
+          .modal__tags
+            a.tag.tag--light(href="#") Распознавание речи
+            a.tag.tag--light(href="#") Распознавание речи
+            a.tag.tag--light(href="#") Компьютерное зрение
+          .modal__facts
+            +fact({
+              number: '40 000 0000 Р',
+              title: 'Призовой фонд'
+            })
+          .modal__article
+            p Открытая лаборатория искусственного интеллекта основана в декабре 2015 года и является подразделением Центра компетенций НТИ на базе МФТИ по направлению «Искусственный интеллект».
+            p Основными направлениями развития Лаборатории являются разработка образовательных программ в области искусственного интеллекта, машинного обучения и нейротехнологий, а также исследования в области человеко-машинных интерфейсов на основе биосигналов человека.
+            h4 Кейсы
+            ul
+              li Кейс 1
+              li Кейс следующий с описанием
+              li Второй кейс
+          h4 Партнеры
+          .modal__partners-list
+            a.modal__partner(href="#")
+              img.modal__partner-img(src="./img/modal-partner-1.png", alt)
+            a.modal__partner(href="#")
+              img.modal__partner-img(src="./img/modal-partner-2.png", alt)
+            a.modal__partner(href="#")
+              img.modal__partner-img(src="./img/modal-partner-3.png", alt)
+        .modal__aside
+          .modal__logo
+            img.modal__logo-img(src="./img/modal-logo-2.svg", alt)
+          p.xs.fw-semibold.mb-10 Адрес проведения:
+          p.sm.mb-25 Г. Москва, ул. Строителей, д65
+          p.xs.mb-10 
+            span.fw-semibold Сайт: 
+            a.text-decoration-none.modal__aside-link(href="aimipt.com") aimipt.com
+          .modal__socials
+            p.xs.fw-semibold.modal__socials-header Соц. сети:
+            +socials({
+              items: ['vk', 'ig']
+            })
+  
+    else if data && data.type == 'research'
+      .modal__wrapper
+        .modal__content
+          h3.mb-15 Институт проблем искусственного интелекта на базе ФИЦ ИУ РАН
+          .modal__tags
+            a.tag.tag--light(href="#") Прикладной ИИ
+            a.tag.tag--light(href="#") Алгоритмы и струкутура данных
+            a.tag.tag--light(href="#") Обработка и анализ данных
+            a.tag.tag--light(href="#") Криптография
+          .modal__article
+            p Открытая лаборатория искусственного интеллекта основана в декабре 2015 года и является подразделением Центра компетенций НТИ на базе МФТИ по направлению «Искусственный интеллект».
+            p Основными направлениями развития Лаборатории являются разработка образовательных программ в области искусственного интеллекта, машинного обучения и нейротехнологий, а также исследования в области человеко-машинных интерфейсов на основе биосигналов человека.
+            h4 Направление деятельности
+            ul
+              li Искусственный интеллект – это свойство интеллектуальной системы
+              li Выполнять те функции и задачи, которые обычно характерны существ
+              li Это может быть проявление каких-то творческих способностей
+              li Склонность к рассуждению, обобщение, обучение на основании полученного 
+            h4 Проекты
+            ul
+              li Искусственный интеллект – это свойство интеллектуальной системы
+              li Выполнять те функции и задачи, которые обычно характерны существ
+              li Это может быть проявление каких-то творческих способностей
+              li Склонность к рассуждению, обобщение, обучение на основании полученного 
+          h4 Партнеры
+          .modal__partners-list
+            a.modal__partner(href="#")
+              img.modal__partner-img(src="./img/modal-partner-1.png", alt)
+            a.modal__partner(href="#")
+              img.modal__partner-img(src="./img/modal-partner-2.png", alt)
+            a.modal__partner(href="#")
+              img.modal__partner-img(src="./img/modal-partner-3.png", alt)
+        .modal__aside
+          .modal__logo
+            img.modal__logo-img(src="./img/modal-logo-1.png", alt)
+          p.xs.fw-semibold.mb-10 Контакты:
+          p.sm.mb-25 Г. Москва, ул. Строителей, д65 <br>+7 495 899-88-88 <br>fcccs@frcsd.ru
+          .modal__photo
+            img.modal__photo-picture(src="./img/modal-photo-2.jpg", alt)
+          p.xs.text-gray-lightest.mb-10 Руководитель
+          p.mb-25 Григорьев Олег Григориевич
+          p.xs.mb-10 
+            span.fw-semibold Сайт: 
+            a.text-decoration-none.modal__aside-link(href="aimipt.com") aimipt.com
+          .modal__socials
+            p.xs.fw-semibold.me-10.mb-0.modal__socials-header Соц. сети:
+            +socials({
+              items: ['vk', 'ig', 'tw', 'tg', 'wa', 'dc', 'fb', 'yt']
+            })
+        
+    else
+      .modal__form
+        h4.mob-lg.modal__title.mb-20.mb-lg-35 Задайте ваш вопрос
+        form.form(action="#", method="post", autocomplete="off")
+          .form__item.form__item--new.form-group
+            p.xs.form-label.font-secondary.mb-5 Тема обращения*
+            +select({
+              placeholder: 'Выберите'
+            }).select--default.select--new
+          .form__item.form__item--new.form-group
+            p.xs.form-label.font-secondary.mb-5 Имя
+            input.input.form-control(type="text", placeholder="Введите", autocomplete="off")
+          .form__item.form__item--new.form-group
+            p.xs.form-label.font-secondary.mb-5 Фамилия
+            input.input.form-control(type="text", placeholder="Введите", autocomplete="off")
+          .form__item.form__item--new.form-group
+            p.xs.form-label.font-secondary.mb-5 E-mail
+            input.input.form-control(type="email", placeholder="Введите", autocomplete="off")
+          .form__item.form__item--new.form-group
+            p.xs.form-label.font-secondary.mb-5 Место работы
+            input.input.form-control(type="text", placeholder="Введите", autocomplete="off")
+          .form__item.form__item--new.form-group
+            p.xs.form-label.font-secondary.mb-5 Должность
+            input.input.form-control(type="text", placeholder="Введите", autocomplete="off")
+          .form__item.form__item--new.form-group
+            p.xs.form-label.font-secondary.mb-5 Сообщение*
+            textarea.input.input--textarea.form-control(autocomplete="off", placeholder="Введите")
+          .form__footer
+            button.btn.btn-primary.btn-lg.btn-violet.form__footer-btn(type="submit") Отправить
+            .form-check.form-check--new.mb-0
+              input#check1.form-check-input(type='checkbox' checked value='')
+              label.form-check-label(for='check1') Я согласен 
+                a(href="https://www.scienceid.net/agreement", target="_blank") с политикой обработки персональных данных

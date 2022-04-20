@@ -1,0 +1,494 @@
+.form {
+
+  &__item {
+    margin-bottom: 32px;
+    width: 100%;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 16px;
+    }
+
+    &--calendar {
+      // Default Datepicker
+
+      .ui-datepicker.ui-widget-content {
+        padding: 25px 30px 7px;
+        width: 100%;
+        max-width: 320px;
+        background: #fff;
+        border: none;
+        border-radius: 0;
+
+        @include media-breakpoint-down(sm) {
+          max-width: none;
+        }
+      }
+
+      .ui-datepicker .ui-widget-header {
+        background: transparent;
+        border: solid #e4e4e4;
+        border-width: 0 0 1px;
+        border-radius: 0;
+      }
+
+      .ui-datepicker .ui-datepicker-header {
+        padding: 0 0 20px;
+      }
+
+      .ui-datepicker .ui-datepicker-prev span,
+      .ui-datepicker .ui-datepicker-next span {
+        display: none;
+      }
+
+      .ui-datepicker .ui-datepicker-prev,
+      .ui-datepicker .ui-datepicker-next {
+        top: 0;
+        left: 0;
+        width: 27px;
+        height: 27px;
+        color: transparent;
+        background-color: transparent;
+        border: 1px solid #d4d4d4;
+        border-radius: 20px;
+        cursor: pointer;
+
+        &:after {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          width: 9px;
+          height: 7px;
+          content: '';
+          background: url(../img/datepicker-arrow.svg) no-repeat;
+        }
+      }
+
+      .ui-datepicker .ui-datepicker-next {
+        right: 0;
+        left: auto;
+
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+
+      .ui-datepicker th {
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: lowercase;
+        color: #1e1e1e;
+      }
+
+      .ui-state-default,
+      .ui-widget-content .ui-state-default {
+        padding: 0;
+        width: 35px;
+        height: 35px;
+        font-size: 13px;
+        line-height: 35px;
+        font-weight: 400;
+        text-align: center;
+        color: #787878;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+      }
+
+      .ui-state-disabled,
+      .ui-widget-content .ui-state-disabled,
+      .ui-widget-header .ui-state-disabled {
+        opacity: 1;
+        cursor: default;
+      }
+
+      .ui-state-disabled,
+      .ui-state-disabled .ui-state-default {
+        opacity: 1;
+        color: #c0c0c0;
+      }
+
+      .ui-state-default.ui-state-active {
+        color: #fff;
+        background-color: $primary;
+        border-radius: 30px;
+      }
+
+      .ui-datepicker-year {
+        display: none;
+      }
+
+      ::-webkit-scrollbar {
+
+        @include media-breakpoint-down(lg) {
+          width: 0;
+          height: 0;
+          background: transparent;
+        }
+      }
+    }
+
+    &--new {
+      margin-bottom: 32px !important;
+      padding: 8px 16px 0;
+      background: #f5f5f7;
+      border-radius: 8px;
+
+      p {
+        margin-bottom: 0 !important;
+      }
+
+      .input {
+        padding-left: 0;
+        height: 35px;
+        border: 0;
+
+        &:focus {
+          border: 0;
+          outline: none !important;
+        }
+
+        &--textarea {
+          padding-top: 0;
+          height: 139px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          font-weight: 400;
+        }
+      }
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 16px !important;
+      }
+    }
+
+    &--filter {
+      padding-right: 0;
+      padding-left: 0;
+
+      & > p {
+        padding: 0 16px;
+      }
+
+      .bx-filter-select-block {
+        padding: 0 16px;
+      }
+
+      .select2 + .select2-container.select2-container--open {
+        width: 100%;
+      }
+
+      .bx-filter-select-arrow {
+        background: #f5f5f7 url(/local/templates/ainav/img/main_page/select-arrow-dark.svg)
+          no-repeat top right 16px !important;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: flex-start;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column-reverse;
+    }
+
+    &--center {
+      align-items: center;
+    }
+  }
+
+  &__footer-btn {
+    margin-right: 32px;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 20px;
+      margin-right: 0;
+    }
+  }
+
+  &__buttons {
+    margin-bottom: 48px;
+  }
+
+  &__auth {
+    margin-bottom: 50px;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__photo {
+    max-width: 248px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__photo-content {
+    position: relative;
+    margin-bottom: 26px;
+    padding-top: 100%;
+    width: 100%;
+    background: rgba($primary, .1);
+    border-radius: 16px;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      font-size: 60px;
+      font-weight: 300;
+      text-align: center;
+      content: '+';
+      color: rgba($primary, .5);
+      border: 1px dashed rgba($primary, .3);
+      border-radius: 16px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__photo-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  &__photo-input {
+    display: none;
+  }
+
+  &__photo-link {
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    color: rgba($violet, .8);
+    cursor: pointer;
+
+    @include transition;
+
+    &:hover {
+      color: $violet;
+    }
+  }
+
+  &__photo-remove {
+    position: absolute;
+    z-index: 1;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    background: url(../img/form-remove.svg) no-repeat center;
+    background-size: contain;
+  }
+
+  &__btn {
+
+    &--mobile {
+      display: none;
+
+      @include media-breakpoint-down(lg) {
+        display: block;
+      }
+    }
+
+    &--desktop {
+
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+  }
+
+  &__file-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__file-input {
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+
+  &__file {
+    display: inline-flex;
+    align-items: center;
+    color: $violet;
+
+    &:before {
+      margin-right: 10px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      content: '';
+      background: url(../img/clip.png) no-repeat center;
+      background-size: contain;
+    }
+  }
+
+  &--dark {
+    position: relative;
+    padding: 40px;
+    color: $dark-new;
+    background: #f5f5f7;
+    border-radius: 8px;
+
+    @include media-breakpoint-down(xl) {
+      padding: 30px 20px;
+    }
+
+    //    &:before {
+    //      position: absolute;
+    //      top: 0;
+    //      left: 0;
+    //      display: block;
+    //      width: 100%;
+    //      height: 100%;
+    //      content: '';
+    //      background: url(../img/form-bg.jpg) no-repeat center;
+    //      background-size: cover;
+    //      mix-blend-mode: multiply;
+    //    }
+
+    .input {
+      font-weight: 400;
+      color: #fff;
+      border-color: rgba(#fff, .5);
+
+      @include placeholder(#a7a7ab);
+
+      &:focus {
+        border-color: #fff;
+      }
+
+      &--textarea {
+        height: 131px;
+      }
+    }
+
+    .form__item {
+
+      &--new {
+        background: #fff;
+      }
+    }
+
+    .form-check {
+
+      .form-check-label {
+        color: $dark-new;
+
+        a {
+          color: $violet;
+        }
+      }
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+      background: transparent url(../img/select-arrow-white.svg) no-repeat center left 5px;
+    }
+
+    .select--default .select2-container .select2-selection--single .select2-selection__rendered,
+    .select--default
+      .select2-container--default
+      .select2-selection--multiple
+      .select2-selection__rendered {
+      height: 43px;
+      color: #fff;
+    }
+
+    .select--default .select2-container .select2-selection--single,
+    .select--default .select2-container--default .select2-selection--multiple {
+      height: 43px;
+      border: 1px solid rgba(#fff, .5);
+    }
+
+    .select--default
+      .select2-container--default
+      .select2-selection--single
+      .select2-selection__placeholder {
+      color: rgba(#fff, .5);
+    }
+
+    .select2-container--default .select2-results > .select2-results__options li {
+      color: $dark;
+    }
+  }
+
+  &--light {
+
+    .form-label {
+      color: #fff;
+    }
+
+    .form__item {
+      margin-bottom: 16px;
+    }
+
+    .input {
+      border-color: #fff;
+
+      @include placeholder(rgba(#fff, .5));
+
+      &:focus {
+        border-color: #fff;
+      }
+
+      &--textarea {
+        height: 85px;
+      }
+    }
+
+    .form-check-input {
+      border-color: #fff;
+
+      &:checked {
+        border-color: #fff;
+      }
+    }
+
+    .form-check-label {
+      color: #fff;
+
+      a {
+        text-decoration: underline;
+        color: #fff;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &--validated {
+
+    .input {
+
+      &:invalid {
+        border-color: $danger;
+      }
+    }
+  }
+}

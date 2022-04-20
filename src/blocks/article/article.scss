@@ -1,0 +1,354 @@
+.article {
+  margin-top: 64px;
+  margin-bottom: 95px;
+
+  @include media-breakpoint-down(xl) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  &__header {
+  }
+
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__title-number {
+    margin-top: 15px;
+    margin-left: 10px;
+    display: flex;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+    background: $primary;
+    border-radius: 50%;
+
+    @include media-breakpoint-down(xl) {
+      margin-top: 0;
+    }
+  }
+
+  &__content {
+    margin-top: 55px;
+
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 40px;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-top: 32px;
+    }
+
+    img {
+      margin: 40px 0;
+      display: block;
+      max-width: 100%;
+      border-radius: 4px;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 30px;
+      }
+    }
+
+    p {
+      margin-bottom: 1.375em;
+      font-size: 16px;
+      line-height: 1.375;
+      color: rgba($gray, .8);
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 30px;
+      }
+    }
+
+    h3 {
+      margin-top: 40px;
+      margin-bottom: 24px;
+    }
+
+    h4 {
+      margin-top: 40px;
+      margin-bottom: 24px;
+    }
+
+    h5 {
+      margin-bottom: 24px;
+    }
+
+    .new-quote {
+      margin-bottom: 56px;
+    }
+
+    ul {
+      margin-bottom: 56px;
+      padding-left: 0;
+
+      li {
+        position: relative;
+        margin-bottom: 14px;
+        padding-left: 33px;
+        list-style: none;
+        font-size: 20px;
+        line-height: 1.6;
+        color: rgba(#333, .8);
+
+        @include media-breakpoint-down(xxxl) {
+          font-size: 18px;
+        }
+
+        @include media-breakpoint-down(xxl) {
+          padding-left: 25px;
+          font-size: 16px;
+        }
+
+        &:before {
+          position: absolute;
+          top: 12px;
+          left: 0;
+          margin-right: 25px;
+          display: block;
+          width: 8px;
+          height: 8px;
+          flex-shrink: 0;
+          content: '';
+          background: $primary;
+          border-radius: 50%;
+
+          @include media-breakpoint-down(xxxl) {
+            top: 9px;
+          }
+
+          @include media-breakpoint-down(xxl) {
+            top: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  &__tags-wrapper {
+  }
+
+  &__header-tags {
+    margin-bottom: 40px;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__content-tags {
+    margin-top: 58px;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 32px;
+    }
+  }
+
+  &__tag {
+  }
+
+  &__header-info {
+    margin-top: 24px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__header-info-text {
+    font-weight: 600;
+    color: rgba(#333, .8);
+
+    & + & {
+      margin-left: 24px;
+
+      &:before {
+        margin-right: 24px;
+        content: '|';
+      }
+    }
+
+    &--language {
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &--no-divider {
+
+      & + .article__header-info-text--no-divider {
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__links-wrapper {
+    margin-top: 40px;
+    margin-bottom: 56px;
+    padding-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-top: 1px solid #d9d9de;
+    border-bottom: 1px solid #d9d9de;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__link {
+    margin-right: 56px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgba($violet, .8);
+
+    @include transition;
+  }
+
+  &__docs {
+    margin-top: 50px;
+  }
+
+  &__aside {
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 40px;
+    }
+  }
+
+  &__aside-picture {
+    border-radius: 16px;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+
+    &--desktop {
+
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @include media-breakpoint-down(lg) {
+        display: block;
+      }
+    }
+  }
+
+  &__date {
+    margin-bottom: 24px;
+  }
+
+  &__contact {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    line-height: 1.41;
+    font-weight: 400;
+    text-decoration: none;
+    color: $violet;
+
+    @include media-breakpoint-down(xl) {
+      font-size: 20px;
+    }
+
+    &:before {
+      margin-right: 24px;
+      display: block;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      content: '';
+
+      @include media-breakpoint-down(xl) {
+        margin-right: 16px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &--phone {
+
+      &:before {
+        background: url(../img/article-phone.svg) no-repeat center;
+        background-size: contain;
+      }
+    }
+
+    &--email {
+
+      &:before {
+        background: url(../img/article-email.svg) no-repeat center;
+        background-size: contain;
+      }
+    }
+
+    &--dark {
+
+      &.article__contact {
+        font-size: 24px;
+        line-height: 1.2;
+        font-weight: 600;
+        letter-spacing: .04em;
+        color: #55556a;
+
+        @include media-breakpoint-down(xl) {
+          font-size: 12px;
+        }
+
+        &:before {
+          margin-right: 32px;
+          width: 16px;
+          height: 16px;
+
+          @include media-breakpoint-down(xl) {
+            margin-right: 16px;
+          }
+        }
+
+        &--phone {
+
+          &:before {
+            background: url(../img/article-dark-phone.svg) no-repeat center;
+            background-size: contain;
+          }
+        }
+
+        &--email {
+
+          &:before {
+            background: url(../img/article-dark-email.svg) no-repeat center;
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+}

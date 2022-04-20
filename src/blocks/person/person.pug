@@ -1,0 +1,7 @@
+mixin person(data)
+  .person&attributes(attributes)
+    .person__picture
+      img.person__picture-img(src="./img/" + data.picture, alt)
+    .person__content
+      p.lg-new.mb-10= data.name
+      p.person__dscr CEO, управляющий партнер, системный инженер, руководитель проектов

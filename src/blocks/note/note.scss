@@ -1,0 +1,67 @@
+.note {
+  padding: 32px;
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+  color: $dark;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+
+  @include transition;
+
+  @include media-breakpoint-down(lg) {
+    padding: 20px;
+  }
+
+  &:hover {
+    color: #fff;
+    background: $primary;
+
+    .note__title {
+      color: #fff;
+    }
+  }
+
+  &__title {
+    text-decoration: none;
+
+    @include transition;
+  }
+
+  &__author {
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__author-photo {
+    position: relative;
+    margin-right: 16px;
+    overflow: hidden;
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 50%;
+  }
+
+  &__author-photo-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  &__author-content {
+  }
+
+  &__author-role {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #888;
+  }
+}

@@ -1,0 +1,35 @@
+mixin navigator(data)
+  .navigator&attributes(attributes)
+    .container
+      h2.text-white.mb-0.mb-sm-50.mb-xxl-30.mb-xxxl-100 AI Навигатор
+      .row.navigator__features
+        .col-6.col-xl-4
+          +feature({
+            type: 'tech',
+            title: 'Технологии'
+          })
+        .col-6.col-xl-4
+          +feature({
+            type: 'eco',
+            title: 'Экосистемы'
+          })
+        .col-6.col-xl-4
+          +feature({
+            type: 'monitor',
+            title: 'AI Монитор'
+          })
+        .col-6.col-xl-4
+          +feature({
+            type: 'support',
+            title: 'Поддержка'
+          })
+        .col-6.col-xl-4
+          +feature({
+            type: 'regulations',
+            title: 'Регуляторика'
+          })
+        .col-6.col-xl-4
+          +feature({
+            type: 'project',
+            title: 'Федеральный проект'
+          })

@@ -1,0 +1,41 @@
+extends ../templates/template.pug
+block content
+  +header
+  .wrapper
+    .container.container--new
+      +crumbs({
+        links: ['Мероприятия', 'Прикладные кейсы использования технологий машинного обучения в реальных бизнес кейсах внешних Зак...']
+      }).mb-15.mb-xl-35
+      .article
+        .row
+          .col-lg-8
+            h3.md.fw-medium.mb-25 Прикладные кейсы использования технологий машинного обучения в реальных бизнес кейсах внешних Заказчиков
+            img.article__aside-picture.article__aside-picture--mobile.mb-30.mb-xl-50(src="./img/article-5.jpg", alt)
+            p.lg-new Чебоксары, Ледовый Дворец «Чебоксары-Арена», ул. Чапаева, 19
+            .article__date 30 октября, 13:00
+            .article__tags-wrapper.article__header-tags
+              a.tag.tag--new.tag--btn-active.article__tag(href="#") R&D
+              a.tag.tag--new.tag--btn-active.article__tag(href="#") Внедрение
+            a.btn.btn-primary.btn-violet.btn-lg(href="#") Зарегистрироваться
+            .row
+              .col-xl-10
+                .article__content
+                  p Основные направления кейсов: банковские кейсы, кейсы для ритейл-индустрии, производство, анализ медицинских данных, работа с текстами, диалоговые системы, голосовые боты. Основные направления прикладных разработок в области ИИ: разработка прогностических моделей, рекомендательных моделей; разработка моделей по работе с изображениями, разработка моделей по работе с текстами, НИРы и НИОКРы на стыке разных технологий. 
+                +auth({
+                  type: 'custom',
+                  header: 'Поделиться',
+                  socials: ['vk-new', 'tg-new', 'wa-new', 'dc-new']
+                }).mt-40.mt-xl-60
+          .col-lg-4
+            .article__aside
+              img.article__aside-picture.article__aside-picture--desktop.mb-30.mb-xl-50(src="./img/article-5.jpg", alt)
+              h5.mb-30 Спикеры:
+              +person({
+                picture: 'person-1.jpg',
+                name: 'Роберт Васильев'
+              })    
+              +person({
+                picture: 'person-2.jpg',
+                name: 'Игорь Ольгов'
+              })         
+  +footer

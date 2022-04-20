@@ -1,0 +1,88 @@
+extends ../templates/template.pug
+block content
+  +header.header--static.mb-0
+  .cabinet
+    .cabinet__top
+      .container
+        .cabinet__top-wrapper
+          .cabinet__top-left
+            .cabinet__picture
+              img.cabinet__picture-img(src="./img/cabinet-user.jpg", alt)
+            .cabinet__info-wrapper.cabinet__info-wrapper--wide
+              h3.text-white.mb-25 Виктор Владимирович Валидарский
+              .cabinet__info
+                .cabinet__info-item
+                  .p.text-white г. Стерлитамак
+                .cabinet__info-item
+                  .p.text-white 18 авг. 1988
+                .cabinet__info-item
+                  a.p.text-white(href="#") @VityaSterlitamak
+                .cabinet__info-item
+                  a.cabinet__social(href="#")
+                    img.cabinet__social-icon(src="./img/vk-white.svg", alt)
+                  a.cabinet__social(href="#")
+                    img.cabinet__social-icon(src="./img/fb-white.svg", alt)
+          .cabinet__top-right
+            .cabinet__top-right-links
+              a.p.sm.cabinet__link(href="#") Редактировать
+              a.p.sm.cabinet__link(href="#") Выйти из профиля
+            .cabinet__id 1233241569
+    .cabinet__content
+      .container
+        ul.nav.nav-tabs(role='tablist')
+          li.nav-item(role='presentation')
+            button#events-tab.nav-link.active(data-bs-toggle='tab' data-bs-target='#events' type='button' role='tab' aria-controls='events' aria-selected='true') Мои мероприятия
+          li.nav-item(role='presentation')
+            button#interests-tab.nav-link(data-bs-toggle='tab' data-bs-target='#interests' type='button' role='tab' aria-controls='interests' aria-selected='false') Мои интересы
+        .tab-content
+          #events.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='events-tab')
+            ul.nav.nav-tabs.nav-tabs--btns.my-35(role='tablist')
+              li.nav-item(role='presentation')
+                button#future-tab.nav-link.active(data-bs-toggle='tab' data-bs-target='#future' type='button' role='tab' aria-controls='future' aria-selected='true') Будущие
+              li.nav-item(role='presentation')
+                button#past-tab.nav-link(data-bs-toggle='tab' data-bs-target='#past' type='button' role='tab' aria-controls='past' aria-selected='false') Прошедшие
+            .tab-content
+              #future.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='future-tab')
+                .row
+                  .col-xl-4
+                    +item({
+                      picture: 'item-1.jpg',
+                      type: 'cabinet'
+                    })
+                  .col-xl-4
+                    +item({
+                      picture: 'item-3.jpg',
+                      type: 'cabinet'
+                    })
+                  .col-xl-4
+                    +item({
+                      picture: 'item-2.jpg',
+                      type: 'cabinet'
+                    })
+              #past.tab-pane.fade(role='tabpanel' aria-labelledby='past-tab') ...
+          #interests.tab-pane.fade(role='tabpanel' aria-labelledby='interests-tab')
+            .pt-35
+              .row
+                .col-xl-8
+                  h3.fw-light.mb-25 Название опроса
+                  p.lh-lg.mb-35 С вашей помощью этот сайт может стать еще полезнее. Расскажите о своих интересах, и мы подберем контент лично для вас.
+              .row
+                .col-xxl-3.col-lg-4.col-sm-6
+                  form.form(action="#", method="POST")
+                    .form__item.form-group
+                      p.xs.form-label.font-secondary.mb-5 Укажите вашу сферу деятельности?
+                      +select({
+                        placeholder: 'Выберите'
+                      }).select--default
+                    .form__item.form-group
+                      p.xs.form-label.font-secondary.mb-5 Какими технологиями ИИ вы интересуетесь? 
+                      +select({
+                        placeholder: 'Выберите'
+                      }).select--default
+                    .form__item.form-group
+                      p.xs.form-label.font-secondary.mb-5 Ваш уровень владения информацией
+                      +select({
+                        placeholder: 'Выберите'
+                      }).select--default
+                    button.btn.btn-primary.btn-md(type="submit") Отправить
+  +footer

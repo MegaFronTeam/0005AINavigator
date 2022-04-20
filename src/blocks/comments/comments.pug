@@ -1,0 +1,28 @@
+mixin comments(data)
+  .comments&attributes(attributes)
+    h3.fw-semibold.mb-30.mb-xl-50 Комментарии (35)
+    +comment({
+      name: 'Елена',
+      dscr: 'Циата в тексте для наглядности отображенмия Наука и практика анализа больших объемов данных с помощью всевозможных математических методов, в том числе машинного Рассмотрим работу ML на примере задачи банковского скоринга. Банк располагает данными о существующих клиентах. Ему известно, есть ли у кого-то просроченные платежи по кредитам. Задача — определить, будет ли новый потенциаль'
+    })
+    +comment({
+      name: 'lord_amotar',
+      dscr: '«Добрый день, на этапе «скопировать шаблон компонента в шаблон сайта и применить его» После применения копии шаблона на странице появляется ошибка: Can not find ‘news1′ template with page ‘news’» <br><br>Ребяяятки, Кто нибудь знает как это лечится? Та же самая проблема'
+    })
+    .row
+      .col-xl-9
+        form.form.comments__form(action="#", method="POST")
+          h5.mb-35 Оставить комментарий
+          .row
+            .col-xl-6
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Имя
+                input.input.form-control(type="text", required, placeholder="Введите")
+            .col-xl-6
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 E-mail
+                input.input.form-control(type="text", required, placeholder="Введите")
+          .form__item.form__item--new.form-group
+            p.xs.form-label.font-secondary.mb-5 Ваш комментарий
+            textarea.input.input--textarea.form-control(required, placeholder="Введите")
+          button.btn.btn-violet.btn-lg(type="submit") Отправить

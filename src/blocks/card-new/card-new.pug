@@ -1,0 +1,15 @@
+mixin card-new(data)
+  a.card-new(href="#")&attributes(attributes)
+    .card-new__picture
+      img.card-new__picture-img(src="./img/page-card-1.jpg", alt)
+    .card-new__date 17 арп 2022
+    if data && data.type == 'article'
+    else
+      .card-new__tags
+        .tag.tag--new.tag--btn-active R&D
+        .tag.tag--new.tag--btn-active Внедрение
+    p.card-new__dscr Ежегодное число российских научных публикаций по искусственному интеллекту выросло в 2,6 раза по сравнению с периодом 2011-2015 гг. [при среднемировом значении 1,3] 
+    if data && data.type == 'article'
+      .link-arrow.card-new__link Подробнее
+    else
+      .link-arrow.link-arrow--dark.card-new__link Подробно

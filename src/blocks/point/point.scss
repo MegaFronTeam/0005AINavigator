@@ -1,0 +1,107 @@
+.point {
+  background: #eaeaef;
+  border-radius: 16px;
+
+  &__item {
+    padding: 32px 32px 104px;
+
+    @include media-breakpoint-down(xl) {
+      padding: 16px 16px 80px;
+    }
+  }
+
+  &__item-number {
+    margin-bottom: 7px;
+    font-size: 24px;
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: .04em;
+    color: $dark-new;
+
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 27px;
+      font-size: 16px;
+      line-height: 1.4;
+      text-align: center;
+    }
+  }
+
+  &__item-wrapper {
+    margin: 0 auto;
+    display: flex;
+    max-width: 75%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @include media-breakpoint-down(md) {
+      max-width: none;
+    }
+  }
+
+  &__item-icon {
+    margin-bottom: 56px;
+    width: 100px;
+    height: 100px;
+
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 32px;
+      width: 56px;
+      height: 56px;
+    }
+  }
+
+  &__item-icon-img {
+  }
+
+  &__header {
+
+    @include media-breakpoint-down(xl) {
+      font-size: 16px;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    z-index: 2;
+    right: 32px;
+    bottom: 32px;
+    width: 32px;
+    height: 32px;
+    font-size: 0;
+    background: url(../img/slider-arrow-black.svg) no-repeat center;
+    border: 1px solid $dark-new;
+    border-radius: 50%;
+
+    @include media-breakpoint-down(xl) {
+      bottom: 20px;
+      width: 24px;
+      height: 24px;
+      background-position: 7px center;
+      background-size: 30%;
+    }
+
+    &.slick-prev {
+      right: 92px;
+
+      @include media-breakpoint-down(xl) {
+        right: auto;
+        left: calc(50% - 20px);
+        transform: translate(-50%);
+      }
+    }
+
+    &.slick-next {
+      right: 32px;
+      transform: rotate(180deg);
+
+      @include media-breakpoint-down(xl) {
+        right: auto;
+        left: calc(50% + 20px);
+        transform: translate(-50%) rotate(180deg);
+      }
+    }
+  }
+}

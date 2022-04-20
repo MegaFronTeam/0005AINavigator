@@ -1,0 +1,146 @@
+.events-list {
+  margin-bottom: 107px;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 48px;
+  }
+
+  &__top {
+  }
+
+  &__header {
+    min-height: 65px;
+    font-size: 36px;
+    line-height: 1.15;
+    font-weight: 500;
+    letter-spacing: .04em;
+    color: $dark-new;
+    border-bottom: 1px solid $secondary;
+
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      min-height: 0;
+      font-size: 20px;
+      line-height: 1.22;
+      letter-spacing: .04em;
+      border-bottom: 1px solid #d9d9de;
+    }
+
+    @include media-breakpoint-down(md) {
+      border-color: $secondary;
+    }
+  }
+
+  &__top-content {
+    margin-top: 277px;
+
+    @include media-breakpoint-down(xl) {
+      display: none;
+    }
+  }
+
+  &__dscr {
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: $dark-new;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    text-decoration: none;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+
+    @include media-breakpoint-down(xl) {
+      font-size: 8px;
+      line-height: 1.25;
+    }
+
+    &:after {
+      margin-left: 16px;
+      display: block;
+      width: 32px;
+      height: 32px;
+      content: '';
+      background: url(../img/events-link-arrow.svg) no-repeat center;
+      background-size: contain;
+      border-radius: 50%;
+
+      @include media-breakpoint-down(xl) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @include media-breakpoint-down(xl) {
+        display: flex;
+      }
+    }
+  }
+
+  &__slider {
+    position: relative;
+    display: flex;
+
+    .slick-arrow {
+      position: absolute;
+      top: 0;
+      width: 32px;
+      height: 32px;
+      font-size: 0;
+      background: url(../img/slider-arrow-black.svg) no-repeat center;
+      border: 1px solid $dark-new;
+      border-radius: 50%;
+
+      @include media-breakpoint-down(xl) {
+        top: -56px;
+        width: 24px;
+        height: 24px;
+        background-position: 7px center;
+        background-size: 30%;
+      }
+
+      @include media-breakpoint-down(md) {
+        top: 8px;
+      }
+
+      &.slick-prev {
+        right: 60px;
+
+        @include media-breakpoint-down(xl) {
+          right: 40px;
+        }
+      }
+
+      &.slick-next {
+        right: 0;
+        transform: rotate(180deg);
+      }
+    }
+
+    &:not(.slick-initialized) {
+      display: flex;
+      flex-wrap: wrap;
+
+      .event-item {
+        margin-bottom: 24px;
+        width: 25%;
+
+        @include media-breakpoint-down(xl) {
+          width: 50%;
+        }
+
+        @include media-breakpoint-down(md) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

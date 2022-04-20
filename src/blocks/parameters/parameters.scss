@@ -1,0 +1,18 @@
+.parameters {
+  margin-bottom: 24px;
+  padding: 56px 70px 67px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 43px rgba(0, 0, 0, .1);
+
+  @include media-breakpoint-down(xxl) {
+    padding: 32px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 20px;
+  }
+
+  &__header {
+  }
+}

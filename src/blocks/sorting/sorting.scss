@@ -1,0 +1,37 @@
+.sorting {
+  display: flex;
+
+  &__item {
+    padding: 13px 17px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+    text-decoration: none;
+    color: $gray;
+    background: #d9d9de;
+
+    @include transition;
+
+    &:first-child {
+      border-radius: 8px 0 0 8px;
+    }
+
+    &:last-child {
+      border-radius: 0 8px 8px 0;
+    }
+
+    &--active {
+      color: #fff;
+      background: $primary;
+    }
+  }
+
+  &--new {
+
+    .sorting__item--active {
+      background: $violet;
+    }
+  }
+}

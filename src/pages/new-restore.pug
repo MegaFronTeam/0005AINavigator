@@ -1,0 +1,21 @@
+extends ../templates/template.pug
+block content
+  +header
+  .wrapper
+    .container.container--new
+      +crumbs({
+        links: ['Авторизация', 'Восстановление пароля']
+      }).mb-15.mb-xl-35
+      .row
+        .col-xxl-4.col-md-5
+          h2.sm-new.fw-medium.mb-40 Востановление пароля
+          form.form(action="#", method="POST")
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Введите e-mail
+              input.input.form-control(type="email", placeholder="Ваш e-mail", autocomplete="off")
+            .row.mb-30
+              .col-xl-6
+                button.btn.btn-primary.btn-lg.btn-violet.w-100.px-10(type="submit") Сбросить пароль
+            p.sm.fw-semibold.mb-40.mb-xl-80 Вспомнили пароль? 
+              a.text-decoration-none.text-violet(href="#") Войти
+  +footer

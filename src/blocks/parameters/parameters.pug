@@ -1,0 +1,30 @@
+mixin parameters(data)
+  .parameters&attributes(attributes)
+    .parameters__header
+      h4.mb-40.mb-xxl-65 5 показателей эффективности ИИ
+    .row.flex-lg-nowrap.justify-content-center
+      .col-lg.col-md-4.col-6
+        +parameter({
+          icon: 'parameter-1.svg',
+          title: 'Скорость'
+        })
+      .col-lg.col-md-4.col-6
+        +parameter({
+          icon: 'parameter-2.svg',
+          title: 'Качество'
+        })
+      .col-lg.col-md-4.col-6
+        +parameter({
+          icon: 'parameter-3.svg',
+          title: 'Уровень персонализации'
+        })
+      .col-lg.col-md-4.col-6
+        +parameter({
+          icon: 'parameter-4.svg',
+          title: 'Экономическая эффективность'
+        })
+      .col-lg.col-md-4.col-6
+        +parameter({
+          icon: 'parameter-5.svg',
+          title: 'Объективность'
+        })

@@ -1,0 +1,9 @@
+mixin university(data)
+  .university&attributes(attributes)
+    .university__top
+      a.university__logo(href="#university", data-fancybox)
+        img.university__logo-img(src="./img/" + data.logo, alt)
+      a.p.university__title(href="#university", data-fancybox)= data.title
+      p.sm.university__address= data.address
+    .university__bottom
+      a.btn.btn-primary.btn-xs(href="#university", data-fancybox) подробнее...

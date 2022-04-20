@@ -1,0 +1,96 @@
+extends ../templates/template.pug
+block content
+  +header.header--static.mb-40.mb-xl-65
+  .overflow-hidden
+    .container
+      h2.mb-35 Медиацентр
+      +filters({
+        type: 'media'
+      }).mb-20
+      .mb-40.mb-xl-100
+        h3.mb-30 Новости
+        .row
+          .col-xl-10
+            .d-flex.flex-wrap.mb-30
+              .form-check.form-check--btn
+                input#check1.form-check-input(type='checkbox' checked value='')
+                label.form-check-label(for='check1') Разработки и исследования в области ИИ
+              .form-check.form-check--btn
+                input#check2.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check1') Инфраструктура ИИ
+              .form-check.form-check--btn
+                input#check3.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check1') Образование и кадры
+              .form-check.form-check--btn
+                input#check4.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check1') Инвестиционная активность
+              .form-check.form-check--btn
+                input#check5.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check1') Новости ФП ИИ
+              .form-check.form-check--btn
+                input#check6.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check1') Официальные сообщения
+              .form-check.form-check--btn
+                input#check7.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check1') Внедрение ИИ
+              .form-check.form-check--btn
+                input#check8.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check1') Тренды ИИ
+              .form-check.form-check--btn
+                input#check9.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check1') Для СМИ
+        .slider
+          .slider__content
+            +card({
+              picture: 'card-1.jpg',
+            }).slider__item
+            +card({
+              picture: 'card-2.jpg',
+            })
+            +card({
+              picture: 'card-3.jpg',
+            })
+        .d-flex.justify-content-center.mt-30.mt-xl-50
+          a.btn.btn-danger.btn-new(href="#") Показать еще
+      .mb-40.mb-xl-100
+        h3.mb-10.mb-xl-50 События
+        .slider.mt-0
+          .slider__content.slider__content--two.slider__content--overflow
+            +video({
+              picture: 'article-4.jpg',
+            }).slider__item
+            +video({
+              picture: 'card-1.jpg',
+            }).slider__item
+            +video({
+              picture: 'article-4.jpg',
+            }).slider__item
+            +video({
+              picture: 'card-1.jpg',
+            }).slider__item
+      .mb-40.mb-xl-100
+        h3.mb-60.mb-xl-100 Фото
+        .slider
+          .slider__content.slider__content--photo
+            +photo({
+              picture: 'photo-1.jpg',
+            }).slider__item
+            +photo({
+              picture: 'photo-2.jpg',
+            }).slider__item
+            +photo({
+              picture: 'photo-3.jpg',
+            }).slider__item
+            +photo({
+              picture: 'photo-1.jpg',
+            }).slider__item
+            +photo({
+              picture: 'photo-2.jpg',
+            }).slider__item
+            +photo({
+              picture: 'photo-3.jpg',
+            }).slider__item
+  +footer
+  +modal({
+    type: 'iframe'
+  }).modal--video#video

@@ -1,0 +1,19 @@
+mixin schedule(data)
+  .schedule&attributes(attributes)
+    .container
+      h2.mb-30.mb-xl-50 Календарь мероприятий
+      .schedule__wrapper
+        .schedule__header
+          .schedule__filters
+            .schedule__filters-item
+              +select({
+                placeholder: 'Все города'
+              })
+            .schedule__filters-item
+              +select({
+                placeholder: 'Организатор'
+              })
+          .schedule__view
+            a.schedule__view-btn.schedule__view-btn--active.schedule__view-btn--calendar(href="#")
+            a.schedule__view-btn.schedule__view-btn--table(href="#")
+        +calendar

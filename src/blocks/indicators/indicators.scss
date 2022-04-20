@@ -1,0 +1,145 @@
+.indicators {
+  margin-top: 56px;
+  margin-bottom: 36px;
+
+  @include media-breakpoint-down(xl) {
+    margin-top: 30px;
+  }
+
+  &__wrapper {
+
+    @include media-breakpoint-down(xl) {
+      margin-left: -16px;
+      overflow: auto;
+      width: calc(100% + 32px);
+    }
+  }
+
+  &__content {
+
+    @include media-breakpoint-down(xl) {
+      padding-right: 20px;
+      padding-left: 20px;
+      min-width: 1000px;
+    }
+
+    @include media-breakpoint-down(md) {
+      min-width: 700px;
+    }
+  }
+
+  &__header {
+    display: flex;
+  }
+
+  &__header-item {
+    padding: 17px 12px 17px 0;
+    display: flex;
+    align-items: flex-end;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #76767a;
+  }
+
+  &__number {
+    flex: 0 1 6.12%;
+  }
+
+  &__title {
+    padding-right: 106px !important;
+    flex: 0 1 44.88%;
+
+    @include media-breakpoint-down(xxl) {
+      padding-right: 24px !important;
+    }
+  }
+
+  &__current {
+    flex: 0 1 12.5%;
+  }
+
+  &__planned {
+    flex: 0 1 12.74%;
+  }
+
+  &__range {
+    flex: 0 1 15.89%;
+
+    @include media-breakpoint-down(xxl) {
+      flex: 0 1 12.89%;
+    }
+  }
+
+  &__dynamics {
+    flex: 0 1 8.18%;
+
+    @include media-breakpoint-down(xxl) {
+      flex: 0 1 11.89%;
+    }
+  }
+
+  &__item {
+    margin-bottom: 24px;
+    padding: 36px 0;
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 3px 0 15px rgba(74, 66, 142, .07);
+
+    @include media-breakpoint-down(md) {
+      padding: 18px 0;
+    }
+  }
+
+  &__item-cell {
+    padding-right: 24px;
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down(xl) {
+      padding-right: 12px !important;
+      align-items: flex-start;
+    }
+
+    &--count {
+      padding-left: 24px;
+      justify-content: center;
+      text-align: center;
+
+      @include media-breakpoint-down(xl) {
+        padding-left: 12px;
+      }
+    }
+
+    &--number {
+      font-size: 32px;
+      line-height: 1.2;
+      font-weight: 600;
+      letter-spacing: .04em;
+      color: $dark-new;
+
+      @include media-breakpoint-down(xxl) {
+        font-size: 20px;
+      }
+    }
+
+    &--title {
+      padding-left: 34px;
+      font-size: 16px;
+      line-height: 1.375;
+      color: $dark-new;
+
+      @include media-breakpoint-down(md) {
+        padding-left: 16px;
+        font-size: 13px;
+      }
+    }
+
+    &--dynamics {
+      justify-content: flex-start;
+
+      @include media-breakpoint-down(xl) {
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+extends ../templates/template.pug
+block content
+  +header
+  .wrapper
+    .container.container--new
+      +crumbs({
+        links: ['Авторизация']
+      }).mb-15.mb-xl-35
+      h2.sm-new.fw-medium.mb-40 Войти на сайт
+      .row
+        .col-xxl-4.col-md-5
+          form.form(action="#", method="POST")
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Логин
+              input.input.form-control(type="email", placeholder="Ваш e-mail", autocomplete="off")
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Пароль
+              input.input.form-control(type="password", placeholder="Введите пароль", autocomplete="off")
+            .row.mb-30
+              .col-xl-6
+                button.btn.btn-primary.btn-lg.btn-violet.w-100(type="submit") Войти
+              .col-xl-6
+                a.btn.btn-link.btn-link--violet.px-10(href="#") Восстановить пароль
+            p.sm.mb-15 Войти через
+            +leader.mb-30.mb-xl-50
+            p.sm.fw-semibold.mb-40.mb-xl-80 Впервые на сайте? 
+              a.text-decoration-none.text-violet(href="#") Зарегистрируйтесь
+        .col-xxl-4.col-md-5.d-none.d-md-block.ms-auto
+          p.md.lh-md.text-gray.semi-transparent Пожалуйста, авторизуйтесь. У вас появится возможность создавать персональные настройки, оставлять комментарии и проходить опросы.
+  +footer

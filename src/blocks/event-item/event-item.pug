@@ -1,0 +1,16 @@
+mixin event-item(data)
+  .event-item&attributes(attributes)
+    a.event-item__top(href="#")
+      if data && data.date
+        .event-item__date= data.date
+      else
+        .event-item__date 17/02/2022
+      .event-item__picture
+        img.event-item__picture-img(src="./img/" + data.picture, alt)
+      .event-item__tags-wrapper
+        .event-item__tag Конференция
+      p.event-item__dscr= data.dscr
+    if data && data.type == 'cabinet'
+      a.btn.btn-primary.btn-violet.btn-sm.w-100.mb-15(href="#") Удалить событие
+      a.btn.btn-outline-primary.btn-violet.btn-sm.w-100.mb-15(href="#") Добавить в Google календарь
+      a.btn.btn-link.btn-violet.btn-sm.w-100(href="#") Скачать файл календаря

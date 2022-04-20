@@ -1,0 +1,44 @@
+extends ../templates/template.pug
+block content
+  +header
+  .wrapper
+    .container.container--new
+      +crumbs({
+        links: ['База знаний']
+      }).mb-15.mb-xl-35
+      .d-flex.flex-column.flex-xl-row.align-items-baseline.mb-40
+        h2.sm-new.fw-medium.mb-10.mb-xl-0.me-xl-40 База знаний
+        p.sm.text-gray-new.semi-transparent Всего документов: 435
+      .row
+        .col-xl-9
+          p.new Содержит архив документов по искусственному интеллекту. Выберите интересующую вас категорию или тэги для поиска необходимых документов.
+          .d-flex.flex-wrap
+            a.tag.tag--new.tag--btn.tag--btn-active(href="#") R&D
+            a.tag.tag--new(href="#") Студентам
+            a.tag.tag--new.tag--btn.tag--btn-active(href="#") Внедрение
+            a.tag.tag--new(href="#") Внедрение
+            a.tag.tag--new(href="#") R&D
+            a.tag.tag--new(href="#") Студентам
+            a.tag.tag--new(href="#") Smart City
+            a.tag.tag--new(href="#") Внедрение
+            a.tag.tag--new(href="#") Внедрение
+            a.tag.tag--new(href="#") Сбер
+      +news-list({
+        title: 'Направления',
+        tags: ['Национальные документы по развитию в области ИИ', 'Национальные документы по развитию ИИ в других странах', 'Мировые рейтинги индексы в ИИ', 'Международные сотрудничества и альянысы в области ИИ'],
+        docs: 120,
+        link: 'no'
+      }).news-list--database
+      +news-list({
+        title: 'Компоненты',
+        tags: ['Регулирование искусственного интеллекта', 'Инфраструктура ИИ', 'Образование и кадры', 'Инвестиционная активность', 'Компании-разработчики и стратапы', 'Технологии ИИ', 'Технологии ИИ', 'Тренды ИИ'],
+        docs: 215,
+        link: 'no'
+      }).news-list--database
+      +news-list({
+        title: 'Регулирование искусственного интеллекта',
+        tags: ['Нормативное регулирование ИИ', 'Этика'],
+        docs: 70,
+        link: 'no'
+      }).news-list--database
+  +footer

@@ -1,0 +1,8 @@
+mixin document(data)
+  a.document(href="#")&attributes(attributes)
+    .document__icon
+      img.document__icon-img(src="./img/document.svg", alt)
+      .document__icon-type pdf
+    .document__content
+      .document__title= data.title
+      .document__type pdf 3,4 mb

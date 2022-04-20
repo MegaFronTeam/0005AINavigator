@@ -1,0 +1,32 @@
+mixin info(data)
+  .info&attributes(attributes)
+    .container
+      .info__wrapper
+        h2.text-white.mb-30.mb-xxl-70 Федеральный проект 
+        .row.justify-content-between
+          .col-xl-4.d-flex.align-items-end
+            p.lg.text-white.mb-0 Задача федерального проекта «Искусственный интеллект» — создать условия для того, чтобы предприятия и граждане использовали продукты и услуги, основанные на преимущественно отечественных технологиях искусственного интеллекта, обеспечивающих качественно новый уровень эффективности деятельности.
+          .col-xxxl-8.col-xxl-7.col-xl-8.d-flex
+            .info__fields
+              .row.g-0.w-100
+                .col-md-4
+                  +field({
+                    number: '01',
+                    title: 'Исследования и аналитика'
+                  })
+                .col-md-4
+                  +field({
+                    number: '02',
+                    title: 'Гранты'
+                  }).field--top
+              .row.g-0.w-100
+                .col-md-4.offset-md-4
+                  +field({
+                    number: '03',
+                    title: 'Конференции и мероприятия'
+                  }).field--bottom
+                .col-md-4
+                  +field({
+                    number: '04',
+                    title: 'Образование'
+                  })

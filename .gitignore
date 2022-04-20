@@ -1,0 +1,6 @@
+public
+node_modules
+.zip
+yarn.lock
+.idea
+.mp4

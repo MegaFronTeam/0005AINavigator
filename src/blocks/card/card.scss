@@ -1,0 +1,198 @@
+.card {
+  margin: 0 12px;
+  padding: 32px 32px 16px;
+  border-radius: 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+
+  @include media-breakpoint-down(lg) {
+    padding: 16px 16px 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin: 0;
+    padding-bottom: 8px;
+    border: 1px solid rgba(#000, .1);
+    box-shadow: none;
+  }
+
+  &__picture {
+    position: relative;
+    margin-bottom: 16px;
+    padding-top: 59.52%;
+    display: block;
+    overflow: hidden;
+    border-radius: 4px;
+
+    @include transition;
+
+    &:hover {
+
+      .card__picture-img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__picture-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+    object-position: top center;
+
+    @include transition;
+  }
+
+  &__content {
+  }
+
+  &__date {
+    margin-bottom: 16px;
+    line-height: 1.6;
+    color: rgba(#333, .8);
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    display: inline-flex;
+    text-decoration: none;
+    color: $dark;
+
+    @include transition;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__tag {
+  }
+
+  &--sm {
+    padding: 23px;
+    border-radius: 16px;
+    box-shadow: none;
+
+    @include media-breakpoint-down(xxl) {
+      padding: 16px;
+    }
+
+    @include media-breakpoint-down(md) {
+      border: 0;
+    }
+
+    .card__picture {
+      padding-top: 59.7%;
+      border-radius: 8px;
+
+      @include media-breakpoint-down(xxl) {
+        padding-top: 0;
+        height: 150px;
+      }
+
+      @include media-breakpoint-down(xl) {
+        height: 100px;
+      }
+
+      @include media-breakpoint-down(md) {
+        height: 150px;
+      }
+    }
+
+    .card__picture-img {
+      border-radius: 8px;
+
+      @include media-breakpoint-down(xxl) {
+        object-position: center;
+      }
+    }
+
+    .card__date {
+      margin-bottom: 16px;
+      font-size: 14px;
+
+      @include media-breakpoint-down(xxl) {
+        margin-bottom: 8px;
+      }
+
+      @include media-breakpoint-down(xl) {
+        font-size: 12px;
+      }
+
+      @include media-breakpoint-down(md) {
+        font-size: 14px;
+      }
+    }
+
+    .card__title {
+      margin-bottom: 16px;
+      font-size: 20px;
+      font-weight: 600;
+
+      @include media-breakpoint-down(xxl) {
+        margin-bottom: 8px;
+        font-size: 16px;
+      }
+
+      @include media-breakpoint-down(xl) {
+        font-size: 13px;
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 12px;
+        font-size: 16px;
+      }
+    }
+
+    .card__dscr {
+      font-size: 16px;
+
+      @include media-breakpoint-down(xxl) {
+        font-size: 14px;
+      }
+
+      @media (max-height: 750px) {
+        font-size: 12px;
+      }
+
+      @include media-breakpoint-down(xl) {
+        font-size: 12px;
+      }
+
+      @include media-breakpoint-down(md) {
+        font-size: 14px;
+      }
+    }
+
+    .card__tags {
+      margin-bottom: -16px;
+
+      @include media-breakpoint-down(xl) {
+        margin-bottom: -8px;
+      }
+    }
+
+    .card__tag {
+
+      @include media-breakpoint-down(xxl) {
+        font-size: 12px;
+      }
+
+      @include media-breakpoint-down(xl) {
+        margin-right: 8px;
+        margin-bottom: 8px;
+        padding: 4px;
+      }
+
+      @include media-breakpoint-down(md) {
+        padding: 5.21px 11.6px;
+        font-size: 14px;
+        border-radius: 4px;
+      }
+    }
+  }
+}

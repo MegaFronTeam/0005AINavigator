@@ -1,0 +1,116 @@
+.research {
+  margin-bottom: 82px;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 48px;
+  }
+
+  &__title {
+    margin-bottom: 88px;
+    font-weight: 500;
+
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__dynamics {
+    margin-top: 88px;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 16px;
+    }
+  }
+
+  &__dynamics-header {
+    margin-bottom: 44px;
+    padding-bottom: 17px;
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: .04em;
+    color: $dark-new;
+    border-bottom: 1px solid #d9d9de;
+
+    @include media-breakpoint-down(xxl) {
+      font-size: 24px;
+    }
+
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 25px;
+      padding-bottom: 16px;
+      font-size: 20px;
+      line-height: 1.22;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 16px;
+      line-height: 1.4;
+      border-bottom: 0;
+    }
+  }
+
+  &__dynamics-content {
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__dynamics-item {
+
+    @include media-breakpoint-down(md) {
+      padding: 16px 0;
+      display: flex;
+      align-items: flex-start;
+      border-top: .5px solid #e4e4fa;
+    }
+
+    &:last-child {
+
+      @include media-breakpoint-down(md) {
+        border-bottom: .5px solid #e4e4fa;
+      }
+    }
+  }
+
+  &__dynamics-item-number {
+    margin-bottom: 20px;
+    font-size: 82px;
+    line-height: 1.18;
+    letter-spacing: .04em;
+    color: #5d60f4;
+
+    @include media-breakpoint-down(xxl) {
+      margin-bottom: 8px;
+      font-size: 64px;
+      font-weight: 400;
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 150px;
+      flex-shrink: 0;
+      font-size: 28px;
+      line-height: 1.18;
+    }
+  }
+
+  &__dynamics-item-content {
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: .04em;
+    color: #55556a;
+
+    @include media-breakpoint-down(xxl) {
+      font-size: 14px;
+    }
+
+    @include media-breakpoint-down(xl) {
+      font-size: 10px;
+      line-height: 1.3;
+    }
+
+    @include media-breakpoint-down(md) {
+      color: $dark-new;
+    }
+  }
+}

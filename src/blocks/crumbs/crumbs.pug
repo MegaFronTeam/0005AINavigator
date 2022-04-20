@@ -1,0 +1,9 @@
+mixin crumbs(data)
+  .crumbs&attributes(attributes)
+    .crumbs__item
+      a.crumbs__item-link(href="#")
+        span Главная
+    each item in data.links
+      .crumbs__item
+        a.crumbs__item-link(href="#")
+          span= item

@@ -1,0 +1,183 @@
+extends ../templates/template.pug
+block content
+  +header.header--static.mb-30.mb-xl-50
+  .container
+    .map
+      .map__header
+        h2.map__title Карта искусственного интеллекта РФ
+        a.btn.btn-primary.btn-xs.btn-rounded.map__header-btn.fw-normal(href="#") Добавить проект в карту ИИ
+      .map__inner
+        .map__inner-left
+          h3.mb-30.mb-xl-40 Карта
+          .map__inner-tags
+            a.tag.tag--gray.tag--md.map__inner-btn.js-map-btn.js-map-btn--research(href="#") Исследовательские центры и Научные лаборатории
+            a.tag.tag--gray.tag--md.map__inner-btn.js-map-btn.js-map-btn--education.js-map-btn--active(href="#") Образование
+            a.tag.tag--gray.tag--md.map__inner-btn.js-map-btn.js-map-btn--events(href="#") Мероприятия
+          .map__inner-dscr.map__inner-dscr--desktop
+            .map__inner-dscr-item.js-map-content.js-map-content--research
+              h4.mb-25 Исследовательские центры и Научные лаборатории
+              p.sm.text-gray Рассмотрим работу ML на примере задачи банковского скоринга. Банк располагает данными о существующих клиентах. Ему известно, есть ли у кого-то просроченные платежи по кредитам. 
+            .map__inner-dscr-item.js-map-content.js-map-content--education.js-map-content--active
+              h4.fw-semibold.mb-25 Образование
+              p.sm.text-gray Рассмотрим работу ML на примере задачи банковского скоринга. Банк располагает данными о существующих клиентах. Ему известно, есть ли у кого-то просроченные платежи по кредитам. 
+            .map__inner-dscr-item.js-map-content.js-map-content--events
+              h4.mb-25 Мероприятия
+              p.sm.text-gray Рассмотрим работу ML на примере задачи банковского скоринга. Банк располагает данными о существующих клиентах. Ему известно, есть ли у кого-то просроченные платежи по кредитам. 
+          .map__inner-dscr.map__inner-dscr--mobile
+        .map__country.js-map-content.js-map-content--research
+          +country({
+            type: 'research'
+          }).country--red
+        .map__country.js-map-content.js-map-content--education.js-map-content--active
+          +country({
+            type: 'education'
+          }).country--blue
+        .map__country.js-map-content.js-map-content--events
+          +country({
+            type: 'events'
+          }).country--green
+      .map__items
+        .map__items-content.js-map-content.js-map-content--research
+          .map__filters
+            +filters({
+              type: 'research'
+            })
+            +view.map__view
+          .map__projects.table-grid
+            .map__projects-headers
+              a.map__projects-header-item.map__projects-header-item--link.table-grid__item--md(href="#") ВУЗ
+              a.map__projects-header-item.map__projects-header-item--link.table-grid__item--sm(href="#") Город
+              a.map__projects-header-item.table-grid__item--lg(href="#") Специальности
+            .map__projects-content
+              .map__projects-item
+                +project({
+                  tags: ['Прикладной ИИ', 'Алгоритмы и струкутура данных'],
+                  type: 'research'
+                })
+              .map__projects-item
+                +project({
+                  tags: ['Прикладной ИИ', 'Алгоритмы и струкутура данных'],
+                  type: 'research'
+                })
+              .map__projects-item
+                +project({
+                  tags: ['Прикладной ИИ', 'Алгоритмы и струкутура данных'],
+                  type: 'research'
+                })
+            .map__projects-btn
+              a.btn.btn-outline-primary.btn-rounded.btn-lg(href="#") Показать еще
+        .map__items-content.js-map-content.js-map-content--education.js-map-content--active
+          .map__filters
+            +filters({
+              type: 'education'
+            })
+            +view.map__view
+          .map__projects.table-grid
+            .map__projects-headers
+              a.map__projects-header-item.map__projects-header-item--link.table-grid__item--md(href="#") ВУЗ
+              a.map__projects-header-item.map__projects-header-item--link.table-grid__item--sm(href="#") Город
+              a.map__projects-header-item.table-grid__item--sm(href="#") Формат обучения
+              a.map__projects-header-item.table-grid__item--lg(href="#") Специальности
+            .map__projects-content
+              .map__projects-item
+                +project({
+                  tags: ['Прикладной ИИ', 'Алгоритмы и струкутура данных', 'Обработка и анализ данных', 'Криптография'],
+                  type: 'education'
+                })
+              .map__projects-item
+                +project({
+                  tags: ['Прикладной ИИ', 'Алгоритмы и струкутура данных', 'Обработка и анализ данных', 'Криптография'],
+                  type: 'education'
+                })
+              .map__projects-item
+                +project({
+                  tags: ['Прикладной ИИ', 'Алгоритмы и струкутура данных', 'Обработка и анализ данных'],
+                  type: 'education'
+                })
+              .map__projects-item
+                +project({
+                  tags: ['Прикладной ИИ', 'Алгоритмы и струкутура данных', 'Обработка и анализ данных', 'Криптография'],
+                  type: 'education'
+                })
+              .map__projects-item
+                +project({
+                  tags: ['Прикладной ИИ', 'Алгоритмы и струкутура данных'],
+                  type: 'education'
+                })
+              .map__projects-item
+                +project({
+                  tags: ['Прикладной ИИ', 'Алгоритмы и струкутура данных', 'Обработка и анализ данных', 'Криптография'],
+                  type: 'education'
+                })
+              .map__projects-item
+                +project({
+                  tags: ['Прикладной ИИ', 'Алгоритмы и струкутура данных'],
+                  type: 'education'
+                })
+              .map__projects-item
+                +project({
+                  tags: ['Прикладной ИИ', 'Алгоритмы и струкутура данных'],
+                  type: 'education'
+                })
+              .map__projects-item
+                +project({
+                  tags: ['Прикладной ИИ', 'Алгоритмы и струкутура данных'],
+                  type: 'education'
+                })
+            .map__projects-btn
+              a.btn.btn-outline-primary.btn-rounded.btn-lg(href="#") Показать еще
+        .map__items-content.js-map-content.js-map-content--events
+          .map__filters
+            +filters({
+              type: 'events'
+            })
+            +view.map__view
+          .map__projects.table-grid
+            .map__projects-headers
+              a.map__projects-header-item.map__projects-header-item--link.table-grid__item--md(href="#") Название
+              a.map__projects-header-item.map__projects-header-item--link.table-grid__item--sm(href="#") Город
+              a.map__projects-header-item.table-grid__item--lg(href="#") Технологии
+              a.map__projects-header-item.table-grid__item--sm(href="#") Даты проведения
+            .map__projects-content
+              .map__projects-item
+                +project({
+                  tags: ['Прикладной ИИ', 'Алгоритмы и струкутура данных', 'Обработка и анализ данных', 'Криптография'],
+                  type: 'event'
+                })
+              .map__projects-item
+                +project({
+                  tags: ['Прикладной ИИ', 'Алгоритмы и струкутура данных', 'Обработка и анализ данных', 'Криптография'],
+                  type: 'event'
+                })
+              .map__projects-item
+                +project({
+                  tags: ['Прикладной ИИ', 'Алгоритмы и струкутура данных', 'Обработка и анализ данных'],
+                  type: 'event'
+                })
+              .map__projects-item
+                +project({
+                  tags: ['Прикладной ИИ', 'Алгоритмы и струкутура данных', 'Обработка и анализ данных', 'Криптография'],
+                  type: 'event'
+                })
+              .map__projects-item
+                +project({
+                  tags: ['Прикладной ИИ', 'Алгоритмы и струкутура данных'],
+                  type: 'event'
+                })
+              .map__projects-item
+                +project({
+                  tags: ['Прикладной ИИ', 'Алгоритмы и струкутура данных', 'Обработка и анализ данных', 'Криптография'],
+                  type: 'event'
+                })
+            .map__projects-btn
+              a.btn.btn-outline-primary.btn-rounded.btn-lg(href="#") Показать еще
+  +footer
+  +modal({
+    type: 'research'
+  }).modal--light.modal--new#research
+  +modal({
+    type: 'education'
+  }).modal--light.modal--new#education
+  +modal({
+    type: 'event'
+  }).modal--light.modal--new#event

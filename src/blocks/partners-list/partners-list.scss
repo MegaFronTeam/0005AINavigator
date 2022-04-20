@@ -1,0 +1,77 @@
+.partners-list {
+  margin-bottom: -55px;
+  padding: 82px 0 114px;
+  background: url(../img/partners-bg.png) no-repeat center top;
+  background-size: cover;
+
+  @include media-breakpoint-down(xl) {
+    margin-bottom: -32px;
+    padding: 65px 0;
+  }
+
+  .container {
+
+    @include media-breakpoint-down(xl) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(xl) {
+      padding: 0 24px;
+      overflow: auto;
+    }
+  }
+
+  &__item {
+    margin-right: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+
+    @include media-breakpoint-down(xxl) {
+      margin-right: 20px;
+      width: 110px;
+      flex-shrink: 0;
+    }
+
+    @include media-breakpoint-down(xl) {
+      margin-right: 35px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 12px;
+    height: 56px;
+  }
+
+  &__logo-img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__name {
+    font-size: 14px;
+    line-height: 1.25;
+    letter-spacing: .04em;
+    color: #e4e4fa;
+
+    @include media-breakpoint-down(xxl) {
+      font-size: 12px;
+    }
+
+    @include media-breakpoint-down(xl) {
+      font-size: 8px;
+      letter-spacing: .01em;
+    }
+  }
+}

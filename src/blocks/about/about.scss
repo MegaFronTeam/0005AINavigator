@@ -1,0 +1,26 @@
+.about {
+
+  &__top {
+    margin-bottom: -56px;
+    padding: 55px 0 128px;
+    background: url(../img/about-top.jpg) no-repeat center;
+    background-size: cover;
+    border-radius: 40px 40px 0 0;
+
+    @include media-breakpoint-down(xl) {
+      margin-top: -28px;
+      border-radius: 8px 8px 0 0;
+    }
+  }
+
+  &__content {
+    padding-top: 72px;
+    background: #fff;
+    border-radius: 40px 40px 0 0;
+
+    @include media-breakpoint-down(xl) {
+      padding-top: 30px;
+      border-radius: 8px 8px 0 0;
+    }
+  }
+}

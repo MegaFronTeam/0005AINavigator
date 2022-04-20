@@ -1,0 +1,32 @@
+mixin ethics(data)
+  .ethics&attributes(attributes)
+    .ethics__cover
+      .container.container--new
+        .row
+          .col-md-6.col-xl-5.d-flex
+            .ethics__cover-col
+              a.ethics__logo(href="#")
+                img.ethics__logo-img(src="./img/ethics-logo.png", alt)
+              h2.sm.ethics__header Этика искусственного интеллекта: начало доверия
+          .col-md-6.offset-xl-1.d-flex
+            .ethics__cover-col
+              a.ethics__cover-btn(href="#") Форум
+              a.ethics__media(href="#video")
+                img.ethics__media-picture(src="./img/ethics-media.jpg", alt)
+              +modal({
+                type: 'video'
+              }).modal--video#video
+    .container.container--new
+      .row
+        .col-md-6.col-xl-5
+          p.lh-md.ethics__dscr.mb-15.mb-xl-25 Международный форум «Этика искусственного интеллекта: начало доверия» стал первой в России специализирован-ной площадкой, где разработчики и пользователи ИИ-технологий обсудили шаги по эффективному внедрению этики искусственного интеллекта в приоритетные отрасли.
+          p.lh-md.ethics__dscr.mb-15.mb-xl-45 Ключевым событием I международного форума «Этика искусственного интеллекта: начало доверия», который прошел в октябре 2021 года в Москве, стало подписание Кодекса этики искусственного интеллекта.
+          a.btn.btn-secondary.btn-rounded.btn-lg-new.ethics__btn(href="#") Подробнее
+        .col-md-6.offset-xl-1
+          a.ethics__card(href="#")
+            .ethics__card-link
+            .ethics__card-icon
+              img.ethics__card-icon-img(src="./img/ethics-icon.svg", alt)
+            .ethics__card-wrapper
+              .ethics__card-title Кодекс этики
+              .ethics__card-content Кодекс этики в сфере искусственного интеллекта устанавливает общие этические принципы и стандарты поведения, которыми следует руководствоваться участникам отношений в сфере искусственного интеллекта в своей деятельности, а также механизмы реализации положений настоящего Кодекса.

@@ -1,0 +1,19 @@
+mixin course(data)
+  a.course(href="#", data-bg=data.bg)&attributes(attributes)
+    if data && data.bg
+      //.section__bg
+        video.section__bg-content(autoplay="autoplay", muted)
+          source(src='./img/' + data.bg, type='video/mp4')
+    else
+      img.course__picture-img(src="./img/course-picture.jpg", alt)
+    .course__wrapper
+      .course__left
+        .course__icon
+          img.course__icon-img.course__icon-img--gray(src="./img/" + data.icon + '.svg', alt)
+          img.course__icon-img.course__icon-img--color(src="./img/" + data.icon + '--color.svg', alt)
+        .course__arrow
+      .course__content
+        .course__header
+          .course__title= data.title
+          .course__number= data.number
+        p.course__dscr= data.dscr

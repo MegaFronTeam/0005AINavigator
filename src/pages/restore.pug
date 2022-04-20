@@ -1,0 +1,19 @@
+extends ../templates/template.pug
+block content
+  +header.header--static.mb-xl-100
+  .container
+    +back
+    .row.flex-column-reverse.flex-md-row.justify-content-between
+      .col-xxl-3.col-md-5
+        h2.mb-30 Востановление пароля
+        form.form(action="#", method="POST")
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Введите e-mail
+            input.input.form-control(type="text", placeholder="Введите")
+          .form__buttons
+            button.btn.btn-primary.btn-md(type="submit") Сбросить
+          p.sm.fw-semibold.mb-40.mb-xl-80 Вспомнили пароль? 
+            a.text-decoration-none(href="#") Войти
+      .col-xxl-4.col-md-5
+        p.text-gray Рассмотрим работу ML на примере задачи банковского скоринга. Банк располагает данными о существующих клиентах. Ему известно, есть ли у кого-то просроченные платежи по кредитам. Задача — определить, будет ли новый потенциальный клиент вовремя вносить платежи. По каждому клиенту банк обладает совокупностью определенных черт/признаков: пол, возраст
+  +footer

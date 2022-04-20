@@ -1,0 +1,46 @@
+extends ../templates/template.pug
+block content
+  +header
+  .wrapper
+    .container.container--new
+      +crumbs({
+        links: ['Контакты']
+      }).mb-15.mb-xl-35
+      .row
+        .col-xl-4
+          .article.mb-30.mb-xl-55
+            h2.sm-new.fw-medium.mb-30.mb-xl-55 Контакты
+            p.lg-new.mb-25 Редакция Национального портала по искусственному интеллекту
+            a.article__contact.article__contact--email(href="mailto:mail@ainavigator.com") mail@ainavigator.com
+      form.form.form--dark.mb-40.mb-xl-90(action="#", method="POST")
+        .form__content
+          .row
+            .col-xl-3.col-lg-6
+              h4.md.mb-35 Напишите нам
+          .row
+            .col-xl-4.col-lg-6.mb-30.mb-lg-0
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Имя
+                input.input.form-control(type="text", placeholder="Введите")
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Фамилия
+                input.input.form-control(type="text", placeholder="Введите")
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 E-mail
+                input.input.form-control(type="email", placeholder="Введите")
+            .col-xl-8.col-lg-6
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Сообщение
+                textarea.input.input--textarea.form-control( placeholder="Введите")
+              .form__file-wrapper
+                +file({
+                  title: 'Загрузить файл'
+                }).form__file-input
+                .form__file filename.pdf
+          .form__footer.form__footer--center
+            button.btn.btn-violet.btn-lg.form__btn.form__footer-btn(type="submit") Отправить
+            .form-check.form-check--new
+              input#check1.form-check-input(type='checkbox' value='')
+              label.form-check-label(for='check1') Я согласен с 
+                a(href="#") политикой обработки персональных данных
+  +footer

@@ -1,0 +1,8 @@
+mixin activity(data)
+  .activity&attributes(attributes)
+    //.activity__dots-wrapper
+      - var n = 0;
+      while n < data.dot
+        .activity__dot
+        - n++
+    p.sm.activity__dscr= data.title

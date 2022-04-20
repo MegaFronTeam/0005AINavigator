@@ -1,0 +1,7 @@
+mixin indicator(data)
+  .indicator&attributes(attributes)
+    .indicator__number= data.number
+    .indicator__subheader
+      .indicator__direction(class="indicator__direction--" + data.direction)= data.change
+      .indicator__subheader-title Рост показателя за Q IV 2021
+    p.indicator__dscr= data.dscr 

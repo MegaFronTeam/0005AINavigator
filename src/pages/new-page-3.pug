@@ -1,0 +1,122 @@
+extends ../templates/template.pug
+block content
+  .main
+    +header
+    .container.container--new.crumbs__wrapper
+      +crumbs({
+        links: ['Поддержка разработчиков']
+      }).crumbs--cover
+    +cover({
+      title: 'Грантовая поддержка внедрения технологий ИИ',
+      dscr: 'Поддержка  фондом «Сколково» пилотных проектов для тестирования технологий искусственного интеллекта',
+      picture: 'cover-3.png'
+    })
+    .page
+      .page__section
+        .container.container--new
+          .row
+            .col-xl-5.col-md-6.d-flex
+              .page__subcover-left
+                .page__subcover-top
+                  p.md.lh-md.mb-30.page__text Фонд «Сколково» осуществляет ежегодную поддержку пилотных проектов с применением искусственного интеллекта в приоритетных для страны направлениях. В отборе принимают участие проекты, если в их цели и задачи входят внедрение технологий искусственного интеллекта в экономику и ускорение цифровой трансформации. 
+                  p.md.lh-md.mb-30.page__text «Сколково» до 2024 года планирует поддержать до 50 пилотных внедрений. В программе с общим объемом финансирования 5 млрд рублей примут участие более 100 отечественных заказчиков и разработчиков в сфере искусственного интеллекта.
+                .page__operator
+                  p.md.page__operator-header Оператор: 
+                  .page__logos-wrapper
+                    .page__logo
+                      img.page__logo-img(src="./img/page-logo-2.svg", alt)
+                    .page__logo
+                      img.page__logo-img(src="./img/page-logo-3.svg", alt)
+            .col-md-6.offset-xl-1.d-flex
+              .page__activity
+                h3.md.page__subheader Направления деятельности
+                .row
+                  .col-xl-4
+                    +activity({
+                      dot: '1',
+                      title: 'Компьютерное зрение'
+                    })
+                  .col-xl-4
+                    +activity({
+                      dot: '2',
+                      title: 'Обработка естественного языка'
+                    })
+                  .col-xl-4
+                    +activity({
+                      dot: '3',
+                      title: 'Распознавание и синтез речи'
+                    })
+                  .col-xl-4
+                    +activity({
+                      dot: '4',
+                      title: 'Интеллектуальные системы поддержки принятия решений'
+                    })
+                  .col-xl-4
+                    +activity({
+                      dot: '5',
+                      title: 'Перспективные методы искусственного интеллекта'
+                    })
+      .container.container--new
+        .page__section
+          +point
+        .page__section
+          .row
+            .col-md-5
+              h3.md.mob-sm Исследования в области искусственного интеллекта
+            .col-md-6.offset-xl-1
+              p.mob-sm Сегодня больше ученых и разработчиков обращаются к теме ИИ. Растет востребованность научных результатов, уменьшая разрыв между теорией и практикой. Разработчики отмечают, что интервал между докладом на конференции уровня А* и внедрением представленных ИИ-решений в IT-продукты сократился до 3 месяцев.
+              p.mob-sm Россия демонстрирует высокую научную активность и рекордный рост числа публикаций в сфере ИИ на международной арене. Российский бизнес ― полноправный участник научной работы в сфере ИИ. Исследовательские центры в области ИИ — флагманы исследований и разработок.
+        .page__section
+          h3.md.mb-25.mb-xl-50.mob-sm Прогнозируемые результаты
+          .row
+            .col-md-5.col-xl-4
+              .page__card
+                .page__card-picture
+                  img.page__card-picture-img(src="./img/page-card-2.jpg", alt)
+                p.sm.mob-xs Ежегодное число российских научных публикаций по искусственному интеллекту выросло в 2,6 раза по сравнению с периодом 2011-2015 гг. [при среднемировом значении 1,3] 
+                a.link-arrow.link-arrow--dark(href="#") Подробно
+            .col-md-5.col-xl-6.offset-xl-2.offset-md-1
+              .page__results
+                .page__year 2022 год
+                +number({
+                  number: '7',
+                  dscr: 'пилотных проектов'
+                })
+              .page__results
+                .page__year 2023 год
+                +number({
+                  number: '13',
+                  dscr: 'пилотных проектов'
+                })
+              .page__results
+                .page__year к 2024 году
+                +number({
+                  number: '50',
+                  dscr: 'пилотных проектов'
+                })
+        .page__section
+          h3.md.mob-sm Ссылки по теме
+          .row.page__links
+            .col-xl-4.d-flex.page__links-item
+              +theme({
+                number: '01',
+                title: 'Конкурсный отбор пилотных проектов апробации технологий ИИ'
+              })
+            .col-xl-4.d-flex.page__links-item
+              +theme({
+                number: '02',
+                title: 'Систему поддержки врачебных решений резидента «Сколково» на основе ИИ внедрят в медцентрах Узбекистана'
+              })
+            .col-xl-4.d-flex.page__links-item
+              +theme({
+                number: '03',
+                title: '«Сколково» поддержит развитие искусственного интеллекта в России'
+              })
+        .page__section
+          +graph
+        .page__section
+          +news-list({
+            title: 'Статьи по теме',
+            link: 'no'
+          }).news-list--page
+    +footer

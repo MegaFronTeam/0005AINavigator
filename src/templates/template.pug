@@ -1,0 +1,10 @@
+doctype html
+html(lang='ru')
+  include ../templates/head.pug
+  include ../templates/blocks.pug
+  
+  body
+    +loader
+    block content
+    script(src="js/vendor.js?version=33")
+    script(src="js/scripts.js?version=33")

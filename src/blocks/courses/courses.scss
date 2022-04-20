@@ -1,0 +1,7 @@
+.courses {
+  margin-bottom: 90px;
+
+  @include media-breakpoint-down(xl) {
+    margin-bottom: 24px;
+  }
+}

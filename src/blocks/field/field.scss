@@ -1,0 +1,150 @@
+.field {
+  position: relative;
+  padding-top: 100%;
+  display: block;
+  width: 100%;
+  background: $primary;
+  border: 1px solid #fff;
+
+  @include transition;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 20px;
+    padding-top: 0;
+    min-height: 100px;
+  }
+
+  &:hover {
+    background: #fff;
+
+    .field__number {
+      position: relative;
+      top: 20px;
+      right: 10px;
+      font-size: 294px;
+      font-weight: 600;
+      color: rgba($primary, .05);
+
+      @include media-breakpoint-down(xxxl) {
+        right: 0;
+        font-size: 240px;
+      }
+
+      @include media-breakpoint-down(lg) {
+        font-size: 180px;
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 0;
+        font-size: 100px;
+      }
+    }
+
+    .field__content-footer {
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .field__title {
+      position: absolute;
+      top: 23px;
+      left: 32px;
+      font-size: 34px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $primary;
+
+      @include media-breakpoint-down(xxxl) {
+        font-size: 24px !important;
+      }
+
+      @include media-breakpoint-down(xxl) {
+        font-size: 20px !important;
+      }
+
+      @include media-breakpoint-down(lg) {
+        font-size: 16px !important;
+      }
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 23px 42px 33px 32px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(xxxl) {
+      padding: 20px;
+    }
+
+    @include media-breakpoint-down(md) {
+      position: static;
+    }
+  }
+
+  &__number {
+    color: #fff;
+
+    @include transition;
+  }
+
+  &__content-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:after {
+      display: block;
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      content: '';
+      background: url(../img/arrow-white.svg) no-repeat center;
+      border: 1px solid #fff;
+      border-radius: 50%;
+
+      @include media-breakpoint-down(md) {
+        width: 30px;
+        height: 30px;
+        background-size: 30%;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+    color: #fff;
+
+    @include transition;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 16px !important;
+    }
+  }
+
+  &--top {
+    border-left: 0;
+    border-bottom: 0;
+
+    @include media-breakpoint-down(md) {
+      border-left: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+    }
+  }
+
+  &--bottom {
+    border-right: 0;
+
+    @include media-breakpoint-down(md) {
+      border-right: 1px solid #fff;
+    }
+  }
+}

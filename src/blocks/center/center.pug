@@ -1,0 +1,50 @@
+mixin center(data)
+  .center&attributes(attributes)
+    .center__wrapper
+      .center__header-wrapper
+        h5.center__header События
+        a.center__link.center__link--mobile(href="#") Все события →
+      .center__content
+        +center__item({
+          title: 'Итоги заседания рабочей группы по ИИ'
+        })
+        +center__item({
+          title: 'Указ Президента РФ №111 от 10.10.2021'
+        })
+        +center__item({
+          title: 'Итоги заседания рабочей группы по ИИ'
+        })
+        +center__item({
+          title: 'Указ Президента РФ №111 от 10.10.2021'
+        })
+        +center__item({
+          title: 'Анонс экспертного семинара по улучшению условий труда'
+        })
+        +center__item({
+          title: 'Указ Президента РФ №111 от 10.10.2021'
+        })
+        +center__item({
+          title: 'Итоги заседания рабочей группы по ИИ'
+        })
+        +center__item({
+          title: 'Указ Президента РФ №111 от 10.10.2021'
+        })
+        +center__item({
+          title: 'Итоги заседания рабочей группы по ИИ'
+        })
+        +center__item({
+          title: 'Указ Президента РФ №111 от 10.10.2021'
+        })
+        +center__item({
+          title: 'Итоги заседания рабочей группы по ИИ'
+        })
+        +center__item({
+          title: 'Указ Президента РФ №111 от 10.10.2021'
+        })
+    a.center__link.center__link--desktop(href="#") Все события →
+
+
+mixin center__item(data)
+  .center__item&attributes(attributes)
+    .center__item-date 10.10.2021
+    a.p.sm.center__item-title(href="#")= data.title

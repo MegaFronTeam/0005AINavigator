@@ -1,0 +1,22 @@
+extends ../templates/template.pug
+block content
+  +header({
+    type: 'short'
+  })
+  .wrapper
+    .container.container--new
+      h2.sm-new.text-center.mb-30 Сайт находится в разработке
+      p.md.text-center.mb-30.mb-xl-50 Описание для наглядности отображения в пару строк
+      .row.mb-50.mb-xl-100
+        .col-xxl-4.col-md-6.mx-auto
+          form.form(action="#", method="POST")
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Логин
+              input.input.form-control(type="email", placeholder="Ваш e-mail", autocomplete="off")
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Пароль
+              input.input.form-control(type="password", placeholder="Введите пароль", autocomplete="off")
+            .row
+              .col-xl-6.mx-auto
+                button.btn.btn-primary.btn-lg.btn-violet.w-100(type="submit") Войти
+  +footer

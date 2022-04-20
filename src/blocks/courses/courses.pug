@@ -1,0 +1,63 @@
+mixin courses(data)
+  .courses&attributes(attributes)
+    .container.container--new
+      h2.sm.sm-new.fw-medium.mb-20.mb-xl-40 Основные <br>направления
+      .row
+        .col-xl-4.d-none.d-md-flex.align-items-center
+          p.md.md-new.lh-md Растет востребованность научных результатов, уменьшая разрыв между теорией и практикой. Разработчики отмечают, что интервал между докладом на конференции уровня А* и внедрением представленных ИИ-решений в IT-продукты сократился до 3 месяцев.
+        .col-6.col-xl-4.d-flex
+          +course({
+            bg: 'section-1',
+            number: '01',
+            icon: 'course-icon-1',
+            title: 'Поддержка бизнеса',
+            dscr: 'Поддержка пилотных проектов для тестирования технологий ИИ и разработки аппаратно-программных комплексов для ИИ'
+          })
+        .col-6.col-xl-4.d-flex
+          +course({
+            bg: 'section-2',
+            number: '02',
+            icon: 'course-icon-1',
+            title: 'Поддержка разработчиков',
+            dscr: 'Предоставление грантов малым предприятиям на разработку решений в области искусственного интеллекта'
+          })
+        .col-6.col-xl-4.d-flex
+          +course({
+            bg: 'section-3',
+            number: '03',
+            icon: 'course-icon-3',
+            title: 'Массивы данных',
+            dscr: 'Datasets Development of state datasets for internal needs of the federal executive bodies as part of the digital transformation and 4 state datasets (Rosselkhoznadzor, Russian Federal Tax Service, Rosstat, Ministry of Economic Development, Rosreestr) with the possibility of using third-party developers for business solutions.'
+          })
+        .col-6.col-xl-4.d-flex
+          +course({
+            bg: 'section-4',
+            number: '04',
+            icon: 'course-icon-4',
+            title: 'Кадры',
+            dscr: 'Разработка программ высшего образования по искусственному интеллекту и повышение квалификации преподавателей'
+          })
+        .col-6.col-xl-4.d-flex
+          +course({
+            bg: 'section-5',
+            number: '05',
+            icon: 'course-icon-5',
+            title: 'Сообщества',
+            dscr: 'Организация хакатонов и лекций по искусственному интеллекту'
+          })
+        .col-6.col-xl-4.d-flex
+          +course({
+            bg: 'section-6',
+            number: '06',
+            icon: 'course-icon-6',
+            title: 'Наука',
+            dscr: 'Поддержка исследовательских центров, работающих в разных областях искусственного интеллекта и с этическими аспектами его применения'
+          })
+        .col-6.col-xl-4.d-flex
+          +course({
+            bg: 'section-7',
+            number: '07',
+            icon: 'course-icon-7',
+            title: 'Нормативное регулирование',
+            dscr: 'Перспективная программа стандартизации'
+          })

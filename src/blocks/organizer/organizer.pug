@@ -1,0 +1,5 @@
+mixin organizer(data)
+  a.organizer(href=data.link, target="_blank")&attributes(attributes)
+    .organizer__logo
+      img.organizer__logo-img(src="./img/" + data.logo, alt)
+    .p.sm.text-primary.organizer__title= data.title

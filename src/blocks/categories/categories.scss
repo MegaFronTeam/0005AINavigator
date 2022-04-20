@@ -1,0 +1,129 @@
+.categories {
+  margin-bottom: 112px;
+
+  @include media-breakpoint-down(xxl) {
+    margin-bottom: 80px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    margin-bottom: 48px;
+  }
+
+  .slick-track {
+    display: flex;
+  }
+
+  .slick-arrow {
+    position: absolute;
+    z-index: 1;
+    top: 152px;
+    width: 37px;
+    height: 37px;
+    font-size: 0;
+    background: url(../img/slider-arrow-white.svg) no-repeat center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+
+    @include media-breakpoint-down(xxl) {
+      top: 80px;
+    }
+
+    @include media-breakpoint-down(xl) {
+      top: 24px;
+      width: 24px;
+      height: 24px;
+      background-size: 25%;
+    }
+
+    @include media-breakpoint-down(md) {
+      top: auto;
+      bottom: 30px;
+    }
+
+    &.slick-active {
+    }
+
+    &.slick-prev {
+      left: calc((100% - 1396px) / 2);
+
+      @media (max-width: 1444px) {
+        left: 36px;
+      }
+
+      @include media-breakpoint-down(xl) {
+        right: 100px;
+        left: auto;
+        background-position: 7px 7px;
+      }
+
+      @include media-breakpoint-down(md) {
+        right: auto;
+        left: 16px;
+      }
+    }
+
+    &.slick-next {
+      left: calc(((100% - 1396px) / 2) + 124px);
+      transform: rotate(180deg);
+
+      @media (max-width: 1444px) {
+        left: 160px;
+      }
+
+      @include media-breakpoint-down(xl) {
+        right: 24px;
+        left: auto;
+        background-position: 7px 7px;
+      }
+
+      @include media-breakpoint-down(md) {
+        right: auto;
+        left: 90px;
+      }
+
+      //      @include media-breakpoint-down(xxl) {
+      //        left: 100px;
+      //      }
+    }
+  }
+
+  &__counter {
+    position: absolute;
+    z-index: 1;
+    top: 152px;
+    left: calc(((100% - 1396px) / 2) + 37px);
+    padding-left: 10px;
+    width: 87px;
+    font-size: 22px;
+    line-height: 37px;
+    text-align: center;
+    letter-spacing: .3em;
+    color: #fff;
+
+    @include media-breakpoint-down(xxl) {
+      top: 80px;
+    }
+
+    @media (max-width: 1444px) {
+      left: 73px;
+    }
+
+    @include media-breakpoint-down(xl) {
+      top: 24px;
+      right: 48px;
+      left: auto;
+      padding-left: 5px;
+      width: 52px;
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 400;
+      letter-spacing: .3em;
+    }
+
+    @include media-breakpoint-down(md) {
+      top: auto;
+      bottom: 30px;
+      left: 40px;
+    }
+  }
+}

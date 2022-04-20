@@ -1,0 +1,13 @@
+mixin experts(data)
+  .experts&attributes(attributes)
+    .container
+      h2.mb-20 Эксперты по AI
+      .experts__wrapper
+        .experts__map
+          - for (var i = 0; i < 82; ++i) {
+            +expert({
+              number: i
+            })
+          - }
+      .text-center
+        a.btn.btn-secondary.experts__btn(href="#") Все эксперты

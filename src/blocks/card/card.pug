@@ -1,0 +1,14 @@
+mixin card(data)
+  .card&attributes(attributes)
+    a.card__picture(href="#")
+      img.card__picture-img(src="./img/" + data.picture, alt)
+    .card__content
+      .p.card__date 17 апр 2022
+      a.p.lg.card__title(href="#") Разработка и развитие программного обеспечения
+      p.lh-lg.card__dscr.mb-15 Паспорт федерального проекта «Искусственный интеллект» утвержден на заседании Президиума комиссии по цифровому развитию, использованию...
+      if data && data.type == 'short'
+      else
+        .card__tags
+          a.card__tag.tag.tag--gray(href="#") Студентам
+          a.card__tag.tag.tag--gray(href="#") Сбер
+          a.card__tag.tag.tag--gray(href="#") Smart City

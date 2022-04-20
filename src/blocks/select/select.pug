@@ -1,0 +1,58 @@
+mixin select(data)
+  .select&attributes(attributes)
+    if data && data.evaluate == '10'
+      select.select__input(data-placeholder=data.placeholder, required)
+        option(disabled, selected)
+        option 1
+        option 2
+        option 3
+        option 4
+        option 5
+        option 6
+        option 7
+        option 8
+        option 9
+        option 10
+    else if data && data.evaluate == '5'
+      if data && data.notRequired
+        - var isRequired = ''
+      else
+        - var isRequired = required
+      select.select__input(data-placeholder=data.placeholder, isRequired)
+        option(disabled, selected)
+        option 1
+        option 2
+        option 3
+        option 4
+        option 5
+    else if data && data.evaluate == 'portal'
+      select.select__input(data-placeholder=data.placeholder)
+        option(disabled, selected)
+        option 1
+        option 2
+        option 3
+        option 4
+        option 5
+    else
+      if data && data.multiple 
+        select.select__input(data-placeholder=data.placeholder, multiple)
+          option(disabled, selected)
+          if block  
+            block
+          else
+            option Вариант 1
+            option Вариант 2
+            option Вариант 3
+            option Вариант 4
+            option Вариант 5
+      else
+        select.select__input(data-placeholder=data.placeholder)
+          option(disabled, selected)
+          if block  
+            block
+          else
+            option Вариант 1
+            option Вариант 2
+            option Вариант 3
+            option Вариант 4
+            option Вариант 5

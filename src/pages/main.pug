@@ -1,0 +1,17 @@
+extends ../templates/template.pug
+block content
+  .main
+    .main__magic
+      +front({
+        header: true
+      }).main__section.main__section--active
+      +navigator.main__section
+      +monitor.main__section
+      +info.main__section
+    +experts
+    +support
+    +schedule
+    +updates
+    +partners
+    +footer
+  

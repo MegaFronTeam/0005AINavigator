@@ -1,0 +1,105 @@
+extends ../templates/template.pug
+block content
+  +header
+  .wrapper
+    .container.container--new
+      +crumbs({
+        links: ['Личный кабинет']
+      }).mb-15.mb-xl-35
+      h2.sm-new.fw-medium.mb-40 Личный кабинет
+      .cabinet
+        .cabinet__top
+          .container
+            .cabinet__top-wrapper
+              .cabinet__top-left
+                .cabinet__picture
+                  input#formFile.form-control.cabinet__photo-input(type='file')
+                  //img.cabinet__picture-img(src="./img/cabinet-user.jpg", alt)
+                .cabinet__info-wrapper
+                  h3.md.mb-25 Ладыжский <br>Виктор Александрович
+                  .cabinet__id 1233241569
+              .cabinet__top-right
+                .cabinet__top-right-links
+                  a.p.xs.cabinet__link(href="#") Редактировать
+                  a.p.xs.cabinet__link(href="#") Выйти из профиля
+        .cabinet__content
+          .container
+            ul.nav.nav-tabs.nav-tabs--new(role='tablist')
+              li.nav-item(role='presentation')
+                button#info-tab.nav-link.active(data-bs-toggle='tab' data-bs-target='#info' type='button' role='tab' aria-controls='info' aria-selected='true') Информация
+              li.nav-item(role='presentation')
+                button#polls-tab.nav-link(data-bs-toggle='tab' data-bs-target='#polls' type='button' role='tab' aria-controls='polls' aria-selected='false') Опрос
+              li.nav-item(role='presentation')
+                button#events-tab.nav-link(data-bs-toggle='tab' data-bs-target='#events' type='button' role='tab' aria-controls='events' aria-selected='false') Мои мероприятия
+            .tab-content
+              #info.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='info-tab')
+                .cabinet__profile
+                  .cabinet__profile-item
+                    .cabinet__profile-item-header E-mail
+                    .cabinet__profile-item-content
+                      a(href="mailto:sample@sample.com") sample@sample.com
+                  .cabinet__profile-item
+                    .cabinet__profile-item-header Телефон
+                    .cabinet__profile-item-content +7 978 889 559 88
+                  .cabinet__profile-item
+                    .cabinet__profile-item-header leder-ID
+                    .cabinet__profile-item-content 1233241569
+                  .cabinet__profile-item
+                    .cabinet__profile-item-header Город
+                    .cabinet__profile-item-content г. Стерлитамак
+                  .cabinet__profile-item
+                    .cabinet__profile-item-header Дата рождения
+                    .cabinet__profile-item-content 18 авг. 1988
+                  .cabinet__profile-item
+                    .cabinet__profile-item-header Соц. сети
+                    .cabinet__profile-item-content 
+                      a.cabinet__social(href="#")
+                        img.cabinet__social-icon(src="./img/cabinet-vk.svg", alt)
+                      a.cabinet__social(href="#")
+                        img.cabinet__social-icon(src="./img/cabinet-fb.svg", alt)
+              #polls.tab-pane.fade(role='tabpanel' aria-labelledby='polls-tab')
+                .pt-35
+                  .row
+                    .col-xl-8
+                      h4.md.mb-25 Мои Интересы
+                      p.lh-lg.mb-35 С вашей помощью этот сайт может стать еще полезнее. Расскажите о своих интересах, и мы подберем контент лично для вас
+                  .row
+                    .col-lg-4.col-sm-6
+                      form.form(action="#", method="POST")
+                        .form__item.form__item--new.form-group
+                          p.xs.form-label.font-secondary.mb-5 Укажите вашу сферу деятельности?
+                          +select({
+                            placeholder: 'Выберите'
+                          }).select--new
+                        .form__item.form__item--new.form-group
+                          p.xs.form-label.font-secondary.mb-5 Какими технологиями ИИ вы интересуетесь? 
+                          +select({
+                            placeholder: 'Выберите'
+                          }).select--new
+                            option 
+                            option Вариант 1
+                            option Вариант 2
+                            option С вашей помощью этот сайт может стать еще полезнее. Расскажите о своих интересах, и мы подберем контент лично для вас
+                        .form__item.form__item--new.form-group
+                          p.xs.form-label.font-secondary.mb-5 Ваш уровень владения информацией
+                          +select({
+                            placeholder: 'Выберите'
+                          }).select--new
+                        button.btn.btn-primary.btn-violet.btn-lg(type="submit") Отправить
+              #events.tab-pane.fade(role='tabpanel' aria-labelledby='events-tab')
+                .row.mt-30
+                  .col-xl-3
+                    +event-item({
+                      date: '17/02/2022',
+                      picture: 'event-item-1.svg',
+                      dscr: 'Ведущая независимая открытая конференция по искусственному интеллекту в России.',
+                      type: 'cabinet'
+                    }).event-item--cabinet
+                  .col-xl-3
+                    +event-item({
+                      date: '16/02/2022',
+                      picture: 'event-item-2.svg',
+                      dscr: 'Серия мероприятий по искусственному интеллекту и анализу данных, проводимая ...',
+                      type: 'cabinet'
+                    }).event-item--cabinet
+  +footer

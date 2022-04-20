@@ -1,0 +1,231 @@
+extends ../templates/template.pug
+block content
+  +header.header--static.mb-40.mb-xl-65
+  .container.mb-50.mb-xl-100
+    .row.mb-30.mb-xl-50
+      .col-xl-8
+        h3.mb-25 Опрос экспертов Рабочей группы «Искусственный интеллект» АНО «Цифровая экономика»
+        p.lh-lg.mb-10 О достаточности мер по реализации Национальной стратегии развития искусственного интеллекта на период до 2030 года
+    form.form(action="#", method="POST")
+      .row
+        .col-md-5
+          h5 Вопрос 1: Считаете ли Вы достаточными в настоящее время реализуемые в РФ и известные Вам меры* для обеспечения опережающего развития искусственного интеллекта?*
+          p.xs.text-gray *Вся совокупность мер, реализуемых не только в рамках федерального проекта «Искусственный интеллект»
+          p.xs.text-gray-light.mb-35 Для перечисленных ниже направлений мер проставьте балл от 1 до 10 в зависимости от их достаточности на сегодняшний день, по Вашему мнению, для целей опережающего развития искусственного интеллекта (1 – недостаточны, 10 – достаточны).
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Подготовка высококвалифицированных кадров в области ИИ (доступность и качество образовательных программ в области ИИ/смежных областях) 
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '10'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Поддержка фундаментальных и прикладных научных исследований в области ИИ
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '10'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Механизмы привлечения частных инвестиций в развитие корпоративной науки, научных исследований и разработок в области ИИ
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '10'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Организация работы профессорско-преподавательского состава и научных сотрудников в области ИКТ/ИИ в бюджетном секторе (система мотивации и вознаграждения, условия труда, возможности для научной самореализации и др.)
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '10'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Организация международного научного сотрудничества в области ИИ, включая обмен/привлечение высококвалифицированных кадров
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '10'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Государственная поддержка разработки и развития программного обеспечения, в котором используются технологии ИИ
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '10'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Государственная поддержка разработки и развития аппаратного обеспечения, необходимого для решения задач в области ИИ
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '10'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Государственная поддержка разработки микропроцессоров и принципиально новых типов архитектур вычислительных систем
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '10'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Государственная поддержка внедрения ИИ-решений в отраслях экономики
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '10'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Подготовка государственных наборов данных и обеспечение их качества для развития технологий ИИ
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '10'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Создание (модернизация) общедоступных платформ для хранения наборов данных
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '10'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Создание, развитие, обеспечение разработчикам доступа к вычислительным мощностям, в том числе созданным на основе российских микропроцессоров
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '10'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Акселерация российских разработчиков ИИ-решений в целях их вхождения в группу лидеров на мировом рынке
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '10'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Меры поддержки экспорта ИКТ (включая ИИ-решений) и их продвижение на международных рынках
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '10'
+            }).select--default
+        .col-md-5.offset-md-2
+          h5 Вопрос 2: Отнесите каждое из 14 представленных направлений государственной политики к одной из пяти групп в зависимости от необходимости приоритетной разработки новых отраслевых мер (или расширения/корректировки существующих)
+          p.xs.text-gray 1 –группа с направлениями, по которым разработка/корректировка отраслевых мер и концентрация ресурсов возможны после решения всех иных приоритетных вопросов ; 5 – группа с наиболее приоритетными направлениями, требующими разработки новых отраслевых мер (или расширения/корректировки текущих) и приоритизации ресурсов.
+          p.xs.text-gray-light.mb-35 Для достижения целей опроса просим, по возможности, распределить 14 направлений равномерно по 5-ти группам.
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Подготовка высококвалифицированных кадров в области ИИ (доступность и качество образовательных программ в области ИИ/смежных областях) 
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '5'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Подготовка высококвалифицированных кадров в области ИИ (доступность и качество образовательных программ в области ИИ/смежных областях) 
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '5'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Подготовка высококвалифицированных кадров в области ИИ (доступность и качество образовательных программ в области ИИ/смежных областях) 
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '5'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Поддержка фундаментальных и прикладных научных исследований в области ИИ
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '5'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Механизмы привлечения частных инвестиций в развитие корпоративной науки, научных исследований и разработок в области ИИ
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '5'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Организация работы профессорско-преподавательского состава и научных сотрудников в области ИКТ/ИИ в бюджетном секторе (система мотивации и вознаграждения, условия труда, возможности для научной самореализации и др.)
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '5'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Организация международного научного сотрудничества в области ИИ, включая обмен/привлечение высококвалифицированных кадров
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '5'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Государственная поддержка разработки и развития программного обеспечения, в котором используются технологии ИИ
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '5'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Государственная поддержка разработки и развития аппаратного обеспечения, необходимого для решения задач в области ИИ
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '5'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Государственная поддержка разработки микропроцессоров и принципиально новых типов архитектур вычислительных систем
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '5'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Государственная поддержка внедрения ИИ-решений в отраслях экономики
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '5'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Подготовка государственных наборов данных и обеспечение их качества для развития технологий ИИ
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '5'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Создание (модернизация) общедоступных платформ для хранения наборов данных
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '5'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Создание, развитие, обеспечение разработчикам доступа к вычислительным мощностям, в том числе созданным на основе российских микропроцессоров
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '5'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Акселерация российских разработчиков ИИ-решений в целях их вхождения в группу лидеров на мировом рынке
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '5'
+            }).select--default
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Меры поддержки экспорта ИКТ (включая ИИ-решений) и их продвижение на международных рынках
+              span.text-danger *
+            +select({
+              placeholder: 'Выберите',
+              evaluate: '5',
+              notRequired: true
+            }).select--default
+      button.btn.btn-primary.btn--wide(type="submit") Отправить
+  +footer

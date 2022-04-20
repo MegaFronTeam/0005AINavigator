@@ -1,0 +1,14 @@
+mixin news-card(data)
+  a.news-card(href="#")&attributes(attributes)
+    .news-card__picture
+      if data && data.logo
+        img.news-card__picture-logo(src="./img/" + data.logo, alt)
+      else if data && data.picture
+        img.news-card__picture-img(src="./img/" + data.picture, alt)
+    .news-card__content
+      .news-card__tags-wrapper
+        .news-card__tag.news-card__tag--star
+        .news-card__tag R&D
+        .news-card__tag Мировые рейтинги индексы в ИИ Мировые рейтинги индексы в ИИ
+      p.news-card__title= data.title
+      .news-card__date 26.01.2022

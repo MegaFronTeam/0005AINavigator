@@ -1,0 +1,13 @@
+mixin category-item(data)
+  .category-item&attributes(attributes)
+    .category-item__subtitle-wrapper
+      if data && data.subtitle
+        .category-item__subtitle= data.subtitle
+    .category-item__wrapper
+      if data && data.type == 'empty'
+      else
+        .category-item__icon
+          img.category-item__icon-img(src="./img/" + data.icon, alt)
+        .category-item__content
+          .category-item__title= data.title
+          .category-item__dscr= data.dscr

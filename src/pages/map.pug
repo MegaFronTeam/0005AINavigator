@@ -1,0 +1,12 @@
+extends ../templates/template.pug
+block content
+  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initMap" async)
+  +header.header--static.mb-30.mb-xl-50
+  .container
+    .map
+      .map__header
+        h2.map__title Карта искусственного интелекта РФ
+        a.btn.btn-primary.btn-xs.map__header-btn(href="#") Добавить проект в карту ИИ
+      .map__wrapper
+        .map__content#map
+  +footer

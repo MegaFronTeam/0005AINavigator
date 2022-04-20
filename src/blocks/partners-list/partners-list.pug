@@ -1,0 +1,39 @@
+mixin partners-list(data)
+  .partners-list&attributes(attributes)
+    .container.container--new
+      .partners-list__content
+        +partners-list__item({
+          logo: 'partners-list-1.svg',
+          title: 'Новости искусственного интеллекта на ICT.Moscow'
+        })
+        +partners-list__item({
+          logo: 'partners-list-2.svg',
+          title: 'Альянс в сфере искусственного интеллекта '
+        })
+        +partners-list__item({
+          logo: 'partners-list-3.svg',
+          title: 'Блог об искусственном интеллекте'
+        })
+        +partners-list__item({
+          logo: 'partners-list-4.svg',
+          title: 'Сообщество искусственного интеллекта'
+        })
+        +partners-list__item({
+          logo: 'partners-list-5.svg',
+          title: 'Российская ассоциация искусственного интеллекта'
+        })
+        +partners-list__item({
+          logo: 'partners-list-6.svg',
+          title: 'Хакатоны по искусственному интеллекту'
+        })
+        +partners-list__item({
+          logo: 'partners-list-7.svg',
+          title: 'Данные для  искусственного интеллекта'
+        })
+
+
+mixin partners-list__item(data)
+  a.partners-list__item(href="#")&attributes(attributes)
+    .partners-list__logo
+      img.partners-list__logo-img(src="./img/" + data.logo, alt)
+    .partners-list__name= data.title

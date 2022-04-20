@@ -1,0 +1,21 @@
+mixin auth(data)
+  .auth&attributes(attributes)
+      if data && data.type == 'custom'
+        if data && data.header
+          p.sm.auth__header= data.header
+        if data && data.socials
+          .auth__content
+            each item in data.socials
+              a.auth__item(href="#")
+                img.auth__item-logo(src="./img/" + item + ".svg", alt)
+      else
+        p.sm.auth__header Войти через
+        .auth__content
+          a.auth__item.px-25(href="#")
+            img.auth__item-logo(src="./img/auth-leader.svg", alt)
+          a.auth__item(href="#")
+            img.auth__item-logo(src="./img/auth-vk.svg", alt)
+          a.auth__item(href="#")
+            img.auth__item-logo(src="./img/auth-fb.svg", alt)
+          a.auth__item(href="#")
+            img.auth__item-logo(src="./img/auth-go.svg", alt)

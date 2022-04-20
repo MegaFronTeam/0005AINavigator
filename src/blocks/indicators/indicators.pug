@@ -1,0 +1,46 @@
+mixin indicators(data)
+  .indicators&attributes(attributes)
+    .indicators__wrapper
+      .indicators__content
+        .indicators__header
+          .indicators__header-item.indicators__title Показатель национального и федерального проекта
+          .indicators__header-item.indicators__planned Плановые значения
+          .indicators__header-item.indicators__current Реальные значения
+          .indicators__header-item.indicators__range Период
+          .indicators__header-item.indicators__dynamics
+        +indicators__item({
+          title: 'Удовлетворенность условиями работы в Российской Федерации граждан, заинтересованных в развитии технологий искусственного интеллекта',
+          plan: 1,
+          real: 64,
+          number: 30
+        })
+        +indicators__item({
+          number: 2,
+          title: 'Публикации российских специалистов на конференциях в области ИИ уровня А*',
+          plan: 36,
+          real: 76,
+          number: 211
+        })
+        +indicators__item({
+          number: 3,
+          title: 'Количество специалистов в области ИИ, подготовленных в рамках программ высшего образования',
+          plan: 650,
+          real: 2083,
+          number: 320
+        })
+  
+  
+  
+  
+  
+mixin indicators__item(data)
+  .indicators__item&attributes(attributes)
+    //.indicators__item-cell.indicators__item-cell--count.indicators__item-cell--number.indicators__number= data.number
+    .indicators__item-cell.indicators__item-cell--title.indicators__title= data.title
+    .indicators__item-cell.indicators__item-cell--number.indicators__planned= data.plan
+    .indicators__item-cell.indicators__item-cell--number.indicators__current= data.real
+    .indicators__item-cell.indicators__item-cell--number.indicators__range 2021
+    .indicators__item-cell.indicators__item-cell--number.indicators__item-cell--dynamics.indicators__dynamics
+      +circle({
+        number: data.number
+      })

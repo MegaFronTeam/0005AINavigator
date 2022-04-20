@@ -1,0 +1,23 @@
+.doc-new {
+  margin-bottom: 30px;
+  padding: 24px;
+  display: block;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 3px 0 15px rgba(74, 66, 142, .07);
+
+  &__title {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 1.375;
+    letter-spacing: .04em;
+    color: $violet;
+  }
+
+  &__date {
+    font-size: 14px;
+    line-height: 1.43;
+    color: rgba(#a7a7ab, .8);
+  }
+}

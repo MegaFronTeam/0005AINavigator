@@ -1,0 +1,323 @@
+mixin monitor(data)
+  .monitor&attributes(attributes)
+            
+    if data && data.type == 'indicators'
+      h3.mb-30.mb-xl-50 Показатели
+      .row
+        .col-xl-6.d-flex
+          .monitor__item.monitor__item--indicator
+            p.lg.mb-30 Размер AI сообщества
+            .monitor__lines-wrapper
+              +monitor__line({
+                year: 2018,
+                number: 0,
+                max: 200
+              }).monitor__line--divided
+              +monitor__line({
+                year: 2019,
+                number: 0,
+                max: 200
+              }).monitor__line--divided
+              +monitor__line({
+                year: 2020,
+                number: 0,
+                max: 200
+              }).monitor__line--divided
+              +monitor__line({
+                year: 2021,
+                number: 120,
+                max: 200
+              }).monitor__line--divided
+              +monitor__line({
+                year: 2022,
+                number: 140,
+                max: 200
+              }).monitor__line--divided
+              +monitor__line({
+                year: 2023,
+                number: 160,
+                max: 200
+              }).monitor__line--divided
+              +monitor__line({
+                year: 2024,
+                number: 200,
+                max: 200
+              }).monitor__line--divided
+        .col-xl-6.d-flex
+          .monitor__item.monitor__item--indicator
+            p.lg.mb-30 Удовлетворенность условиями работы
+            .monitor__circle-wrapper
+              .monitor__circle
+                .monitor__circle-graph
+                  .monitor__circle-graph-filler
+                .monitor__circle-text
+                  .monitor__circle-text-number 56
+                  .monitor__circle-text-percent %
+              p.sm.monitor__circle-dscr.mb-0 Удовлетворены условиями работы в Российской Федерации в развитии технологий AI
+        .col-xl-6.d-flex
+          .monitor__item.monitor__item--indicator
+            p.lg.mb-30 Количество специалистов по программам высшего образования
+            .monitor__lines-wrapper
+              +monitor__line({
+                year: 2018,
+                number: 0,
+                max: 2650
+              }).monitor__line--divided.monitor__line--number
+              +monitor__line({
+                year: 2019,
+                number: 0,
+                max: 2650
+              }).monitor__line--divided.monitor__line--number
+              +monitor__line({
+                year: 2020,
+                number: 0,
+                max: 2650
+              }).monitor__line--divided.monitor__line--number
+              +monitor__line({
+                year: 2021,
+                number: 650,
+                max: 2650
+              }).monitor__line--divided.monitor__line--number
+              +monitor__line({
+                year: 2022,
+                number: 650,
+                max: 2650
+              }).monitor__line--divided.monitor__line--number
+              +monitor__line({
+                year: 2023,
+                number: 650,
+                max: 2650
+              }).monitor__line--divided.monitor__line--number
+              +monitor__line({
+                year: 2024,
+                number: 2650,
+                max: 2650
+              }).monitor__line--divided.monitor__line--number
+        .col-xl-6.d-flex
+          .monitor__item.monitor__item--indicator
+            p.lg.mb-30 Количество специалистов по программам высшего образования
+            .monitor__lines-wrapper
+              +monitor__line({
+                year: 2018,
+                number: 0,
+                max: 1199
+              }).monitor__line--divided.monitor__line--number
+              +monitor__line({
+                year: 2019,
+                number: 0,
+                max: 1199
+              }).monitor__line--divided.monitor__line--number
+              +monitor__line({
+                year: 2020,
+                number: 0,
+                max: 1199
+              }).monitor__line--divided.monitor__line--number
+              +monitor__line({
+                year: 2021,
+                number: 247,
+                max: 1199
+              }).monitor__line--divided.monitor__line--number
+              +monitor__line({
+                year: 2021,
+                number: 620,
+                max: 1199
+              }).monitor__line--divided.monitor__line--number
+              +monitor__line({
+                year: 2021,
+                number: 920,
+                max: 1199
+              }).monitor__line--divided.monitor__line--number
+              +monitor__line({
+                year: 2021,
+                number: 1199,
+                max: 1199
+              }).monitor__line--divided.monitor__line--number
+        .col-12.d-flex
+          .monitor__item.monitor__item--indicator
+            p.lg.mb-30 Количество специалистов, получивших доп образование
+            .row
+              .col-xl-5.col-md-6.mb-40.mb-md-0
+                .monitor__columns-wrapper.monitor__columns-wrapper--column
+                  p.mb-30.mb-xl-65 Публикации на конференциях
+                  .monitor__columns-container
+                    +monitor__column({
+                      year: 2021,
+                      max: 70,
+                      number: 36
+                    }).monitor__column--red
+                    +monitor__column({
+                      year: 2022,
+                      max: 70,
+                      number: 48
+                    })
+                    +monitor__column({
+                      year: 2023,
+                      max: 70,
+                      number: 60
+                    })
+              .col-xl-5.offset-xl-1.col-md-6.mb-40.mb-md-0
+                .monitor__columns-wrapper.monitor__columns-wrapper--column
+                  p.mb-30.mb-xl-65 Доля ФОИВ
+                  .monitor__columns-container
+                    +monitor__column({
+                      year: 2021,
+                      max: 120,
+                      number: 50
+                    }).monitor__column--red
+                    +monitor__column({
+                      year: 2022,
+                      max: 120,
+                      number: 100
+                    })
+                    +monitor__column({
+                      year: 2023,
+                      max: 120,
+                      number: 100
+                    })
+    
+    else if data && data.type == 'chart'
+      .monitor__columns-wrapper.monitor__columns-wrapper--column
+        .monitor__columns-container
+          +monitor__column({
+            year: 2021,
+            max: 120,
+            number: 36
+          }).monitor__column--red
+          +monitor__column({
+            year: 2022,
+            max: 120,
+            number: 48
+          })
+          +monitor__column({
+            year: 2023,
+            max: 120,
+            number: 60
+          })
+          +monitor__column({
+            year: 2021,
+            max: 120,
+            number: 72
+          }).monitor__column--red
+          +monitor__column({
+            year: 2022,
+            max: 120,
+            number: 84
+          })
+          +monitor__column({
+            year: 2023,
+            max: 120,
+            number: 96
+          })
+                    
+    else 
+      .container
+            
+        if data && data.type == 'stats'
+          h3.mb-30 AI Монитор
+        else
+          h2.mb-30 AI Монитор
+        .row.justify-content-between
+          if data && data.type == 'stats'
+            .col-xl-6.d-flex
+              .monitor__left
+                .monitor__item.monitor__item--row
+                  .monitor__circle
+                    .monitor__circle-graph
+                      .monitor__circle-graph-filler
+                    .monitor__circle-text
+                      .monitor__circle-text-number 56
+                      .monitor__circle-text-percent %
+                  p.lg.mb-0 Специалистов в IT сфере используют AI в своей работе
+                .monitor__item.monitor__item--lines
+                  p.lg.monitor__lines-header.mb-30 Доля ФОИВ, внедряющих ИИ 
+                  .monitor__lines-wrapper
+                    +monitor__line({
+                      year: 2021,
+                      number: 12
+                    }).monitor__line--red
+                    +monitor__line({
+                      year: 2022,
+                      number: 61
+                    })
+                    +monitor__line({
+                      year: 2023,
+                      number: 98
+                    })
+          else
+            .col-xl-5.d-flex
+              .monitor__left
+                .monitor__item.monitor__item--row
+                  .monitor__circle
+                    .monitor__circle-graph
+                      .monitor__circle-graph-filler
+                    .monitor__circle-text
+                      .monitor__circle-text-number 56
+                      .monitor__circle-text-percent %
+                  p.lg.mb-0 Специалистов в IT сфере используют AI в своей работе
+                .monitor__item.monitor__item--lines
+                  p.lg.monitor__lines-header.mb-30 Доля ФОИВ, внедряющих ИИ 
+                  .monitor__lines-wrapper
+                    +monitor__line({
+                      year: 2021,
+                      number: 12
+                    }).monitor__line--red
+                    +monitor__line({
+                      year: 2022,
+                      number: 61
+                    })
+                    +monitor__line({
+                      year: 2023,
+                      number: 98
+                    })
+          .col-xl-5.d-flex
+            .monitor__right
+              .monitor__item.monitor__item--column
+                p.lg.monitor__columns-header.mb-30.mb-xxxl-70 Публикации российских специалистов на конференциях в области ИИ 
+                .monitor__columns-wrapper
+                  +monitor__column({
+                    year: 2021,
+                    max: 130,
+                    number: 12
+                  }).monitor__column--red
+                  +monitor__column({
+                    year: 2022,
+                    max: 130,
+                    number: 45
+                  })
+                  +monitor__column({
+                    year: 2023,
+                    max: 130,
+                    number: 110
+                  })
+              if data && data.type == 'stats'
+              else
+                a.btn.btn-secondary.monitor__btn(href="#") Интерактивный мониторинг по 12 показателям
+              
+              
+              
+mixin monitor__line(data)
+  .monitor__line&attributes(attributes)
+    if data && data.max
+      - var max = data.max
+    else
+      - var max = 100
+    .monitor__line-year= data.year
+    .monitor__line-container
+      .monitor__line-wrapper
+        .monitor__line-content(style="width: " + data.number/max*100 + '%')
+          .monitor__line-text
+            .monitor__line-text-wrapper
+              .monitor__line-number= data.number
+              .monitor__line-percent %
+          
+          
+mixin monitor__column(data)
+  .monitor__column&attributes(attributes)
+    .monitor__column-container
+      .monitor__column-wrapper
+        .monitor__column-text
+          .monitor__column-number= data.number
+        .monitor__column-content(style="height: " + data.number/data.max*100 + '%')
+    .monitor__column-year= data.year
+      
+      

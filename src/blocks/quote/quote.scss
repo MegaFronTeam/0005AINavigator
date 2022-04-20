@@ -1,0 +1,45 @@
+.quote {
+  display: flex;
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__photo {
+    position: relative;
+    margin-right: 32px;
+    margin-bottom: 32px;
+    overflow: hidden;
+    width: 95px;
+    height: 95px;
+    flex-shrink: 0;
+    border-radius: 50%;
+  }
+
+  &__photo-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  &__content {
+    padding-left: 32px;
+    border-left: 1px solid $primary;
+  }
+
+  &__text {
+    line-height: 1.5 !important;
+  }
+
+  &--white {
+    margin-bottom: 56px;
+    padding: 32px;
+    background: #fff;
+  }
+}

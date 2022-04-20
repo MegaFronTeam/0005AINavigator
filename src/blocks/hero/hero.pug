@@ -1,0 +1,57 @@
+mixin hero(data)
+  .hero.ticker.ticker--dots&attributes(attributes)
+    +hero__item({
+      title: 'Развитие инфраструктуры беспилотного транспорта',
+      picture: 'hero-1.png',
+    })
+    +hero__item({
+      title: 'Развитие инфраструктуры беспилотного транспорта',
+      picture: 'hero-1.png',
+    })
+    +hero__item({
+      title: 'Развитие инфраструктуры беспилотного транспорта',
+      picture: 'hero-1.png',
+    })
+    +hero__item({
+      title: 'Развитие инфраструктуры беспилотного транспорта',
+      picture: 'hero-1.png',
+    })
+    +hero__item({
+      title: 'Развитие инфраструктуры беспилотного транспорта',
+      picture: 'hero-1.png',
+    })
+    +hero__item({
+      title: 'Развитие инфраструктуры беспилотного транспорта',
+      picture: 'hero-1.png',
+    })
+    +hero__item({
+      title: 'Развитие инфраструктуры беспилотного транспорта',
+      picture: 'hero-1.png',
+    })
+    
+    
+    
+mixin hero__item(data)
+  .hero__item(data-title=data.title)&attributes(attributes)
+    .hero__item-container
+      .hero__left
+        .hero__item-wrapper
+          .hero__item-content
+            .hero__item-top
+              h4.hero__item-title= data.title
+              p.sm В 15 регионах РФ проводится опытная эксплуатация беспилотных автомобилей на дорогах общего пользования. К 2025 году беспилотные автомобили станут доступны для всех граждан РФ
+              a.btn.btn-primary.btn-new.hero__btn(href="#") Узнать больше
+          .hero__item-picture
+            img.hero__item-picture-img(src="./img/hero-2.png", alt)
+      .hero__right
+        .hero__achievements
+          .hero__achievements-header-wrapper
+            a.h5.hero__achievements-header(href="#") Индикаторы
+          +achievement({
+            number: '635',
+            dscr: 'миллионов километров — общий пробег беспилотных автомобилей с начала тестирования '
+          }).hero__achievement
+          +achievement({
+            number: '1 000+',
+            dscr: 'федеральных закона — в России заработали экспериментальные правовые режимы в сфере цифровых инноваций'
+          }).hero__achievement

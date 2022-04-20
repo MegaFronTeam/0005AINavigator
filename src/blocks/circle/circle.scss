@@ -1,0 +1,31 @@
+.circle {
+  position: relative;
+  width: 78px;
+  height: 78px;
+
+  @include media-breakpoint-down(xl) {
+    width: 60px;
+    height: 60px;
+  }
+
+  canvas {
+    position: absolute;
+    display: block;
+  }
+
+  &__number {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: $violet;
+  }
+}

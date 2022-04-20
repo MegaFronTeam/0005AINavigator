@@ -1,0 +1,19 @@
+extends ../templates/template.pug
+block content
+  +header
+  .wrapper
+    .container.container--new
+      +crumbs({
+        links: ['Указы и постановления']
+      }).mb-15.mb-xl-35
+      h2.sm-new.mb-25 АI Монитор
+      .line-header
+        h3.md.line-header__title Показатели Федерального проекта «Искусственный интеллект»
+      +indicators
+      .part.part--table.mb-40.mb-xl-100
+        .part__table-outer
+          .line-header
+            h3.md.line-header__title Индекс Зрелости ФОИВ
+        .part__table
+          +table
+  +footer

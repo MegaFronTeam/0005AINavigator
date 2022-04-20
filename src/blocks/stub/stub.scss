@@ -1,0 +1,71 @@
+.stub {
+
+  &__wrapper {
+    padding: 80px 0 66px;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-breakpoint-down(xxl) {
+      padding: 40px 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 20px 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  &__inner {
+    padding: 40px 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-breakpoint-down(sm) {
+      align-items: flex-start;
+    }
+  }
+
+  &__footer-text {
+    font-size: 12px;
+    line-height: 2;
+    color: $dark;
+
+    @include media-breakpoint-down(sm) {
+      margin-right: 20px;
+      font-size: 10px;
+    }
+  }
+
+  &__btn {
+
+    @include media-breakpoint-down(sm) {
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+mixin cover(data)
+  .cover&attributes(attributes)
+    .cover__picture
+      img.cover__picture-img(src="./img/" + data.picture, alt)
+    .cover__content
+      .container.container--new
+        .row
+          .col-xl-6.col-md-5
+            h2.sm-new.fw-medium.mob-sm.mb-15.mb-md-25.mb-xl-30= data.title
+        .row
+          .col-xl-4.col-md-5
+            p.cover__dscr= data.dscr

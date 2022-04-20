@@ -1,0 +1,22 @@
+.back {
+  margin-bottom: 56px;
+  display: block;
+
+  @include transition;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 30px;
+  }
+
+  &__btn {
+    width: 45px;
+    height: 16px;
+    flex-shrink: 0;
+    background: url(../img/back-icon.svg) no-repeat center;
+    background-size: contain;
+  }
+}

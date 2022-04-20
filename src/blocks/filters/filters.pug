@@ -1,0 +1,173 @@
+mixin filters(data)
+  .filters&attributes(attributes)
+    a.btn.btn-primary.btn-lg.filters__btn(href="#") Фильтры
+    .filters__content
+      form.form(action="#", method="post")
+      
+        if data && data.type == 'media'
+          .row
+            .col-sm-4.d-flex.align-items-end
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Технологии ИИ
+                +select({
+                  placeholder: 'Выберите'
+              }).select--new
+            .col-sm-4.d-flex.align-items-end
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Уровень сложности
+                +select({
+                  placeholder: 'Выберите'
+              }).select--new
+            .col-sm-4.d-flex.align-items-end
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Сфера
+                +select({
+                  placeholder: 'Выберите'
+              }).select--new
+              
+        else if data && data.type == 'events'
+          .row
+            .col-sm-3.d-flex.align-items-end
+              .form__item.form__item--new.form__item--filter.form-group
+                p.xs.form-label.font-secondary.mb-5 Дата начала
+                +select({
+                  placeholder: 'Выберите'
+              }).select--new
+            .col-sm-3.d-flex.align-items-end
+              .form__item.form__item--new.form__item--filter.form-group
+                p.xs.form-label.font-secondary.mb-5 Организатор
+                +select({
+                  placeholder: 'Выберите'
+              }).select--new
+            .col-sm-3.d-flex.align-items-end
+              .form__item.form__item--new.form__item--filter.form-group
+                p.xs.form-label.font-secondary.mb-5 Тип мероприятия
+                +select({
+                  placeholder: 'Выберите'
+              }).select--new
+            .col-sm-3
+              .form-check.form-check--new.mt-15.mb-0
+                input#check1.form-check-input(type='checkbox' checked value='')
+                label.form-check-label(for='check1') Идет регистрация
+          a.filters__reset-new(href="#") Сбросить фильтр
+              
+        else if data && data.type == 'support'
+          .row
+            .col-xxl-2.col-xl-3.col-sm-4.d-flex.align-items-end
+              .form__item.form-group
+                p.xs.form-label.font-secondary.mb-5 Уровень сложности
+                +select({
+                  placeholder: 'Выберите'
+                }).select--default.select--rounded
+            .col-xxl-2.col-xl-3.col-sm-4.d-flex.align-items-end
+              .form__item.form-group
+                p.xs.form-label.font-secondary.mb-5 Сфера
+                +select({
+                  placeholder: 'Выберите'
+                }).select--default.select--rounded
+            .col-xxl-2.col-xl-3.col-sm-4.d-flex.align-items-end
+              .form__item.form-group
+                a.btn.btn-outline-primary.btn-sm.btn-rounded.filters__reset(href="#") Сбросить
+              
+        else if data && data.type == 'research'
+          .row
+            .col-xl-3.col-sm-4.d-flex.align-items-end
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Технологии ИИ
+                +select({
+                  placeholder: 'Выберите'
+                }).select--new
+            .col-xl-3.col-sm-4.d-flex.align-items-end
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Уровень сложности
+                +select({
+                  placeholder: 'Выберите'
+                }).select--new
+            .col-xl-3.col-sm-4.d-flex.align-items-end
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Сфера
+                +select({
+                  placeholder: 'Выберите'
+                }).select--new
+          a.filters__reset-new(href="#") Сбросить фильтр
+              
+        else if data && data.type == 'education'
+          .row
+            .col-xl-3.col-sm-4.d-flex.align-items-end
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Регион
+                +select({
+                  placeholder: 'Все'
+                }).select--new
+            .col-xl-3.col-sm-4.d-flex.align-items-end
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 ВУЗ
+                +select({
+                  placeholder: 'Все'
+                }).select--new
+            .col-xl-3.col-sm-4.d-flex.align-items-end
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Формат обучения
+                +select({
+                  placeholder: 'Все'
+                }).select--new
+          a.filters__reset-new(href="#") Сбросить фильтр
+              
+        else if data && data.type == 'map-events'
+          .row
+            .col-xl-3.col-sm-4.d-flex.align-items-end
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Регион
+                +select({
+                  placeholder: 'Все'
+                }).select--new
+            .col-xl-3.col-sm-4.d-flex.align-items-end
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Тип мероприятия
+                +select({
+                  placeholder: 'Все'
+                }).select--new
+          a.filters__reset-new(href="#") Сбросить фильтр
+          
+        else
+          .row
+            .col-xxl-2.col-lg-4.col-sm-6.d-flex.align-items-end
+              .form__item.form-group
+                .form-check.form-check--switch
+                  input#check1.form-check-input(type='checkbox' checked value='')
+                  label.form-check-label(for='check1')
+                    span.form-check__switch-item Будущие
+                    span.form-check__switch-item Прошедшие
+            .col-xxl-2.col-lg-4.col-sm-6.d-flex.align-items-end
+              .form__item.form__item--calendar.form-group
+                p.xs.form-label.font-secondary.mb-5 Даты проведения
+                input.input.input--calendar.form-control(type="text", placeholder="Выберите")
+            .col-xxl-2.col-lg-4.col-sm-6.d-flex.align-items-end
+              .form__item.form-group
+                p.xs.form-label.font-secondary.mb-5 Организатор
+                +select({
+                  placeholder: 'Выберите'
+              }).select--default
+            .col-xxl-2.col-lg-4.col-sm-6.d-flex.align-items-end
+              .form__item.form-group
+                p.xs.form-label.font-secondary.mb-5 Город проведения
+                +select({
+                  placeholder: 'Выберите'
+              }).select--default
+            .col-xxl-2.col-lg-4.col-sm-6.d-flex.align-items-end
+              .form__item.form-group
+                p.xs.form-label.font-secondary.mb-5 Теги
+                +select({
+                  placeholder: 'Выберите',
+                  multiple: true
+              }).select--default
+            .col-xxl-2.col-lg-4.col-sm-6.d-flex.align-items-end
+              .form__item.form-group
+                p.xs.form-label.font-secondary.mb-5 Тип мероприятия
+                +select({
+                  placeholder: 'Выберите',
+                  multiple: true
+              }).select--default
+          .form-check
+            input#check2.form-check-input(type='checkbox' checked value='')
+            label.form-check-label(for='check2') Идет регистрация 

@@ -1,0 +1,19 @@
+mixin header(data)
+  .header&attributes(attributes)
+    .container.container--wide
+      .header__wrapper
+        .header__left
+          +logo.logo--header
+        if data && data.type == 'short'
+        else
+          .header__center
+            +menu.header__menu
+        .header__right
+          if data && data.type == 'short'
+          else
+            +search.search--sm.header__search
+            a.header__btn.header__btn--search(href="#")
+          .header__language
+            a.header__btn.header__btn--language.header__language-item.header__language-item--en.header__language-item--active(href="#") En
+            a.header__btn.header__btn--language.header__language-item.header__language-item--ru(href="#") Ru
+          a.header__btn.header__btn--user(href="#")

@@ -1,0 +1,45 @@
+mixin news-list(data)
+  .news-list&attributes(attributes)
+    .container.container--new
+      .news-list__header
+        if data && data.title
+          .news-list__title= data.title
+        else
+          .news-list__title Новости
+        if data && data.docs
+          .news-list__docs
+            .news-list__docs-header Всего документов:
+            .news-list__docs-number= data.docs
+      if data && data.tags
+        .news-list__tags
+          each tag in data.tags
+            a.tag.tag--color.tag--btn(href="#")= tag
+      .news-list__slider
+        +news-card({
+          logo: 'news-logo-1.svg',
+          title: 'Закупки систем искусственного интеллекта в регионах выросли на 277% за 2021 г.'
+        })
+        +news-card({
+          picture: 'news-pic-2.jpg',
+          title: 'Закупки систем искусственного интеллекта в регионах выросли на 277% за 2021 г. Закупки систем искусственного интеллекта в регионах выросли на 277% за 2021 г. '
+        })
+        +news-card({
+          logo: 'news-logo-3.svg',
+          title: 'Закупки систем искусственного интеллекта'
+        })
+        +news-card({
+          logo: 'news-logo-1.svg',
+          title: 'Закупки систем искусственного интеллекта в регионах выросли на 277% за 2021 г.'
+        })
+        +news-card({
+          picture: 'news-pic-2.jpg',
+          title: 'Закупки систем искусственного интеллекта в регионах выросли на 277% за 2021 г. Закупки систем искусственного интеллекта в регионах выросли на 277% за 2021 г. '
+        })
+        +news-card({
+          logo: 'news-logo-3.svg',
+          title: 'Закупки систем искусственного интеллекта'
+        })
+      if data && data.link == 'no'
+      else
+        .news-list__bottom
+          a.news-list__link(href="#") Все новости

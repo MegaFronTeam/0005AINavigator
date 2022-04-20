@@ -1,0 +1,46 @@
+.link-arrow {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  text-decoration: none;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+
+  @include media-breakpoint-down(xl) {
+    font-size: 8px;
+  }
+
+  &:after {
+    margin-left: 16px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    content: '';
+    background: url(../img/events-link-arrow.svg) no-repeat center;
+    background-size: contain;
+    border-radius: 50%;
+
+    @include media-breakpoint-down(xl) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &--dark {
+    color: $dark-new;
+
+    &:hover {
+      color: $violet;
+
+      //      &:after {
+      //        background: url(../img/events-link-arrow.svg) no-repeat center;
+      //        background-size: contain;
+      //      }
+    }
+
+    &:after {
+      background: url(../img/link-arrow-dark.svg) no-repeat center;
+      background-size: contain;
+    }
+  }
+}

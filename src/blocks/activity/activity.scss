@@ -1,0 +1,50 @@
+.activity {
+  margin-bottom: 48px;
+
+  @include media-breakpoint-down(xl) {
+    margin-bottom: 24px;
+  }
+
+  &:before {
+    margin-bottom: 24px;
+    display: block;
+    width: 40px;
+    height: 2px;
+    content: '';
+    background: #2f32dc;
+  }
+
+  &__dots-wrapper {
+    margin-bottom: 19px;
+    display: flex;
+    max-width: 45px;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__dot {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: 10px;
+    height: 10px;
+    background: $violet;
+    border-radius: 50%;
+  }
+
+  &__dscr {
+    margin-bottom: 0;
+    line-height: 1.375;
+
+    @include media-breakpoint-down(xxl) {
+      font-size: 13px !important;
+    }
+
+    @include media-breakpoint-down(xl) {
+      font-size: 12px !important;
+      line-height: 1.32 !important;
+    }
+  }
+}

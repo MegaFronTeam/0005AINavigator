@@ -1,0 +1,7 @@
+mixin content(data)
+  .content&attributes(attributes)
+    .content__icon
+      img.content__icon-img(src="./img/" + data.icon, alt)
+    h5.content__title= data.title
+    each item in data.links
+      a.content__link(href="#")= item

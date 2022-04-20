@@ -1,0 +1,20 @@
+html {
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  color: $dark;
+  background: #fff;
+  transition: opacity 1s cubic-bezier(.25, .1, .25, 1);
+  -webkit-font-smoothing: antialiased;
+
+  &.fixed {
+    overflow: hidden;
+  }
+
+  &.magic-fixed {
+    overflow: hidden;
+  }
+}

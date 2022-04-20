@@ -1,0 +1,31 @@
+.line-header {
+  display: flex;
+
+  &:after {
+    margin-left: 40px;
+    display: block;
+    flex-grow: 1;
+    content: '';
+    border-bottom: 1px solid #a7a7ab;
+
+    @include media-breakpoint-down(xl) {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+    padding-bottom: 16px;
+    flex-shrink: 0;
+    border-bottom: 1px solid #f22444;
+
+    @include media-breakpoint-down(xl) {
+      flex-shrink: 1;
+      font-size: 18px !important;
+    }
+
+    //    @include media-breakpoint-down(md) {
+    //      margin-left: -16px;
+    //    }
+  }
+}

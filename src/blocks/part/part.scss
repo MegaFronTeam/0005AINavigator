@@ -1,0 +1,28 @@
+.part {
+
+  @include media-breakpoint-down(md) {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  &__table {
+    margin-top: 56px;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 16px;
+      margin-left: -16px;
+      padding-right: 16px;
+      padding-left: 16px;
+      overflow: auto;
+      width: calc(100% + 32px);
+    }
+  }
+
+  &__table-outer {
+  }
+
+  &--table {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

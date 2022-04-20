@@ -1,0 +1,13 @@
+.navigator {
+  display: flex;
+  align-items: center;
+  background: $primary;
+
+  &__features {
+    margin-bottom: -118px;
+
+    @include media-breakpoint-down(xxl) {
+      margin-bottom: 0;
+    }
+  }
+}

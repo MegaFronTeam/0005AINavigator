@@ -1,0 +1,125 @@
+extends ../templates/template.pug
+block content
+  +header.header--static
+  .overflow-hidden
+    .container
+      h2.mb-30.mb-xl-40 База знаний
+      .row.mb-20
+        .col-xxl-6.col-xl-9.col-lg-8
+          a.tag(href="#") #Студентам
+          a.tag(href="#") #Сбер
+          a.tag(href="#") #Smart City
+          a.tag(href="#") #Студентам
+          a.tag(href="#") #Сбер
+          a.tag(href="#") #Smart City
+          a.tag(href="#") #Студентам
+          a.tag(href="#") #Сбер
+          a.tag(href="#") #Smart City
+          a.tag(href="#") #Студентам
+          a.tag(href="#") #Сбер
+          a.tag(href="#") #Smart City
+        .col-xl-3.offset-xxl-3.col-lg-4.mt-20.mt-lg-0
+          a.link.link--anchor(href="#interest") Национальные интересы
+          a.link.link--anchor(href="#components") Компоненты
+          a.link.link--anchor(href="#regulations") Регулирование искусственного интеллекта
+      #interest.mb-40.mb-xl-55
+        h3.mb-35 Национальные интересы
+        .row
+          .col-xl-10
+            .d-flex.flex-wrap
+              .form-check.form-check--btn
+                input#check1.form-check-input(type='checkbox' checked value='')
+                label.form-check-label(for='check1') Национальные документы по развитию в области ИИ
+              .form-check.form-check--btn
+                input#check2.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check2') Национальные документы по развитию ИИ в других странах
+              .form-check.form-check--btn
+                input#check3.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check3') Мировые рейтинги индексы в ИИ
+              .form-check.form-check--btn
+                input#check4.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check4') Международные сотрудничества и альянысы в области ИИ
+        .slider
+          .slider__content
+            +card({
+              picture: 'card-1.jpg',
+            })
+            +card({
+              picture: 'card-2.jpg',
+            })
+            +card({
+              picture: 'card-3.jpg',
+            })
+            +card({
+              picture: 'card-4.jpg',
+            })
+      #components.mb-40.mb-xl-55
+        h3.mb-30 Компоненты
+        .row
+          .col-xl-10
+            .d-flex.flex-wrap
+              .form-check.form-check--btn
+                input#check5.form-check-input(type='checkbox' checked value='')
+                label.form-check-label(for='check5') Разработки и исследования в области ИИ
+              .form-check.form-check--btn
+                input#check6.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check6') Инфраструктура ИИ
+              .form-check.form-check--btn
+                input#check7.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check7') Образование и кадры
+              .form-check.form-check--btn
+                input#check8.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check8') Инвестиционная активность
+              .form-check.form-check--btn
+                input#check9.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check9') Компании-разработчики и стратапы
+              .form-check.form-check--btn
+                input#check10.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check10') Технологии ИИ
+              .form-check.form-check--btn
+                input#check11.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check11') Внедрение ИИ
+              .form-check.form-check--btn
+                input#check12.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check12') Тренды ИИ
+        .slider
+          .slider__content
+            +card({
+              picture: 'card-5.jpg',
+            })
+            +card({
+              picture: 'card-6.jpg',
+            })
+            +card({
+              picture: 'card-7.jpg',
+            })
+            +card({
+              picture: 'card-8.jpg',
+            })
+      #regulations.mb-40.mb-xl-100.pb-xl-40
+        h3.mb-30 Регулирование искусственного интеллекта
+        .row
+          .col-xl-10
+            .d-flex.flex-wrap
+              .form-check.form-check--btn
+                input#check13.form-check-input(type='checkbox' checked value='')
+                label.form-check-label(for='check13') Нормативное регулирование ИИ
+              .form-check.form-check--btn
+                input#check14.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check14') Этика
+        .slider
+          .slider__content
+            +card({
+              picture: 'card-9.jpg',
+            })
+            +card({
+              picture: 'card-10.jpg',
+            })
+            +card({
+              picture: 'card-11.jpg',
+            })
+            +card({
+              picture: 'card-12.jpg',
+            })
+  +updates
+  +footer

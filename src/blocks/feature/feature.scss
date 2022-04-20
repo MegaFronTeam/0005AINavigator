@@ -1,0 +1,890 @@
+.feature {
+  margin-bottom: 118px;
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-down(xxxl) {
+    margin-bottom: 60px;
+  }
+
+  @include media-breakpoint-down(xxl) {
+    margin-bottom: 30px;
+  }
+
+  &__icon {
+    position: relative;
+    margin-bottom: 45px;
+    display: flex;
+    height: 168px;
+    transition: transform .5s ease-in-out;
+
+    @include media-breakpoint-down(sm) {
+      transform: scale(.6);
+      transform-origin: bottom center;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+
+      @include media-breakpoint-down(sm) {
+        transform: scale(.7);
+      }
+    }
+  }
+
+  &__icon-content {
+    display: flex;
+    width: 100%;
+  }
+
+  &__animation {
+  }
+
+  &__animation-item {
+    animation-delay: 1s;
+  }
+
+  &__tech {
+    position: relative;
+    bottom: 20px;
+    padding-left: 115px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
+
+  &__tech-item {
+    position: absolute;
+    bottom: 0;
+    transform-origin: bottom right;
+
+    &:nth-child(1) {
+      animation-delay: 1s;
+
+      &.animate {
+        animation: tech1 2s ease-in-out forwards;
+      }
+
+      @keyframes tech1 {
+
+        to {
+          transform: rotate(-90deg);
+        }
+      }
+
+      &.deanimate {
+        animation: tech1out 2s ease-in-out forwards;
+      }
+
+      @keyframes tech1out {
+
+        from {
+          transform: rotate(-90deg);
+        }
+
+        to {
+          transform: rotate(0);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      animation-delay: 1.25s;
+
+      &.animate {
+        animation: tech2 2s ease-in-out forwards;
+      }
+
+      @keyframes tech2 {
+
+        to {
+          transform: rotate(-75deg);
+        }
+      }
+
+      &.deanimate {
+        animation: tech2out 2s ease-in-out forwards;
+      }
+
+      @keyframes tech2out {
+
+        from {
+          transform: rotate(-75deg);
+        }
+
+        to {
+          transform: rotate(0);
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      animation-delay: 1.5s;
+
+      &.animate {
+        animation: tech3 2s ease-in-out forwards;
+      }
+
+      @keyframes tech3 {
+
+        to {
+          transform: rotate(-60deg);
+        }
+      }
+
+      &.deanimate {
+        animation: tech3out 2s ease-in-out forwards;
+      }
+
+      @keyframes tech3out {
+
+        from {
+          transform: rotate(-60deg);
+        }
+
+        to {
+          transform: rotate(0);
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      animation-delay: 1.75s;
+
+      &.animate {
+        animation: tech4 2s ease-in-out forwards;
+      }
+
+      @keyframes tech4 {
+
+        to {
+          transform: rotate(-45deg);
+        }
+      }
+
+      &.deanimate {
+        animation: tech4out 2s ease-in-out forwards;
+      }
+
+      @keyframes tech4out {
+
+        from {
+          transform: rotate(-45deg);
+        }
+
+        to {
+          transform: rotate(0);
+        }
+      }
+    }
+
+    &:nth-child(5) {
+      animation-delay: 2s;
+
+      &.animate {
+        animation: tech5 2s ease-in-out forwards;
+      }
+
+      @keyframes tech5 {
+
+        to {
+          transform: rotate(-30deg);
+        }
+      }
+
+      &.deanimate {
+        animation: tech5out 2s ease-in-out forwards;
+      }
+
+      @keyframes tech5out {
+
+        from {
+          transform: rotate(-30deg);
+        }
+
+        to {
+          transform: rotate(0);
+        }
+      }
+    }
+  }
+
+  &__eco {
+    position: relative;
+    padding-left: 110px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__eco-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+
+    &:nth-child(1) {
+      animation-delay: 1s;
+
+      &.animate {
+        animation: eco1 2s ease-in-out forwards;
+      }
+
+      @keyframes eco1 {
+
+        to {
+          transform: translate(-50%, -50%) rotate(-160deg);
+        }
+      }
+
+      &.deanimate {
+        animation: eco1out 2s ease-in-out forwards;
+      }
+
+      @keyframes eco1out {
+
+        from {
+          transform: translate(-50%, -50%) rotate(-160deg);
+        }
+
+        to {
+          transform: translate(-50%, -50%) rotate(0);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      animation-delay: 1s;
+
+      &.animate {
+        animation: eco2 2s ease-in-out forwards;
+      }
+
+      @keyframes eco2 {
+
+        to {
+          transform: translate(-50%, -50%) rotate(-110deg);
+        }
+      }
+
+      &.deanimate {
+        animation: eco2out 2s ease-in-out forwards;
+      }
+
+      @keyframes eco2out {
+
+        from {
+          transform: translate(-50%, -50%) rotate(-110deg);
+        }
+
+        to {
+          transform: translate(-50%, -50%) rotate(0);
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      animation-delay: 1s;
+
+      &.animate {
+        animation: eco3 2s ease-in-out forwards;
+      }
+
+      @keyframes eco3 {
+
+        to {
+          transform: translate(-50%, -50%) rotate(-60deg);
+        }
+      }
+
+      &.deanimate {
+        animation: eco3out 2s ease-in-out forwards;
+      }
+
+      @keyframes eco3out {
+
+        from {
+          transform: translate(-50%, -50%) rotate(-60deg);
+        }
+
+        to {
+          transform: translate(-50%, -50%) rotate(0);
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      animation-delay: 1s;
+
+      &.animate {
+        animation: eco4 2s ease-in-out forwards;
+      }
+
+      @keyframes eco4 {
+
+        to {
+          transform: translate(-50%, -50%) rotate(40deg);
+        }
+      }
+
+      &.deanimate {
+        animation: eco4out 2s ease-in-out forwards;
+      }
+
+      @keyframes eco4out {
+
+        from {
+          transform: translate(-50%, -50%) rotate(40deg);
+        }
+
+        to {
+          transform: translate(-50%, -50%) rotate(0);
+        }
+      }
+    }
+
+    &:nth-child(5) {
+      animation-delay: 1s;
+
+      &.animate {
+        animation: eco5 2s ease-in-out forwards;
+      }
+
+      @keyframes eco5 {
+
+        to {
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
+      }
+
+      &.deanimate {
+        animation: eco5out 2s ease-in-out forwards;
+      }
+
+      @keyframes eco5out {
+
+        from {
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
+
+        to {
+          transform: translate(-50%, -50%) rotate(0);
+        }
+      }
+    }
+
+    &:nth-child(6) {
+      animation-delay: 1s;
+
+      &.animate {
+        animation: eco6 2s ease-in-out forwards;
+      }
+
+      @keyframes eco6 {
+
+        to {
+          transform: translate(-50%, -50%) rotate(140deg);
+        }
+      }
+
+      &.deanimate {
+        animation: eco6out 2s ease-in-out forwards;
+      }
+
+      @keyframes eco6out {
+
+        from {
+          transform: translate(-50%, -50%) rotate(140deg);
+        }
+
+        to {
+          transform: translate(-50%, -50%) rotate(0);
+        }
+      }
+    }
+  }
+
+  &__project {
+    position: relative;
+    padding-right: 70px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  &__project-item {
+    position: absolute;
+
+    &:nth-child(1) {
+      transform-origin: center;
+      animation-delay: 1s;
+
+      &.animate {
+        animation: project1 2s ease-in-out forwards;
+      }
+
+      @keyframes project1 {
+
+        to {
+          transform: translateX(40%);
+        }
+      }
+
+      &.deanimate {
+        animation: project1out 2s ease-in-out forwards;
+      }
+
+      @keyframes project1out {
+
+        from {
+          transform: translateX(40%);
+        }
+
+        to {
+          transform: translateX(0);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      transform-origin: center;
+      animation-delay: 1s;
+
+      &.animate {
+        animation: project2 2s ease-in-out forwards;
+      }
+
+      @keyframes project2 {
+
+        to {
+          transform: translate(80%, -27%) rotate(-180deg);
+        }
+      }
+
+      &.deanimate {
+        animation: project2out 2s ease-in-out forwards;
+      }
+
+      @keyframes project2out {
+
+        from {
+          transform: translate(80%, -27%) rotate(-180deg);
+        }
+
+        to {
+          transform: translate(0, 0) rotate(0);
+        }
+      }
+    }
+  }
+
+  &__monitor {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  &__monitor-item {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:nth-child(1) {
+      transform: scale(1, .35);
+      transform-origin: bottom center;
+      animation-delay: 1s;
+
+      &.animate {
+        animation: monitor1 2s ease-in-out forwards;
+      }
+
+      @keyframes monitor1 {
+
+        to {
+          transform: scale(1, 1);
+        }
+      }
+
+      &.deanimate {
+        animation: monitor1out 2s ease-in-out forwards;
+      }
+
+      @keyframes monitor1out {
+
+        from {
+          transform: scale(1, 1);
+        }
+
+        to {
+          transform: scale(1, .35);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      transform: scale(1, .35);
+      transform-origin: bottom center;
+      animation-delay: 1s;
+
+      &.animate {
+        animation: monitor2 2s ease-in-out forwards;
+      }
+
+      @keyframes monitor2 {
+
+        to {
+          transform: scale(1, 1);
+        }
+      }
+
+      &.deanimate {
+        animation: monitor2out 2s ease-in-out forwards;
+      }
+
+      @keyframes monitor2out {
+
+        from {
+          transform: scale(1, 1);
+        }
+
+        to {
+          transform: scale(1, .35);
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      transform: scale(1, .35);
+      transform-origin: bottom center;
+      animation-delay: 1s;
+
+      &.animate {
+        animation: monitor3 2s ease-in-out forwards;
+      }
+
+      @keyframes monitor3 {
+
+        to {
+          transform: scale(1, 1);
+        }
+      }
+
+      &.deanimate {
+        animation: monitor3out 2s ease-in-out forwards;
+      }
+
+      @keyframes monitor3out {
+
+        from {
+          transform: scale(1, 1);
+        }
+
+        to {
+          transform: scale(1, .35);
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      transform: scale(1, .35);
+      transform-origin: bottom center;
+      animation-delay: 1s;
+
+      &.animate {
+        animation: monitor4 2s ease-in-out forwards;
+      }
+
+      @keyframes monitor4 {
+
+        to {
+          transform: scale(1, 1);
+        }
+      }
+
+      &.deanimate {
+        animation: monitor4out 2s ease-in-out forwards;
+      }
+
+      @keyframes monitor4out {
+
+        from {
+          transform: scale(1, 1);
+        }
+
+        to {
+          transform: scale(1, .35);
+        }
+      }
+    }
+  }
+
+  &__support {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  &__support-item {
+    position: absolute;
+
+    &:nth-child(1) {
+      transform-origin: center;
+      animation-delay: 1s;
+
+      &.animate {
+        animation: support1 2s linear forwards;
+      }
+
+      @keyframes support1 {
+
+        50% {
+          transform: rotate(74deg) translate(21.5%, 0) skew(40deg, 40deg) scale(1.2);
+        }
+
+        100% {
+          transform: rotate(148deg) translate(43%, 0) skew(0, 0);
+        }
+      }
+
+      &.deanimate {
+        animation: support1out 2s linear alternate-reverse forwards;
+      }
+
+      @keyframes support1out {
+
+        0% {
+          transform: rotate(0) translate(0, 0) skew(0, 0);
+        }
+
+        50% {
+          transform: rotate(74deg) translate(21.5%, 0) skew(40deg, 40deg) scale(1.2);
+        }
+
+        100% {
+          transform: rotate(148deg) translate(43%, 0) skew(0, 0);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      transform-origin: center;
+      animation-delay: 1s;
+
+      &.animate {
+        animation: support2 2s linear forwards;
+      }
+
+      @keyframes support2 {
+
+        50% {
+          transform: rotate(-68.5deg) translate(37%, 0) skew(10deg, 10deg) scale(1.5);
+        }
+
+        100% {
+          transform: rotate(-137deg) translate(74%, 0);
+        }
+      }
+
+      &.deanimate {
+        animation: support2out 2s linear alternate-reverse forwards;
+      }
+
+      @keyframes support2out {
+
+        0% {
+          transform: rotate(0) translate(0, 0) skew(0, 0);
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      transform-origin: center;
+      animation-delay: 1s;
+
+      &.animate {
+        animation: support3 2s linear forwards;
+      }
+
+      @keyframes support3 {
+
+        50% {
+          transform: rotate(-16.5deg) translate(34%, 0) skew(30deg, 30deg) scale(1.1);
+        }
+
+        100% {
+          transform: rotate(-33deg) translate(68%, -17%);
+        }
+      }
+
+      &.deanimate {
+        animation: support3out 2s linear alternate-reverse forwards;
+      }
+
+      @keyframes support3out {
+
+        0% {
+          transform: rotate(0) translate(0, 0) skew(0, 0);
+        }
+
+        50% {
+          transform: rotate(-16.5deg) translate(34%, 0) skew(30deg, 30deg) scale(1.1);
+        }
+
+        100% {
+          transform: rotate(-33deg) translate(68%, -17%);
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      transform-origin: center;
+      animation-delay: 1s;
+
+      &.animate {
+        animation: support4out 2s linear forwards;
+      }
+
+      @keyframes support4out {
+
+        50% {
+          transform: rotate(21deg) translate(20%, 0) skew(20deg, 20deg) scale(1.5);
+        }
+
+        100% {
+          transform: rotate(42deg) translate(40%, -17%);
+        }
+      }
+
+      &.deanimate {
+        animation: support4out 2s linear alternate-reverse forwards;
+      }
+
+      @keyframes support4out {
+
+        0% {
+          transform: rotate(0) translate(0, 0) skew(0, 0);
+        }
+
+        50% {
+          transform: rotate(21deg) translate(20%, 0) skew(20deg, 20deg) scale(1.5);
+        }
+
+        100% {
+          transform: rotate(42deg) translate(40%, -17%);
+        }
+      }
+    }
+  }
+
+  &__regulations {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__regulations-item {
+    position: absolute;
+
+    &:nth-child(1) {
+      transform: scale(6.64%);
+      transform-origin: center;
+      animation-delay: 1s;
+
+      &.animate {
+        animation: regulations1 2s ease-in-out forwards;
+      }
+
+      @keyframes regulations1 {
+
+        to {
+          transform: scale(84.85%);
+        }
+      }
+
+      &.deanimate {
+        animation: regulations1out 2s ease-in-out alternate-reverse forwards;
+      }
+
+      @keyframes regulations1out {
+
+        to {
+          transform: scale(84.85%);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      transform: scale(6.63%);
+      transform-origin: center;
+      animation-delay: 1s;
+
+      &.animate {
+        animation: regulations2 2s ease-in-out forwards;
+      }
+
+      @keyframes regulations2 {
+
+        to {
+          transform: scale(73.02%);
+        }
+      }
+
+      &.deanimate {
+        animation: regulations2out 2s ease-in-out alternate-reverse forwards;
+      }
+
+      @keyframes regulations2out {
+
+        to {
+          transform: scale(84.85%);
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      transform: scale(1.76%) translateY(-100%) rotateX(-180deg);
+      transform-origin: center;
+      animation-delay: 1s;
+
+      &.animate {
+        animation: regulations3 2s ease-in-out forwards;
+      }
+
+      @keyframes regulations3 {
+
+        to {
+          transform: scale(1);
+        }
+      }
+
+      &.deanimate {
+        animation: regulations3out 2s ease-in-out alternate-reverse forwards;
+      }
+
+      @keyframes regulations3out {
+
+        to {
+          transform: scale(84.85%);
+        }
+      }
+    }
+  }
+}

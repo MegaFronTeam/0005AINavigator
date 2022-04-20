@@ -1,0 +1,22 @@
+.doc {
+  margin-bottom: 48px;
+  display: flex;
+  align-items: flex-start;
+  text-decoration: none;
+  color: #333;
+
+  @include transition;
+
+  &__icon {
+    margin-right: 32px;
+    width: 32px;
+    height: 40px;
+    flex-shrink: 0;
+    background: url(../img/doc-icon.svg) no-repeat center;
+    background-size: contain;
+
+    @include media-breakpoint-down(md) {
+      margin-right: 16px;
+    }
+  }
+}

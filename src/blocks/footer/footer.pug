@@ -1,0 +1,14 @@
+mixin footer(data)
+  .footer&attributes(attributes)
+    .container.container--new
+      .footer__wrapper
+        .footer__top
+            +logo.logo--footer
+            p.footer__top-text Продолжая использовать наш сайт, вы даете согласие на обработку файлов Cookies и других пользовательских данных, в соответствии с 
+              a(href="#") Политикой конфиденциальности и Пользовательским соглашением
+            a.btn.btn-outline-primary.btn-sm.btn-rounded.footer__btn(href="#write" data-fancybox) Форма обратной связи
+        .footer__bottom
+          .footer__copyright 2022. Национальный портал в сфере искусственного интеллекта
+          .footer__bottom-right
+            a.footer__bottom-link(href="#") Карта сайта
+  +modal.modal--thin.modal--newest#write

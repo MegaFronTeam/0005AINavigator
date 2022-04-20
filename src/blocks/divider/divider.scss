@@ -1,0 +1,11 @@
+.divider {
+  margin: 80px 0 50px;
+  width: 100%;
+  max-width: 533px;
+  height: 1px;
+  background: linear-gradient(to right, $primary 0 26.08%, #d9d9de 26.08% 100%);
+
+  @include media-breakpoint-down(lg) {
+    margin: 40px 0;
+  }
+}

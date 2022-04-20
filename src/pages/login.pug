@@ -1,0 +1,23 @@
+extends ../templates/template.pug
+block content
+  +header.header--static.mb-xl-60
+  .container
+    h2.mb-30.mb-xl-50 Войти на сайт
+    .row.flex-column-reverse.flex-md-row.justify-content-between
+      .col-xxl-3.col-md-5
+        form.form(action="#", method="POST")
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Логин
+            input.input.form-control(type="text", placeholder="Ваш e-mail")
+          .form__item.form-group
+            p.xs.form-label.font-secondary.mb-5 Пароль
+            input.input.form-control(type="text", placeholder="Введите пароль")
+          .form__buttons
+            button.btn.btn-primary.btn-md.me-10(type="submit") Войти
+            a.btn.btn-link(href="#") Восстановить пароль
+          +auth.form__auth
+          p.sm.fw-semibold.mb-40.mb-xl-80 Впервые на сайте? 
+            a.text-decoration-none(href="#") Зарегистрируйтесь
+      .col-xxl-4.col-md-5
+        p.text-gray Пожалуйста, авторизуйтесь. У вас появится возможность создавать персональные настройки, оставлять комментарии и проходить опросы.
+  +footer

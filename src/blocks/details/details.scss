@@ -1,0 +1,16 @@
+.details {
+  padding: 40px 80px 32px 40px;
+  background: url(../img/details-bg.svg) no-repeat right top;
+  background-size: contain;
+  border: 1px solid rgba(#000, .2);
+  border-radius: 10px;
+
+  @include media-breakpoint-down(md) {
+    padding: 20px;
+  }
+
+  &__content {
+    margin-right: -80px;
+    padding-right: 80px;
+  }
+}

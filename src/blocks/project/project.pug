@@ -1,0 +1,15 @@
+mixin project(data)
+  .project&attributes(attributes)
+    a.p.project__title.table-grid__item--md(href="#research", data-fancybox) ИТМО / Программирование и искуссивенный интелект
+    p.sm.project__address.table-grid__item--sm Г. 
+      span.project__address-city Москва
+      |, ул. Строителей, д65
+    if data && data.type == 'education'
+      p.sm.project__type.table-grid__item--sm Магистратура
+    .project__tags.table-grid__item--lg
+      each tag in data.tags
+        a.tag.tag--light(href="#education", data-fancybox)= tag
+    if data && data.type == 'event'
+      p.sm.project__dates.table-grid__item--sm 23.02.2022 — 24.02.2022
+    .project__bottom
+      a.btn.btn-primary.btn-rounded.btn-xs.fw-normal(href="#event", data-fancybox) подробнее...

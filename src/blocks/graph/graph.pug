@@ -1,0 +1,18 @@
+mixin graph(data)
+  .graph&attributes(attributes)
+    h3.md.mob-25.mb-xl-40.mob-sm Финансирование 50 пилотных проектов к 2024 году
+    .graph__wrapper
+      .row
+        .col-md-7.col-xl-8
+          .graph__content
+            img.graph__content-img(src="./img/graph.svg", alt)
+        .col-md-5.col-xl-4.d-flex
+          .graph__aside
+            +number({
+              number: '>100',
+              dscr: 'Российских заказчиков и разработчиков в области ИИ станут участниками пилотных проектов'
+            }).graph__number
+            +number({
+              number: 'complex',
+              dscr: 'Предоставляется получателю поддержки в рамках финансирования пилотного проекта'
+            }).graph__number

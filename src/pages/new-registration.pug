@@ -1,0 +1,47 @@
+extends ../templates/template.pug
+block content
+  +header
+  .wrapper
+    .container.container--new
+      +crumbs({
+        links: ['Авторизация', 'Регистрация']
+      }).mb-15.mb-xl-35
+      h2.sm-new.fw-medium.mb-40 Регистрация
+      .row
+        .col-xxl-4.col-md-5
+          form.form(action="#", method="POST")
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Имя
+              input.input.form-control(type="text", placeholder="Введите", autocomplete="off")
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Фамилия
+              input.input.form-control(type="text", placeholder="Введите", autocomplete="off")
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 E-mail
+              input.input.form-control(type="email", placeholder="Введите", autocomplete="off")
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Телефон
+              input.input.form-control(type="tel", placeholder="+_ ____  ____ ___ ___", autocomplete="off")
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Город
+              input.input.form-control(type="text", placeholder="Введите", autocomplete="off")
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Пароль
+              input.input.form-control(type="password", placeholder="Введите", autocomplete="off")
+            .form__item.form__item--new.form-group
+              p.xs.form-label.font-secondary.mb-5 Повторите пароль
+              input.input.form-control(type="password", placeholder="Введите", autocomplete="off")
+          .form-check.form-check--new.mb-15.pt-0
+            input#check2.form-check-input(type='checkbox' value='')
+            label.form-check-label(for='check2') Нажимая кнопку «Зарегистрироваться», я принимаю условия пользовательского соглашения и даю своё согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных»
+          .form-check.form-check--new.mb-30.pt-0
+            input#check1.form-check-input(type='checkbox' value='')
+            label.form-check-label(for='check1') Я даю согласие на получение информационных рассылок от ai.gov.ru
+          button.btn.btn-primary.btn-violet.btn-md.py-15(type="submit") Зарегистрироваться
+          p.sm.fw-semibold.mt-30.mb-40.mb-xl-80 Уже есть аккаунт? 
+            a.text-decoration-none.text-violet(href="#") Войти
+        .col-xxl-4.col-md-5.ms-auto
+          p.md.lh-md.text-gray.semi-transparent Зарегистрируйтесь, чтобы получить доступ к закрытым разделам сайта и создать персональные настройки. Это займет 2 минуты
+          p.sm.mt-40.mb-15 Войти через
+          +leader.mb-30.mb-xl-50
+  +footer

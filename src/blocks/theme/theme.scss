@@ -1,0 +1,64 @@
+.theme {
+  padding: 32px;
+  display: flex;
+  width: 100%;
+  min-height: 150px;
+  align-items: baseline;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 3px 0 15px rgba(74, 66, 142, .07);
+
+  @include media-breakpoint-down(xl) {
+    padding: 16px;
+    min-height: 109px;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+
+  &:hover {
+
+    .theme__title {
+      color: $violet;
+    }
+  }
+
+  &__title {
+    margin-right: 16px;
+    font-size: 16px;
+    line-height: 1.375;
+    letter-spacing: .04em;
+    color: #55556a;
+
+    @include transition;
+
+    @include media-breakpoint-down(xl) {
+      font-size: 12px;
+      line-height: 1.32;
+    }
+  }
+
+  &__number {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    font-size: 24px;
+    line-height: 1.15;
+    letter-spacing: .04em;
+    color: #d9d9de;
+
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    &:before {
+      margin-right: 12px;
+      display: block;
+      width: 30px;
+      height: 1px;
+      content: '';
+      background: #d9d9de;
+    }
+  }
+}

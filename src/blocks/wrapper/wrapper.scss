@@ -1,0 +1,13 @@
+.wrapper {
+  padding-top: 165px;
+  flex-grow: 1;
+
+  @include media-breakpoint-down(xl) {
+    position: relative;
+    z-index: 1;
+    margin-top: 64px;
+    padding-top: 28px;
+    background: #fff;
+    border-radius: 8px 8px 0 0;
+  }
+}

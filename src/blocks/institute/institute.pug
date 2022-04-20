@@ -1,0 +1,5 @@
+mixin institute(data)
+  .institute&attributes(attributes)
+    .institute__picture
+      img.institute__picture-img(src="./img/" + data.logo, alt)
+    p.sm.lh-xl.mb-0= data.dscr

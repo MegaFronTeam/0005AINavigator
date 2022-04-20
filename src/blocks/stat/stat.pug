@@ -1,0 +1,11 @@
+mixin stat(data)
+  .stat&attributes(attributes)
+    .stat__header
+      .stat__icon
+        img.stat__icon-img(src="./img/" + data.icon, alt)
+      h5.stat__title= data.header
+    .stat__content
+      p.sm.stat__dscr= data.dscr
+    a.stat__btn(href="#")
+      span.stat__btn-content Показать
+      span.stat__btn-content Скрыть

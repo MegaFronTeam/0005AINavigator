@@ -1,0 +1,14 @@
+extends ../templates/template.pug
+block content
+  +header.header--static.mb-xl-60
+  .container
+    h2.mb-30.mb-xl-50 АI Монитор
+    +indicators
+    .part.part--table.mb-40.mb-xl-100
+      .part__table-outer
+        h5.mb-20.mb-xl-30 Индекс Зрелости ФОИВ
+      .part__table
+        +table
+      .part__table-outer
+        a.p.link.link--default.mt-30(href="#") Показать еще 20 показателей
+  +footer

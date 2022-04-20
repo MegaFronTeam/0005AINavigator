@@ -1,0 +1,7 @@
+mixin expert(data)
+  a.expert(href="#")&attributes(attributes)
+    .expert__photo
+      img.expert__photo-img(src="./img/expert-" + data.number + ".jpg", alt)
+    .expert__content
+      p.expert__name.mb-25 Ангелина Костиновская #{data.number}
+      p.xs.expert__role.mb-0 Председатель экспертного совета

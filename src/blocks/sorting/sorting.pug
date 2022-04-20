@@ -1,0 +1,9 @@
+mixin sorting(data)
+  .sorting&attributes(attributes)
+    if data && data.title
+      .sorting__title= data.title
+    each item, index in data.btns
+      if index == 0
+        a.sorting__item.sorting__item--active(href="#")= item
+      else 
+        a.sorting__item(href="#")= item

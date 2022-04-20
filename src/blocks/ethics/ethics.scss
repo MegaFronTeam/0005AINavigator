@@ -1,0 +1,208 @@
+.ethics {
+  margin-bottom: 104px;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 48px;
+  }
+
+  &__cover {
+    margin-bottom: 130px;
+    padding: 82px 0;
+    background: url(../img/ethics-cover.jpg) no-repeat center;
+    background-size: cover;
+
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 65px;
+      padding: 45px 0;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__cover-col {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    margin-bottom: 40px;
+
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 24px;
+      max-width: 132px;
+    }
+  }
+
+  &__logo-img {
+  }
+
+  &__header {
+    line-height: 1.2;
+    font-weight: 500;
+    color: #fff;
+
+    @include media-breakpoint-down(xl) {
+      font-size: 20px !important;
+      line-height: 1.22 !important;
+    }
+  }
+
+  &__cover-btn {
+    padding: 9.5px 12px 7.5px;
+    font-size: 12px;
+    line-height: 1.25;
+    text-decoration: none;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    align-self: flex-end;
+
+    @include transition;
+
+    @include media-breakpoint-down(xl) {
+      display: none;
+    }
+
+    &:hover {
+      color: #5d60f4;
+      background: #fff;
+    }
+  }
+
+  &__media {
+    position: relative;
+    margin-bottom: -114px;
+    padding-top: 56.05%;
+    border-radius: 16px;
+
+    &:before {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 80px;
+      height: 80px;
+      content: '';
+      background: url(../img/media-arrow.svg) no-repeat center;
+      background-size: contain;
+      transform: translate(-50%, -50%);
+
+      @include media-breakpoint-down(md) {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+
+  &__media-picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  &__dscr {
+    font-size: 18px;
+    font-weight: 600;
+
+    @include media-breakpoint-down(xl) {
+      font-size: 12px;
+      line-height: 1.32;
+    }
+  }
+
+  &__card {
+    position: relative;
+    padding: 29px 125px 29px 29px;
+    display: flex;
+    align-items: flex-start;
+    text-decoration: none;
+    border-radius: 16px;
+    box-shadow: 3px 0 15px rgba(74, 66, 142, .07);
+
+    @include media-breakpoint-down(xl) {
+      padding: 16px 40px 16px 16px;
+    }
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  &__card-link {
+    position: absolute;
+    top: 29px;
+    right: 29px;
+    width: 28.37px;
+    height: 28.37px;
+    background: url(../img/ethics-arrow.svg) no-repeat center;
+    background-size: contain;
+    border-radius: 50%;
+
+    @include media-breakpoint-down(xl) {
+      top: 16px;
+      right: 16px;
+    }
+  }
+
+  &__card-icon {
+    margin-right: 24px;
+    width: 68px;
+    flex-shrink: 0;
+
+    @include media-breakpoint-down(xl) {
+      width: 32px;
+    }
+  }
+
+  &__card-icon-img {
+  }
+
+  &__card-wrapper {
+  }
+
+  &__card-title {
+    margin-bottom: 30px;
+    font-size: 32px;
+    line-height: 1.15;
+    font-weight: 500;
+    letter-spacing: .04em;
+    color: $dark-new;
+
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 10px;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+  }
+
+  &__card-content {
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: .04em;
+    color: #55556a;
+
+    @include media-breakpoint-down(xl) {
+      font-size: 10px;
+      line-height: 1.3;
+    }
+  }
+
+  &__btn {
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+}

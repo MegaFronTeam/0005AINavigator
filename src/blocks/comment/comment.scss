@@ -1,0 +1,17 @@
+.comment {
+  margin-bottom: 48px;
+
+  &__name {
+    margin-bottom: 8px;
+    font-size: 22px;
+    font-weight: 600;
+    color: $violet;
+  }
+
+  &__date {
+    margin-bottom: 16px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba($dark-new, .8);
+  }
+}

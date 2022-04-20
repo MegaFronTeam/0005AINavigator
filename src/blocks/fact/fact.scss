@@ -1,0 +1,17 @@
+.fact {
+  padding: 16px 16px 13px;
+  display: inline-flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  background: linear-gradient(144.15deg, #f3f5fc 10.14%, #d3edff 89.15%);
+  border-radius: 16px;
+
+  @include media-breakpoint-down(xl) {
+    margin-bottom: 16px;
+  }
+
+  &--new {
+    background: rgba(175, 217, 255, .3);
+  }
+}

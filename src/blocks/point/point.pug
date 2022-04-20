@@ -1,0 +1,21 @@
+mixin point(data)
+  .point&attributes(attributes)
+    +point__item({
+      number: '01'
+    })
+    +point__item({
+      number: '02'
+    })
+    +point__item({
+      number: '03'
+    })
+    
+    
+    
+mixin point__item(data)
+  .point__item&attributes(attributes)
+    .point__item-number= data.number
+    .point__item-wrapper
+      .point__item-icon
+        img.point__item-icon-img(src="./img/point-1.svg", alt)
+      h4.md.point__header Предоставление грантов малым предприятиям на разработку решений в области искусственного интеллекта

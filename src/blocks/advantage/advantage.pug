@@ -1,0 +1,10 @@
+mixin advantage(data)
+  .advantage&attributes(attributes)
+    .advantage__icon
+      img.advantage__icon-img(src="./img/" + data.icon, alt)
+    .advantage__content
+      if data && data.type == 'sm'
+        h4.mb-15= data.header
+      else
+        h3.mb-15= data.header
+      p.sm.mb-0= data.content

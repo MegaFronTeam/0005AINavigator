@@ -1,0 +1,101 @@
+mixin menu(data)
+  .menu&attributes(attributes)
+    a.menu__btn(href="#")
+    .menu__content
+      .menu__item.menu__item--color
+        a.menu__link.menu__link--header(href="index.html") #антисанкц
+          span.menu__link-color ИИ
+      .menu__item.menu__item--strategy
+        a.menu__link.menu__link--header(href="#") Стратегия ИИ
+        .menu__submenu
+          .menu__submenu-content
+            a.menu__sublink(href="#") Национальная стратегия ИИ
+            a.menu__sublink(href="#") Федеральный проект ИИ
+            a.menu__sublink(href="#") Указы и Постановления
+            a.menu__sublink(href="#") Зарубежная политика
+            a.menu__sublink(href="#") Федеральные органы государственной власти
+      .menu__item.menu__item--rd
+        a.menu__link.menu__link--header(href="#") R&D
+        .menu__submenu
+          .menu__submenu-content
+            a.menu__sublink(href="#") Исследовательские центры
+            a.menu__sublink(href="#") Исследования в области ИИ
+            a.menu__sublink(href="#") Научное сообщество
+            a.menu__sublink(href="#") НИОКР и Патенты
+            a.menu__sublink(href="#") Маркетинговое исследование Минпромторга
+      .menu__item.menu__item--inception
+        a.menu__link.menu__link--header(href="#") Внедрение
+        .menu__submenu
+          .menu__submenu-content
+            a.menu__sublink(href="#") Индекс готовности к внедрению
+            a.menu__sublink(href="#") Цифровая трансформация органов власти
+            a.menu__sublink(href="#") Искусственный интеллект против COVID-19
+            a.menu__sublink(href="#") Грантовая поддержка внедрения технологий ИИ
+      .menu__item.menu__item--development
+        a.menu__link.menu__link--header(href="#") Развитие
+        .menu__submenu
+          .menu__submenu-content
+            a.menu__sublink(href="#") Грантовая поддержка разработчиков
+            a.menu__sublink(href="#") Быстрорастущие компании
+            a.menu__sublink(href="#") Образование
+            a.menu__sublink(href="#") Хакатоны и лекции
+      .menu__item.menu__item--regulations
+        a.menu__link.menu__link--header(href="#") Регуляторика
+        .menu__submenu
+          .menu__submenu-content
+            a.menu__sublink(href="#") Стандартизация
+            a.menu__sublink(href="#") Кодекс этики в сфере искусственного интеллекта
+            a.menu__sublink(href="#") Экспериментальные правовые режимы
+            a.menu__sublink(href="#") Концепция нормативного регулирования
+      .menu__item.menu__item--community
+        a.menu__link.menu__link--header(href="#") Сообщество
+        .menu__submenu
+          .menu__submenu-content
+            a.menu__sublink(href="#") Доверие общества
+            a.menu__sublink(href="#") Мероприятия
+            a.menu__sublink(href="#") Форум «Этика искусственного интеллекта»
+            a.menu__sublink(href="#") Региональные сообщества разработчиков
+      .menu__item.menu__item--infrastructure
+        a.menu__link.menu__link--header(href="#") Инфраструктура
+        .menu__submenu
+          .menu__submenu-content
+            a.menu__sublink(href="#") Поддержка разработчиков АПК
+            a.menu__sublink(href="#") Центры коллективного пользования
+            a.menu__sublink(href="#") Реестр государственных массивов данных
+      .menu__item.menu__item--more
+        a.menu__link.menu__link--more.menu__link--header(href="#") Еще
+        .menu__more
+          .menu__more-wrapper
+            .menu__more-top
+              a.menu__more-top-link(href="#") О портале
+              a.menu__more-top-link(href="#") Медиацентр
+              a.menu__more-top-link(href="#") Календарь мероприятий
+              a.menu__more-top-link(href="#") Контакты
+              a.menu__more-top-link(href="#") База знаний
+            .menu__more-bottom
+              .menu__item.menu__item--color.menu__item--mobile
+                a.menu__link.menu__link--header(href="index.html") #антисанкц
+                  span.menu__link-color ИИ
+              a.menu__more-bottom-header(href="#") Искусственный интеллект
+              .menu__more-bottom-content
+                .menu__more-bottom-col
+                  a.menu__more-bottom-link(href='/ai/monitoring/')
+                    | Мониторинг ИИ
+                  a.menu__more-bottom-link(href='/ai/karta-kompetentsiy/')
+                    | Карта компетенций
+                  a.menu__more-bottom-link(href='/ai/reyting-vuzov/')
+                    | Рейтинг вузов в области ИИ
+                  a.menu__more-bottom-link(href='/ai/perechen-vuzov-obuchayushchikh-po-programmam-vo/')
+                    | Перечень ВУЗов, обучающих по программам ВО
+                  a.menu__more-bottom-link(href='/ai/rezultaty-raschetov-indikatorov/')
+                    | Результаты расчетов индикаторов ИИ
+                  a.menu__more-bottom-link(href='/wiki/')
+                    | Аналитика ФП ИИ
+                  a.menu__more-bottom-link(href='/ai/cards_new/')
+                    | Карта ИИ
+                  a.menu__more-bottom-link(href='/ai/akseleratsiya-i-predakseleratsiya/')
+                    | Акселерация и предакселерация
+                  a.menu__more-bottom-link(href='/ai/indeks-ii-zrelosti-foiv/')
+                    | Индекс ИИ-зрелости ФОИВ
+                  a.menu__more-bottom-link(href='/ai/investitsii-i-kredity-dlya-biznesa-v-sfere/')
+                    | Инвестиции и кредиты для бизнеса
