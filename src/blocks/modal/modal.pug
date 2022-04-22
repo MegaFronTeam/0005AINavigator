@@ -309,7 +309,123 @@ mixin modal(data)
             +socials({
               items: ['vk', 'ig', 'tw', 'tg', 'wa', 'dc', 'fb', 'yt']
             })
-        
+
+    else if data && data.type == 'modal-poll'
+      .modal__wrapper
+        .modal__content
+          h3 Необходимые меры поддержки доступности вычислительных ресурсов для&nbsp;ИИ
+          .modal__input-wrap
+            h5 1.	Что преимущественно вы&nbsp;используете при разработке проектов в&nbsp;сфере&nbsp;ИИ:
+            .modal__radio-wrap
+              .modal__radio-content
+                input#check11.form-check-input(type='radio' value='')
+                label.form-check-label(for='check11') Собственные аппаратные средства
+              .modal__radio-content
+                input#check12.form-check-input(type='radio' value='')
+                label.form-check-label(for='check12') Облачные решения
+          .modal__input-wrap
+            h5 2.	Если вы&nbsp;используете иностранные облачные решения в&nbsp;сфере разработки&nbsp;ИИ, то&nbsp;какие именно?
+            .modal__checkbox-wrap
+              .modal__checkbox-content
+                input#check13.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check13') Amazon
+              .modal__checkbox-content
+                input#check14.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check14') Microsoft
+              .modal__checkbox-content
+                input#check15.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check15') Google
+              .modal__checkbox-content
+                input#check16.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='check16') Другое
+          .modal__input-wrap
+            h5 3.	Используете&nbsp;ли вы&nbsp;отечественные облачные решения?
+            .modal__checkbox-wrap.modal__checkbox-wrap--2
+              .modal__checkbox-content.modal__checkbox-content--2
+                input#check17.form-check-input(type='radio' value='')
+                label.form-check-label(for='check17') Яндекс
+              .modal__checkbox-content.modal__checkbox-content--2
+                input#check18.form-check-input(type='radio' value='')
+                label.form-check-label(for='check18') Сбербанк
+              .modal__checkbox-content.modal__checkbox-content--2
+                input#check19.form-check-input(type='radio' value='')
+                label.form-check-label(for='check19') VK (Mail.ru Group)
+              .modal__checkbox-content.modal__checkbox-content--2
+                input#check20.form-check-input(type='radio' value='')
+                label.form-check-label(for='check20') Другое
+            textarea.input.input--textarea.form-control(autocomplete="off", placeholder="Введите ваш вариант")
+          .modal__input-wrap
+            h5 4.	Оптимизированы&nbsp;ли облачные сервисы (модели нейросетей, инструменты и&nbsp;т.д.) под ваши задачи в&nbsp;данный момент? Если нет, то&nbsp;что нужно для оптимизации?
+            textarea.input.input--textarea.form-control(autocomplete="off", placeholder="Введите ваш вариант")
+          .modal__input-wrap
+            h5 5.	Опишите параметры используемых Вами облачных средств (GPU, размер RAM на&nbsp;GPU, стоимость, др.), которыми обладаете, которые необходимы для решения текущих задач, потребности в&nbsp;вычислительных мощностях через 1-2&nbsp;года:
+            textarea.input.input--textarea.form-control(autocomplete="off", placeholder="Введите ваш вариант")
+          .modal__input-wrap
+            h5 6.	Есть&nbsp;ли у&nbsp;вас предложения по&nbsp;мерам поддержки в&nbsp;сфере аппаратной части (характеристики GPU, возможно TPU, кластеры)?
+            textarea.input.input--textarea.form-control(autocomplete="off", placeholder="Введите ваш вариант")
+          button.btn.btn-lg(type="submit") Завершить опрос
+    
+    else if data && data.type == 'modal-info'
+      .modal__wrapper
+        .modal__content
+          h3.mb-15 Меры поддержки малых и средних предприятий
+          .modal__text-wrap
+            h4 Льготные кредиты для инновационных компаний под 3%
+            h6 В чем суть меры?
+            p Малые и&nbsp;средние предприятия, выпускающие высокотехнологичную и&nbsp;инновационную продукцию смогут получить кредиты по&nbsp;льготной процентной ставке не&nbsp;превышающей 3%. Разницу между рыночной и&nbsp;льготной ставками кредитору возместит государство. Кредиты будут предоставляться на&nbsp;инвестиционные цели и&nbsp;пополнение оборотных средств. Максимальный размер кредита&nbsp;&mdash; 400 млн рублей, максимальный срок кредита&nbsp;&mdash; 3&nbsp;года.<br>Финансовый инструмент запущен в&nbsp;рамках федерального проекта &laquo;Взлёт от&nbsp;стартапа до&nbsp;IPO&raquo;. Оператором программы является &laquo;МСП Банк&raquo;. В&nbsp;федеральном бюджете на&nbsp;эту меру поддержки предусмотрено в&nbsp;2022 году&nbsp;&mdash; 750 млн рублей, в&nbsp;2023 году&nbsp;&mdash; 1,4 млрд рублей, в&nbsp;2024-м&nbsp;&mdash; 1,8 млрд рублей.
+          .modal__text-wrap
+            h4 Льготные кредиты для инновационных компаний под 3%
+            h6 В чем суть меры?
+            p Малые и&nbsp;средние предприятия, выпускающие высокотехнологичную и&nbsp;инновационную продукцию смогут получить кредиты по&nbsp;льготной процентной ставке не&nbsp;превышающей 3%. Разницу между рыночной и&nbsp;льготной ставками кредитору возместит государство. Кредиты будут предоставляться на&nbsp;инвестиционные цели и&nbsp;пополнение оборотных средств. Максимальный размер кредита&nbsp;&mdash; 400 млн рублей, максимальный срок кредита&nbsp;&mdash; 3&nbsp;года.<br>Финансовый инструмент запущен в&nbsp;рамках федерального проекта &laquo;Взлёт от&nbsp;стартапа до&nbsp;IPO&raquo;. Оператором программы является &laquo;МСП Банк&raquo;. В&nbsp;федеральном бюджете на&nbsp;эту меру поддержки предусмотрено в&nbsp;2022 году&nbsp;&mdash; 750 млн рублей, в&nbsp;2023 году&nbsp;&mdash; 1,4 млрд рублей, в&nbsp;2024-м&nbsp;&mdash; 1,8 млрд рублей.
+
+    else if data && data.type == 'modal-form'
+      .modal__form
+        h4.mob-lg.modal__title.mb-20.mb-lg-35 Есть идея по развитию российского ИИ
+        form.form(action="#", method="post", autocomplete="off")
+          .row
+            .col-lg-6
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Имя
+                input.input.form-control(type="text", placeholder="Введите", autocomplete="off")
+            .col-lg-6
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Фамилия
+                input.input.form-control(type="text", placeholder="Введите", autocomplete="off")
+            .col-lg-6
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Должность
+                input.input.form-control(type="text", placeholder="Введите", autocomplete="off")
+            .col-lg-6
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Организация
+                input.input.form-control(type="text", placeholder="Введите", autocomplete="off")
+            .col-lg-6
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Телефон
+                input.input.form-control(type="tel", placeholder="Введите", autocomplete="off")
+            .col-lg-6
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 E-mail
+                input.input.form-control(type="email", placeholder="Введите", autocomplete="off")
+            .col-lg-6
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Город
+                input.input.form-control(type="text", placeholder="Введите", autocomplete="off")
+            .col-lg-6
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Тема
+                input.input.form-control(type="text", placeholder="Введите", autocomplete="off")
+            .col-lg-12
+              .form__item.form__item--new.form-group
+                p.xs.form-label.font-secondary.mb-5 Сообщение*
+                textarea.input.input--textarea.form-control(autocomplete="off", placeholder="Введите")
+            .col-12 
+              .form__footer
+                button.btn.btn-primary.btn-lg.btn-violet.form__footer-btn(type="submit") Отправить
+                .form-check.form-check--new.mb-0
+                  input#check1.form-check-input(type='checkbox' checked value='')
+                  label.form-check-label(for='check1') Я согласен 
+                    a(href="https://www.scienceid.net/agreement", target="_blank") с политикой обработки персональных данных
     else
       .modal__form
         h4.mob-lg.modal__title.mb-20.mb-lg-35 Задайте ваш вопрос

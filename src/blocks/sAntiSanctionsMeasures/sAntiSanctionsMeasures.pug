@@ -1,0 +1,18 @@
+mixin sAntiSanctionsMeasures(data)
+  .sAntiSanctionsMeasures&attributes(attributes)
+    .container
+      .sAntiSanctionsMeasures__section-title
+        h2 Антисанкционные меры
+      .sAntiSanctionsMeasures__row.row
+        mixin cardItem(span, title, img)
+          .col-sm-6.col-lg-4.col-xl-3
+            .sAntiSanctionsMeasures__item
+              span()!= span
+              h6!= title
+              .sAntiSanctionsMeasures__img-wrap
+                img(src=`../img/${img}`)
+              a(href="#") Подробнее
+        +cardItem('Меры поддержки', 'Меры поддержки малых и&nbsp;средних предприятий', 'antiSanctions-img-1.png')
+        +cardItem('Разработчики', 'Меры поддержки разработчиков', 'antiSanctions-img-2.png')
+        +cardItem('Внедрение ИИ', 'Меры по&nbsp;внедрению ИИ-технологий', 'antiSanctions-img-3.png')
+        +cardItem('Образовательные меры', 'Образовательные меры поддержки', 'antiSanctions-img-4.png')

@@ -1,0 +1,118 @@
+.sAntiSanctionsMeasures {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  // --sTPB: #{rem()};
+  @include media-breakpoint-up(lg) {
+    padding-top: 60px;
+    padding-bottom: 87px;
+  }
+
+  &__row {
+    --bs-gutter-x: 32px;
+    --bs-gutter-y: 32px;
+  }
+
+  &__section-title {
+    margin-bottom: 25px;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 39px;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      font-size: 36px;
+      font-weight: 600;
+      letter-spacing: .04em;
+      color: #2e2e40;
+    }
+  }
+
+  &__item {
+    padding: 17.6px 16px 19.2px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 16px;
+    // @include mt;
+    box-shadow: 3px 0 15px rgba(74, 66, 142, .07);
+    transition: all .2s ease;
+
+    &:hover {
+      box-shadow: 0 4px 7px rgba(74, 66, 142, .07);
+      // opacity: .74;
+    }
+
+    span {
+      margin-bottom: 16px;
+      padding: 6.4px 8px;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 600;
+      color: $white;
+      background: #000;
+      border-radius: 4px;
+    }
+
+    h6 {
+      margin-bottom: 20px;
+      font-size: 22px;
+      line-height: 1.4em;
+      color: #2e2e40;
+    }
+
+    img {
+      margin-right: auto;
+      // margin-bottom: rem(8);
+      // width: 100%;
+      margin-left: auto;
+      display: block;
+    }
+
+    a {
+      margin-top: auto;
+      padding: 12.5px 10px;
+      display: block;
+      width: 100%;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      letter-spacing: .04em;
+      color: #fff;
+      background-color: #5d60f4;
+      border-radius: 8px;
+      transition: all .2s ease;
+
+      &:hover {
+        opacity: .9;
+        background-color: #5d60f4;
+      }
+    }
+  }
+
+  &__img-wrap {
+    width: 100%;
+  }
+
+  @include media-breakpoint-up(xl) {
+  }
+
+  @include media-breakpoint-up(lg) {
+  }
+
+  @include media-breakpoint-up(md) {
+  }
+
+  @include media-breakpoint-up(sm) {
+  }
+
+  @include media-breakpoint-between(md, xl) {
+  }
+
+  @include media-breakpoint-only(xl) {
+  }
+
+  @include media-breakpoint-down(xl) {
+  }
+} // end.sAntiSanctionsMeasures

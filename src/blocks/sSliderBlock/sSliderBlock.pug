@@ -1,0 +1,24 @@
+mixin sSliderBlock(data)
+  .sSliderBlock&attributes(attributes)
+    .container
+      .sSliderBlock__section-title
+        h2 Лидеры о&nbsp;развитии искусственного интеллекта
+        //- .sSliderBlock__btn-wrap
+        //-   button.slick-prev.slick-arrow(aria-label="Previous") dasdas
+        //-   .swiper-button-hand.swiper-button-hand-next.swiper-button-next
+        //-     //- +icon('chevron-right')
+      .sSliderBlock__slider--js.swiper
+        mixin slide(num, title, name, text)
+          a.sSliderBlock__slide.swiper-slide(href="#")
+            .sSliderBlock__img-wrap
+              img(src=`./img/sliderBlock-img-${num}.jpg`)
+              .sSliderBlock__play
+                span
+            .sSliderBlock__text-wrap
+              h5!= title
+              h6!= name
+              p!= text
+        - for(i=0; i<2; i++)
+          +slide(1, 'Интервью с&nbsp;Александром Крайновым о&nbsp;возможностях&nbsp;ИИ в&nbsp;новой России', 'Александр Крайнов', 'Директор по&nbsp;развитию технологий искусственного интеллекта')
+          +slide(2, 'Другой заголовок для интервью с&nbsp;тематикой данного разговора в&nbsp;три строки', 'Александр Крайнов', 'Директор по&nbsp;развитию технологий искусственного интеллекта')
+          +slide(3, 'Интервью с&nbsp;Александром Крайновым о&nbsp;возможностях&nbsp;ИИ в&nbsp;новой России', 'Александр Крайнов', 'Директор по&nbsp;развитию технологий искусственного интеллекта')

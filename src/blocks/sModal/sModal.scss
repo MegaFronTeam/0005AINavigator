@@ -1,0 +1,5 @@
+.sModal {
+  & + .modal {
+    display: none;
+  }
+}

@@ -42,3 +42,12 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'HeliosUltraCompressed';
+  src: url('../fonts/HeliosUltraCompressed.woff2') format('woff2'),
+    url('../fonts/HeliosUltraCompressed.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

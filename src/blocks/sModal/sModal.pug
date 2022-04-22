@@ -1,0 +1,19 @@
+mixin sModal(data)
+  .sModal&attributes(attributes)
+    .container
+      .row
+        .col-auto
+          a.btn.btn-primary(href="#modal-poll" data-fancybox) Завершить опрос
+        .col-auto
+          a.btn.btn-primary(href="#modal-form" data-fancybox) Форма отправки
+        .col-auto
+          a.btn.btn-primary(href="#modal-info" data-fancybox) Информация
+  +modal({
+    type: 'modal-form'
+  }).modal--modal-form#modal-form
+  +modal({
+    type: 'modal-info'
+  }).modal--modal-info#modal-info
+  +modal({
+    type: 'modal-poll'
+  }).modal--modal-poll#modal-poll
